@@ -1,0 +1,15 @@
+Bundle-Version: 1.0.0.${tstamp}
+
+-baseline: *
+-buildpath: \
+	osgi.annotation;version='7.0.0',\
+	osgi.core;version='7.0.0',\
+	org.apache.felix.http.servlet-api
+
+javac.source: 11
+javac.target: 11
+
+Web-ContextPath: /test
+-wab: static/
+-includeresource: WEB-INF/web.xml=web.xml
+Export-Package: org.gecko.playground.wab

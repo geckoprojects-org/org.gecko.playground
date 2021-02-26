@@ -3,8 +3,8 @@
 	osgi.core;version='7.0.0',\
 	osgi.cmpn;version='7.0.0',\
 	org.gecko.playground;version=latest,\
-	org.apache.logging.log4j.api,\
-	org.apache.logging.log4j.core
+	org.apache.logging.log4j.core;version='2.14',\
+	org.apache.logging.log4j.api;version='2.14'
 
 -baseline: *
 -testpath: \

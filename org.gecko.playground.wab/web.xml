@@ -1,0 +1,21 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+	<welcome-file-list>  
+   		<welcome-file>index.html</welcome-file>  
+  	</welcome-file-list>
+    <servlet>
+        <servlet-name>mytest</servlet-name>
+        <servlet-class>org.gecko.playground.wab.ExampleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mytest</servlet-name>
+        <url-pattern>/my</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+            <servlet-name>default</servlet-name>
+            <url-pattern></url-pattern>
+    </servlet-mapping>
+</web-app>

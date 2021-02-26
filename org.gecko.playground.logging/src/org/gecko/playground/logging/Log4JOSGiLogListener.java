@@ -39,10 +39,6 @@ public class Log4JOSGiLogListener implements LogListener {
 	private static final String EVENTS_FRAMEWORK = "Events.Framework";
 	private static final String EVENTS_SERVICE = "Events.Service";
 	private static final String LOG_SERVICE = "LogService";
-//	private static final String SYSTEM_USER_PATTERN = "${java.system.property:user.name}"; //$NON-NLS-1$
-//	private static final String HOST_PATTERN = "${java.system.property:riena.host.name}"; //$NON-NLS-1$
-//	private static final String SYSTEM_USER_AND_HOST_PATTERN =
-//			SYSTEM_USER_PATTERN + "@" + HOST_PATTERN;
 
 	// OSGi Logger stuff
 	private final Map<String, LogLevel> initialLogLevels;

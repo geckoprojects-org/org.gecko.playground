@@ -10,6 +10,12 @@
 		snapshotUrl=https://oss.sonatype.org/content/repositories/snapshots/;\
 		index=${.}/osgi-snapshot.maven;\
 		name='OSGi SNAPSHOT'
+#-plugin.32.jetty: \
+#	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
+#		releaseUrls=https://repo.maven.apache.org/maven2/; \
+#		pom=${fileuri;${build}/ext/jetty-bom-9.4.37.pom.xml}; \
+#		readOnly=true; \
+#		name="Jetty 9.4"
 		
 #-releaserepo: Release
 #-baselinerepo: Release
