@@ -1,0 +1,13 @@
+# List repository contents using GAV coordinates
+
+#Log4J2
+org.apache.logging.log4j:log4j-api:2.14.0
+org.apache.logging.log4j:log4j-core:2.14.0
+org.apache.logging.log4j:log4j-1.2-api:2.14.0
+org.apache.logging.log4j:log4j-jul:2.14.0
+org.apache.logging.log4j:log4j-jcl:2.14.0
+org.apache.logging.log4j:log4j-osgi:2.14.0
+org.apache.logging.log4j:log4j-slf4j-impl:2.14.0
+org.apache.logging.log4j:log4j-to-slf4j:2.14.0
+org.apache.logging.log4j:log4j-web:2.14.0
+

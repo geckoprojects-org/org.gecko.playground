@@ -1,0 +1,23 @@
+-buildpath: \
+	osgi.annotation;version='7.0.0',\
+	osgi.core;version='7.0.0',\
+	osgi.cmpn;version='7.0.0',\
+	org.osgi.service.condition
+
+-testpath: \
+	${junit},\
+	${mockito},\
+	${mockito-deps}
+
+javac.source: 11
+javac.target: 11
+
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Name: Tasks Runtime
+Bundle-Description: Gecko Playground Tasks Runtime
+-privatepackage: \
+	org.gecko.playground.tasks.commands,\
+	org.gecko.playground.tasks.spi
+Export-Package: \
+	org.gecko.playground.tasks,\
+	org.gecko.playground.tasks.annotations

@@ -1,0 +1,12 @@
+{
+  ":configurator:resource-version": 1,
+  
+  "PlaygroundCore": 
+	{
+		"workmode": "OFFLINE" 
+	},
+	"org.apache.felix.scr.ScrService":
+	{
+		"ds.loglevel":4
+	}
+}

@@ -1,0 +1,24 @@
+#-include: ${if;${def;release.dir};\
+#              ${cnf}/releng/release.bnd;\
+#              ${cnf}/releng/snapshot.bnd\
+#          }
+
+# Configure Repositories
+-plugin.01.SNAPSHOT.API: \
+	aQute.bnd.repository.maven.provider.MavenBndRepository;\
+		releaseUrl=https://devel.data-in-motion.biz/nexus/repository/dim-release/;\
+		snapshotUrl=https://oss.sonatype.org/content/repositories/snapshots/;\
+		index=${.}/osgi-snapshot.maven;\
+		name='OSGi SNAPSHOT'
+		
+#-releaserepo: Release
+#-baselinerepo: Release
+
+-maven-release: pom
+#-groupid: de.ruv.ruvconn.selektionen
+-pom: version=${versionmask;===s;${@version}}	
+
+# Set Git revision information in the manifests of built bundles
+#Git-Descriptor:           ${system-allow-fail;git describe --dirty --always}
+#Git-SHA:                  ${system-allow-fail;git rev-list -1 HEAD}
+

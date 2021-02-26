@@ -1,0 +1,15 @@
+-buildpath: \
+	osgi.annotation;version='7.0.0',\
+	osgi.core;version='7.0.0',\
+	osgi.cmpn;version='7.0.0',\
+	org.gecko.playground;version=latest,\
+	org.apache.logging.log4j.api,\
+	org.apache.logging.log4j.core
+
+-baseline: *
+-testpath: \
+	${junit},\
+	${mockito},\
+	${mockito-deps}
+
+-sub: *.bnd

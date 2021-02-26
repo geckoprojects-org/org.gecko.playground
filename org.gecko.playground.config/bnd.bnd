@@ -1,0 +1,11 @@
+Bundle-Name: Runtime Configuration
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-includeresource: \
+	OSGI-INF/configurator/=config/
+
+Provide-Capability: playground.config;playground.config=default
+Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)',\
+	playground.logging;filter:='(playground.logging=log4j)',\
+	playground.logging;filter:='(playground.logging=config)'
+Bundle-Description: Gecko Playground Runtime Configuration

@@ -1,0 +1,10 @@
+Fragment-Host: org.apache.logging.log4j.core;bundle-version="[2.13.0,3.0)"
+
+-includeresource: \
+	log4j2.xml=config/log4j2.xml
+
+Provide-Capability: playground.logging; playground.logging="config";version:List<Version>="2.0";stage=default
+
+Bundle-Name: Logging Log4j Configuration
+Bundle-Description: Gecko Playground Logging Log4j Configuration
+Bundle-Version: 1.0.0.SNAPSHOT
