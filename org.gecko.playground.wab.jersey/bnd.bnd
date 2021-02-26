@@ -1,0 +1,17 @@
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-baseline: *
+-buildpath: \
+	osgi.annotation;version='7.0.0',\
+	jakarta.ws.rs-api;version='2.1',\
+	org.gecko.playground.http.jersey;version=latest
+
+Bundle-Name: Jersey REST as Web Application Bundle
+Bundle-Description: Gecko Playground Jersey REST as Web Application Bundle
+
+Web-ContextPath: /rest
+
+-wab:
+
+-includeresource: WEB-INF/web.xml=web.xml
+Export-Package: org.gecko.playground.wab.jersey

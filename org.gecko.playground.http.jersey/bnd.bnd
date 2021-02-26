@@ -1,0 +1,21 @@
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Name: Jersey Fragment for Felix HTTP Jetty
+Fragment-Host: org.apache.felix.http.jetty
+#Fragment-Host: org.eclipse.jetty.osgi.boot
+
+-buildpath: \
+	osgi.annotation;version='7.0.0',\
+	osgi.core;version='7.0.0',\
+	org.apache.felix.http.jetty;version='4.0.6',\
+	org.glassfish.jersey.core.jersey-server;version='2.33.0',\
+	org.glassfish.jersey.core.jersey-common;version='2.33.0',\
+	org.glassfish.jersey.containers.jersey-container-servlet-core;version='2.33.0',\
+	org.glassfish.jersey.containers.jersey-container-servlet;version='2.33.0'
+	
+Require-Bundle: \
+	org.glassfish.jersey.core.jersey-server,\
+	org.glassfish.jersey.core.jersey-common,\
+	org.glassfish.jersey.containers.jersey-container-servlet,\
+	org.glassfish.jersey.containers.jersey-container-servlet-core
+-privatepackage: org.gecko.playground.http.jersey
+Export-Package: org.gecko.playground.http.jersey.annotations
