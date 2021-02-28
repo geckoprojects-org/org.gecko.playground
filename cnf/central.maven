@@ -83,3 +83,8 @@ org.glassfish.hk2.external:jakarta.inject:2.6.1
 org.glassfish.hk2:osgi-resource-locator:1.0.3
 org.glassfish.jersey.bundles.repackaged:jersey-guava:2.26-b03
 org.javassist:javassist:3.27.0-GA
+
+# EMF
+org.eclipse.emf:org.eclipse.emf.common:2.18.0
+org.eclipse.emf:org.eclipse.emf.ecore:2.21.0
+org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.16.0

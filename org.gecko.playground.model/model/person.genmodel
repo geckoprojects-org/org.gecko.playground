@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.gecko.playground.model/src" modelPluginID="org.gecko.playground.model"
+    modelName="Person" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="11.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>person.ecore</foreignModel>
+  <genPackages prefix="Person" basePackage="org.gecko.playground.model" resource="XMI"
+      disposableProviderFactory="true" ecorePackage="person.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="person.ecore#//ContextType">
+      <genEnumLiterals ecoreEnumLiteral="person.ecore#//ContextType/WORK"/>
+      <genEnumLiterals ecoreEnumLiteral="person.ecore#//ContextType/HOME"/>
+      <genEnumLiterals ecoreEnumLiteral="person.ecore#//ContextType/OTHER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="person.ecore#//ContactType">
+      <genEnumLiterals ecoreEnumLiteral="person.ecore#//ContactType/PHONE"/>
+      <genEnumLiterals ecoreEnumLiteral="person.ecore#//ContactType/MOBILE"/>
+      <genEnumLiterals ecoreEnumLiteral="person.ecore#//ContactType/EMAIL"/>
+      <genEnumLiterals ecoreEnumLiteral="person.ecore#//ContactType/LINKEDIN"/>
+      <genEnumLiterals ecoreEnumLiteral="person.ecore#//ContactType/TWITTER"/>
+      <genEnumLiterals ecoreEnumLiteral="person.ecore#//ContactType/INSTAGRAM"/>
+      <genEnumLiterals ecoreEnumLiteral="person.ecore#//ContactType/OTHER"/>
+    </genEnums>
+    <genClasses ecoreClass="person.ecore#//Address">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Address/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Address/street"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Address/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Address/zip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Address/context"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference person.ecore#//Address/tag"/>
+    </genClasses>
+    <genClasses ecoreClass="person.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Person/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Person/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Person/lastName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Person/birthDate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference person.ecore#//Person/address"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference person.ecore#//Person/contact"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference person.ecore#//Person/tag"/>
+    </genClasses>
+    <genClasses ecoreClass="person.ecore#//AddressBook">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//AddressBook/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//AddressBook/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//AddressBook/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference person.ecore#//AddressBook/address"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference person.ecore#//AddressBook/person"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference person.ecore#//AddressBook/tag"/>
+    </genClasses>
+    <genClasses ecoreClass="person.ecore#//Contact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Contact/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Contact/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Contact/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Contact/context"/>
+    </genClasses>
+    <genClasses ecoreClass="person.ecore#//Tag">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Tag/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Tag/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Tag/comment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference person.ecore#//Tag/tag"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

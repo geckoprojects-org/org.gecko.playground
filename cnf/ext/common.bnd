@@ -10,6 +10,7 @@
 		snapshotUrl=https://oss.sonatype.org/content/repositories/snapshots/;\
 		index=${.}/osgi-snapshot.maven;\
 		name='OSGi SNAPSHOT'
+		
 #-plugin.32.jetty: \
 #	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
 #		releaseUrls=https://repo.maven.apache.org/maven2/; \

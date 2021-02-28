@@ -1,0 +1,20 @@
+# sets the usually required buildpath, you can extend it with the normal -buildpath to your liking
+-enable-gecko-emf: true
+
+# The code generation takes a bit of time and makes the build a bit slower.
+# It might be a good idea to put comments around it, when you don't need it
+-generate:\
+	model/person.genmodel;\
+		generate=geckoEMF;\
+		genmodel=model/person.genmodel;\
+		output=src
+# Add this attribute to find some logging information
+#		logfile=test.log;\
+
+# If this is not done with a instruction namespace, bnd would think you like
+# to take full control over whats exported and imported and will ignore @Export
+# Bundle Annotations		
+-includeresource.model: model=model
+
+Bundle-Version: 1.0.0.SNAPSHOT
+
