@@ -1,4 +1,5 @@
--include: https://gitlab.com/gecko.io/geckoEMF/-/raw/develop/cnf/geckoEMF/geckoEMF.bnd
+-include: https://gitlab.com/gecko.io/geckoEMF/-/raw/develop/cnf/geckoEMF/geckoEMF.bnd,\
+	https://gitlab.com/gecko.io/jersey_jaxrs_whiteboard/-/raw/master/cnf/geckoRest/geckoRest.bnd
 
 # Configure Repositories
 -plugin.1.R7.API: \
@@ -67,12 +68,12 @@
 #        snapshotUrls=https://oss.sonatype.org/content/repositories/snapshots/;\
 #        revision="org.geckoprojects.emf:org.gecko.emf.osgi.bom:4.0.0"
 
--plugin.21.geckorest:\
-	aQute.bnd.repository.maven.pom.provider.BndPomRepository;\
-        name="Gecko REST";\
-        releaseUrls=https://repo.maven.apache.org/maven2/;\
-        snapshotUrls=https://oss.sonatype.org/content/repositories/snapshots/;\
-        revision="org.geckoprojects.jaxrs:org.gecko.rest.jersey.bom:4.0.5"
+#-plugin.21.geckorest:\
+#	aQute.bnd.repository.maven.pom.provider.BndPomRepository;\
+#        name="Gecko REST";\
+#        releaseUrls=https://repo.maven.apache.org/maven2/;\
+#        snapshotUrls=https://oss.sonatype.org/content/repositories/snapshots/;\
+#        revision="org.geckoprojects.jaxrs:org.gecko.rest.jersey.bom:4.0.5"
 
 -releaserepo: Release
 -baselinerepo: Release

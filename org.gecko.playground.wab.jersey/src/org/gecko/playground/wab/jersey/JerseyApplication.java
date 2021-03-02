@@ -19,6 +19,7 @@ public class JerseyApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> result = new HashSet<Class<?>>();
+        result.add(ExampleResource.class);
         result.add(StatusResource.class);
         result.add(SseResource.class);
         return result;

@@ -28,17 +28,18 @@ org.apache.logging.log4j:log4j-osgi:2.14.0
 org.apache.logging.log4j:log4j-slf4j-impl:2.14.0
 org.apache.logging.log4j:log4j-to-slf4j:2.14.0
 org.apache.logging.log4j:log4j-web:2.14.0
+org.slf4j:slf4j-api:1.7.30
 
 # Apache Felix
 org.apache.felix:org.apache.felix.framework:6.0.4
 org.apache.felix:org.apache.felix.framework:7.0.0
 org.apache.felix:org.apache.felix.gogo.command:1.1.2
-org.apache.felix:org.apache.felix.gogo.jline:1.1.8
+#org.apache.felix:org.apache.felix.gogo.jline:1.1.8
 org.apache.felix:org.apache.felix.gogo.runtime:1.1.4
 org.apache.felix:org.apache.felix.gogo.shell:1.1.4
 org.apache.felix:org.apache.felix.converter:1.0.14
 org.apache.felix:org.apache.felix.eventadmin:1.6.2
-org.apache.felix:org.apache.felix.configurator:1.0.12
+org.apache.felix:org.apache.felix.configurator:1.0.8
 org.apache.felix:org.apache.felix.scr:2.1.26
 org.apache.felix:org.apache.felix.log:1.2.4
 org.apache.felix:org.apache.felix.cm.json:1.0.2
@@ -85,6 +86,6 @@ org.glassfish.jersey.bundles.repackaged:jersey-guava:2.26-b03
 org.javassist:javassist:3.27.0-GA
 
 # EMF
-org.eclipse.emf:org.eclipse.emf.common:2.18.0
-org.eclipse.emf:org.eclipse.emf.ecore:2.21.0
+org.eclipse.emf:org.eclipse.emf.common:2.21.0
+org.eclipse.emf:org.eclipse.emf.ecore:2.23.0
 org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.16.0
