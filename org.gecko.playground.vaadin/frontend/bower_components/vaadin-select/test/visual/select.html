@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Drop down menu tests</title>
+  <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../../polymer/polymer.html">
+  <script>
+    // eslint-disable-next-line no-unused-vars
+    /* global theme */
+    const theme = window.location.search.replace(/.*theme=(\w+).*/, '$1') || 'lumo';
+    document.write(`<link rel="import" href="../../theme/${theme}/vaadin-select.html">`);
+    document.write(`<link rel="import" href="../../../vaadin-list-box/theme/${theme}/vaadin-list-box.html">`);
+    document.write(`<link rel="import" href="../../../vaadin-item/theme/${theme}/vaadin-item.html">`);
+  </script>
+</head>
+
+<body>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .space {
+      display: inline-block;
+      width: 175px;
+    }
+
+    .capture-block {
+      display: inline-block;
+      width: 800px;
+      height: 350px;
+    }
+  </style>
+
+  <div class="capture-block" id="select">
+
+    <vaadin-select label="Normal" placeholder="Placeholder">
+      <div slot="prefix">prefix &nbsp;</div>
+    </vaadin-select>
+
+    <div class="space"></div>
+
+    <vaadin-select label="Disabled" placeholder="Placeholder" disabled>
+    </vaadin-select>
+
+    <vaadin-select label="Selected and Focused" placeholder="Placeholder" id="drop2">
+      <template>
+        <vaadin-list-box>
+          <vaadin-item>default item</vaadin-item>
+          <vaadin-item>Selected and Focused</vaadin-item>
+        </vaadin-list-box>
+      </template>
+    </vaadin-select>
+
+    <br/>
+
+    <vaadin-select label="small" theme="small">
+    </vaadin-select>
+
+    <vaadin-select label="small & selected" theme="small" value="Item one">
+      <template>
+        <vaadin-list-box>
+          <vaadin-item>Item one</vaadin-item>
+        </vaadin-list-box>
+      </template>
+    </vaadin-select>
+
+    <vaadin-select label="aligned center & selected" theme="align-center" value="Item one">
+      <template>
+        <vaadin-list-box>
+          <vaadin-item>Item one</vaadin-item>
+        </vaadin-list-box>
+      </template>
+    </vaadin-select>
+
+    <vaadin-select label="aligned right & selected" theme="align-right" value="Item one">
+      <template>
+        <vaadin-list-box>
+          <vaadin-item>Item one</vaadin-item>
+        </vaadin-list-box>
+      </template>
+    </vaadin-select>
+
+    <br/>
+
+    <vaadin-select label="Item as value" placeholder="Placeholder" value="Html&nbsp;as&nbsp;Content">
+      <template>
+        <vaadin-list-box>
+          <vaadin-item><strong>Html</strong>&nbsp;as&nbsp;<i>Content</i></vaadin-item>
+        </vaadin-list-box>
+      </template>
+    </vaadin-select>
+
+    <vaadin-select label="Open" placeholder="Placeholder" id="drop1" value="Item one">
+      <template>
+        <vaadin-list-box>
+          <strong>Opened menu</strong>
+          <vaadin-item>Item one</vaadin-item>
+          <vaadin-item>Item two</vaadin-item>
+          <vaadin-item disabled>Disabled item</vaadin-item>
+        </vaadin-list-box>
+      </template>
+    </vaadin-select>
+
+    <vaadin-select label="Text as Content" placeholder="Placeholder" value="v2">
+      <template>
+        <vaadin-list-box>
+          <vaadin-item>default item</vaadin-item>
+          <vaadin-item value="v2">Text as Content Two</vaadin-item>
+        </vaadin-list-box>
+      </template>
+    </vaadin-select>
+
+    <vaadin-select label="Label as Content" placeholder="Placeholder" value="Option one">
+      <template>
+        <vaadin-list-box>
+          <vaadin-item label="Label as Content">Option one</vaadin-item>
+        </vaadin-list-box>
+      </template>
+    </vaadin-select>
+
+    <script>
+      window.addEventListener('WebComponentsReady', () => {
+        const drop1 = document.getElementById('drop1');
+
+        /* global theme */
+        Array.from(document.querySelectorAll('[label^="aligned "]'))
+          .forEach(select => theme !== 'lumo' && select.setAttribute('hidden', ''));
+
+        Polymer.RenderStatus.afterNextRender(drop1._menuElement, () => {
+          drop1.opened = true;
+
+          const drop2 = document.getElementById('drop2');
+          Polymer.RenderStatus.afterNextRender(drop2._menuElement, () => {
+            drop2.opened = true;
+            drop2._menuElement.selected = 1;
+            window.webComponentsAreReady = true;
+          });
+        });
+
+      });
+    </script>
+
+  </div>
+</body>

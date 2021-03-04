@@ -1,0 +1,35 @@
+{
+  "name": "@vaadin/vaadin-license-checker",
+  "version": "2.1.2",
+  "repository": "vaadin/license-checker",
+  "author": "Vaadin Ltd",
+  "license": "Apache-2.0",
+  "description": "Web Component validating licenses for the commercial Vaadin Pro Tools",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "bower": "^1.8.2",
+    "fs-extra": "^7.0.0",
+    "gulp": "^3.9.1",
+    "husky": "^0.14.3",
+    "web-component-tester": "^6.5.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.22.0",
+    "babel-plugin-transform-es2015-classes": "^6.22.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "rollup": "^0.64.1",
+    "rollup-plugin-babel": "^3.0.4"
+  },
+  "scripts": {
+    "test": "wct --plugin sauce",
+    "build": "gulp rebuild",
+    "transpile": "rollup -c",
+    "precommit": "gulp auto-amend-commit"
+  },
+  "files": [
+    "vaadin-license-checker.js"
+  ]
+}

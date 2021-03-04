@@ -1,0 +1,29 @@
+{
+  "name": "@vaadin/vaadin-cookie-consent",
+  "version": "1.1.2",
+  "description": "vaadin-cookie-consent",
+  "main": "vaadin-cookie-consent.html",
+  "repository": "vaadin/vaadin-cookie-consent",
+  "keywords": [
+    "Vaadin",
+    "vaadin-cookie-consent",
+    "web-components",
+    "web-component",
+    "polymer"
+  ],
+  "author": "Vaadin Ltd",
+  "license": "https://raw.githubusercontent.com/vaadin/vaadin-cookie-consent/master/LICENSE",
+  "bugs": {
+    "url": "https://github.com/vaadin/vaadin-cookie-consent/issues"
+  },
+  "homepage": "https://vaadin.com/components",
+  "scripts": {
+    "test": "wct",
+    "preversion": "gulp version:update"
+  },
+  "devDependencies": {
+    "axe-core": "^3.0.3",
+    "pwa-helpers": "^0.8.3",
+    "@vaadin/vaadin-component-dev-dependencies": "^1.0.0"
+  }
+}

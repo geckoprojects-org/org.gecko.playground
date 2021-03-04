@@ -1,0 +1,40 @@
+{
+  "name": "@vaadin/vaadin-mobile-drag-drop",
+  "version": "1.0.0",
+  "description": "vaadin-mobile-drag-drop",
+  "main": "index.min.js",
+  "repository": "vaadin/vaadin-mobile-drag-drop",
+  "keywords": [
+    "Vaadin",
+    "web-components",
+    "drag and drop"
+  ],
+  "author": "Vaadin Ltd",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/vaadin/vaadin-mobile-drag-drop/issues"
+  },
+  "homepage": "https://vaadin.com/components",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "scripts": {
+    "prepack": "npm run build",
+    "preversion": "npm test",
+    "build": "babel index.js -o index.min.js",
+    "test": "wct",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:js": "eslint *.js"
+  },
+  "devDependencies": {
+    "@vaadin/vaadin-component-dev-dependencies": "^3.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.5.0"
+  },
+  "dependencies": {
+    "mobile-drag-drop": "^2.3.0-rc.1"
+  }
+}
