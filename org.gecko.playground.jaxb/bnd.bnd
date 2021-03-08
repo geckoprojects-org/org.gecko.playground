@@ -1,0 +1,16 @@
+-buildpath: \
+	osgi.annotation;version='7.0.0',\
+	osgi.core;version='7.0.0',\
+	osgi.cmpn;version='7.0.0',\
+	jakarta.xml.bind-api
+
+-testpath: \
+	${junit},\
+	${mockito},\
+	${mockito-deps}
+
+Bundle-Version: 1.0.0.SNAPSHOT
+-privatepackage: org.gecko.playground.jaxb.spi
+Export-Package: org.gecko.playground.jaxb
+Bundle-Name: JaxB Entities
+Bundle-Description: Gecko Playground JaxB

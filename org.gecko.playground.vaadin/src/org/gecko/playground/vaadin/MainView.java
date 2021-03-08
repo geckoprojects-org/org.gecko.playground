@@ -17,7 +17,9 @@ import com.vaadin.flow.theme.lumo.Lumo;
 @PWA(name = "Project Base for Vaadin Flow", shortName = "Project Base")
 public class MainView extends VerticalLayout {
 
-    public MainView() {
+	private static final long serialVersionUID = -1606204314748731359L;
+
+	public MainView() {
         Button button = new Button("Click test me",
                 event -> Notification.show("Clicked test!"));
         add(button);
