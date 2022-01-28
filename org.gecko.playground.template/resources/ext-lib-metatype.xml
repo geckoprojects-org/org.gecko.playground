@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="OSGI-INF/l10n/org.gecko.bndtools.templates.emf.model">
+  <OCD id="org.gecko.templates.ext.lib" name="Repackage external JAR Project Template" description="Repackage JAR Project Template">
+    <AD id="BundleName" type="String" name="Bundle Name" description="Name of the bundle in the bundle.properties file" default="Re-packaged JAR"/>
+    <AD id="JARVersion" type="String" name="Artifact Version" description="Version of the Maven artifact" default="1.0.0"/>
+    <AD id="JARGroupId" type="String" name="Artifacts Group Id" description="The group id of the Maven artifact" default=""/>
+    <AD id="JARArtifactId" type="String" name="Artifact Id" description="The artifact id of the Maven artifact" default=""/>
+  </OCD>
+</metatype:MetaData>

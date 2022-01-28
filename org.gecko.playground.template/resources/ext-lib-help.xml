@@ -1,0 +1,10 @@
+<form>
+	<p>Creates a project for re-packaging JAR into OSGi capable bundles. For this the Maven GAV information are needed. In addition to that, please note, to provide these artifacts dependencies in you workspace, together with their sources.</p>
+	<li>groupId:artifactId:version</li>
+	<li>groupId:artifactId:jar:sources:version</li>
+	<p>The following variables must be provided for the library to be re-packaged:</p>
+	<li>Maven Group Id</li>
+	<li>Maven Artifact Id</li>
+	<li>Maven Version</li>
+	<li>Bundle Name</li>
+</form>

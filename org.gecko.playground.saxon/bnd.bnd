@@ -1,0 +1,29 @@
+lib.version: 10.3.0
+
+Bundle-Name: Saxon-HE
+Bundle-Vendor: Data In Motion
+Bundle-Version: ${lib.version}
+
+lib.version: 10.3.0
+
+-buildpath:  \
+	net.sf.saxon:Saxon-HE;version=${lib.version}
+	
+-includeresource: \
+	@Saxon-HE-10.3.jar!/META-INF/services/*,\
+	@Saxon-HE-10.3.jar!/net/sf/saxon/data/*,\
+	@${repo;net.sf.saxon:Saxon-HE;${lib.version}}!/META-INF/services/*,\
+	@${repo;net.sf.saxon:Saxon-HE;${lib.version}}!/net/sf/saxon/data/*,\
+	OSGI-OPT/src=@${repo;net.sf.saxon:Saxon-HE:jar:sources;${lib.version};EXACT}
+
+Main-Class: net.sf.saxon.Transform
+
+Export-Package: \
+	!net.sf.saxon.data.*,\
+	*
+
+Import-Package: \
+	jline.*;'resolution:'=optional,\
+	com.sun.org.apache.xerces.internal.jaxp;'resolution:'=optional,\
+	org.apache.xml.*;'resolution:'=optional,\
+	*

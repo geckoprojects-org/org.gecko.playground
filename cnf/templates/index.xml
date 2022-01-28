@@ -1,5 +1,47 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Templates" increment="1539947831157">
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Templates" increment="1643380303920">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="copyright" value="(c) 2021 Data In Motion Consulting GmbH"/>
+      <attribute name="osgi.identity" value="org.gecko.playground.template.osgify"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.0.0.SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.playground.template.osgify"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.0.0.SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.playground.template.osgify"/>
+    </capability>
+    <capability namespace="org.bndtools.template">
+      <attribute name="help" value="ext-lib-help.xml"/>
+      <attribute name="engine" value="mustache"/>
+      <attribute name="name" value="Library Repacking"/>
+      <attribute name="metaType" value="ext-lib-metatype.xml"/>
+      <attribute name="ranking" value="1010.0" type="Double"/>
+      <attribute name="org.bndtools.template" value="project"/>
+      <attribute name="category" value="bbb/Gecko BND Templates"/>
+      <attribute name="dir" value="templates/ext-libs"/>
+    </capability>
+    <capability namespace="org.bndtools.template">
+      <attribute name="help" value="ui-bundle-help.xml"/>
+      <attribute name="engine" value="mustache"/>
+      <attribute name="name" value="UI Bundle"/>
+      <attribute name="metaType" value="ui-bundle-metatype.xml"/>
+      <attribute name="ranking" value="1020.0" type="Double"/>
+      <attribute name="org.bndtools.template" value="project"/>
+      <attribute name="category" value="bbb/Gecko BND Templates"/>
+      <attribute name="dir" value="templates/ui-bundle"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="2246945" type="Long"/>
+      <attribute name="url" value="org.gecko.playground.template.osgify/org.gecko.playground.template.osgify-1.0.0.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="3C9C7D324D4AFD8E5D13D172EA6AB3C060F2F36B9053D9CC2214FED094F3FA12"/>
+    </capability>
+  </resource>
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="org.bndtools.templates.osgi"/>

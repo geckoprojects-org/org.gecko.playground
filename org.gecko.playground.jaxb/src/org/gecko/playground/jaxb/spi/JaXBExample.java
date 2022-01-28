@@ -9,6 +9,7 @@ import javax.xml.bind.Marshaller;
 
 import org.gecko.playground.jaxb.Address;
 import org.gecko.playground.jaxb.Person;
+import org.gecko.playground.jaxb.RequireJaXB;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 

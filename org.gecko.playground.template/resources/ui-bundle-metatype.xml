@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="OSGI-INF/l10n/org.gecko.bndtools.templates.emf.model">
+  <OCD id="org.gecko.templates.ui.bundle" name="UI Bundle Template with plugin.xml" description="UI Bundle Template with plugin.xml">
+    <AD id="BundleName" type="String" name="Bundle Name" description="Name of the bundle in the bundle.properties file" default="Plugin xyz"/>
+    <AD id="BundleVersion" type="String" name="Bundle Version" description="The bundle version" default="1.0.0.SNAPSHOT"/>
+  </OCD>
+</metatype:MetaData>

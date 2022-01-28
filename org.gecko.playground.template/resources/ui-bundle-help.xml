@@ -1,0 +1,6 @@
+<form>
+	<p>Creates a UI project with plugin.xml.</p>
+	<p>The following variables must be provided for the library to be re-packaged:</p>
+	<li>Bundle Version</li>
+	<li>Bundle Name</li>
+</form>

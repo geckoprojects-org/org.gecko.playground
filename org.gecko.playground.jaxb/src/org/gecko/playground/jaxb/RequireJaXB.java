@@ -9,7 +9,7 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package org.gecko.playground.jaxb.spi;
+package org.gecko.playground.jaxb;
 
 import org.osgi.annotation.bundle.Capability;
 import org.osgi.annotation.bundle.Requirement;

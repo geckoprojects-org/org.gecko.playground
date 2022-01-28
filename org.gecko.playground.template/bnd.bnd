@@ -1,0 +1,44 @@
+Bundle-Name: Playground Bnd Project Template OSGi
+Bundle-Vendor: Data in Motion
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-includeresource: \
+	resources,\
+	
+-resourceonly: true
+
+category: bbb/Gecko BND Templates
+
+project-template-workspace:\
+	org.bndtools.template; org.bndtools.template=workspace;\
+		name=Gecko BND Workspace;\
+		category=${category};\
+		ranking:Double=1001;\
+		dir=templates/workspace-gecko;\
+		help=gecko-ws-help.xml
+project-template-ext-libs:\
+	org.bndtools.template; org.bndtools.template=project;\
+		name=Library Repacking;\
+		category=${category};\
+		ranking:Double=1010;\
+		dir=templates/ext-libs;\
+		help=ext-lib-help.xml;\
+		engine=mustache;\
+		metaType=ext-lib-metatype.xml
+project-template-ui-bundle:\
+	org.bndtools.template; org.bndtools.template=project;\
+		name=UI Bundle;\
+		category=${category};\
+		ranking:Double=1020;\
+		dir=templates/ui-bundle;\
+		help=ui-bundle-help.xml;\
+		engine=mustache;\
+		metaType=ui-bundle-metatype.xml
+		
+		
+Provide-Capability: \
+	${project-template-ext-libs},\
+	${project-template-ui-bundle}
+	
+
+
