@@ -2,16 +2,14 @@ package org.gecko.playground.logging;
 
 
 import java.util.AbstractMap.SimpleEntry;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.gecko.playground.Namespaces;
+import org.gecko.playground.logging.impl.Log4JOSGiLogListener;
 import org.osgi.annotation.bundle.Capability;
 import org.osgi.annotation.bundle.Requirement;
 import org.osgi.annotation.bundle.Requirements;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.BundleEvent;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.log.LogListener;
 import org.osgi.service.log.LogReaderService;
@@ -27,11 +25,11 @@ import org.osgi.util.tracker.ServiceTracker;
  * @author xv884az
  *
  */
+//@Requirement(namespace = "osgi.identity", name = "org.gecko.log4.extension", filter = "(&(version>=2.13)(!(version>=3.0)))"),
 @Capability(namespace = Namespaces.CAPABILITY_LOGGING, name = Namespaces.LOGGING_LOG4J, version = "2.0")
 @Requirements({
 	@Requirement(namespace = "osgi.identity", name = "org.apache.logging.log4j.api", filter = "(&(version>=2.13)(!(version>=3.0)))"),
 	@Requirement(namespace = "osgi.identity", name = "org.apache.logging.log4j.core", filter = "(&(version>=2.13)(!(version>=3.0)))"),
-	@Requirement(namespace = "osgi.identity", name = "org.apache.logging.log4j.jcl", filter = "(&(version>=2.13)(!(version>=3.0)))"),
 	@Requirement(namespace = "osgi.identity", name = "org.apache.logging.log4j.slf4j-impl", filter = "(&(version>=2.13)(!(version>=3.0)))"),
 	@Requirement(namespace = Namespaces.CAPABILITY_LOGGING, name = Namespaces.LOGGING_CONFIG, version="2.0", filter="(stage=*)")
 })
@@ -41,36 +39,26 @@ public class Activator implements BundleActivator {
 
 	@Override
 	public void start(BundleContext bundleContext) throws Exception {
+
 		/*
 		 * We cannot use the JULBridge, because Riena is doing something
 		 * that prevents the Client Monitoring from working
 		 */
-		bundleContext.addBundleListener((event) -> initLog4JJULBridgeHandler(event));
-
 		loggerAdminTracker = new ServiceTracker<LoggerAdmin, LogReaderServiceTracker>(bundleContext, LoggerAdmin.class,
 				null) {
-
-			private List<LogReaderServiceTracker> lrstList = new ArrayList<Activator.LogReaderServiceTracker>();
 
 			@Override
 			public LogReaderServiceTracker addingService(ServiceReference<LoggerAdmin> reference) {
 				LoggerAdmin loggerAdmin = bundleContext.getService(reference);
 				LogReaderServiceTracker lrst = new LogReaderServiceTracker(bundleContext, loggerAdmin);
 				lrst.open();
-				lrstList.add(lrst);
+
 				return lrst;
 			}
 
 			@Override
 			public void removedService(ServiceReference<LoggerAdmin> reference, LogReaderServiceTracker lrst) {
 				lrst.close();
-			}
-
-			@Override
-			public void close() {
-				lrstList.forEach(ServiceTracker::close);
-				lrstList.clear();
-				super.close();
 			}
 		};
 
@@ -80,14 +68,7 @@ public class Activator implements BundleActivator {
 	@Override
 	public void stop(BundleContext context) throws Exception {
 		loggerAdminTracker.close();
-		Log4JJULBridgeHandler.uninstall();
 	}
-
-	private void initLog4JJULBridgeHandler(BundleEvent event) {
-		Log4JJULBridgeHandler.removeHandlersForRootLogger();
-		Log4JJULBridgeHandler.install();
-	}
-
 
 	class LogReaderServiceTracker extends ServiceTracker<LogReaderService, Pair> {
 
@@ -117,7 +98,7 @@ public class Activator implements BundleActivator {
 	/**
 	 * Associate a {@link LogReaderService} with the corresponding registered {@link LogListener} instance
 	 */
-	class Pair extends SimpleEntry<LogReaderService, Log4JOSGiLogListener> {
+	static class Pair extends SimpleEntry<LogReaderService, Log4JOSGiLogListener> {
 
 		private static final long serialVersionUID = 1L;
 
@@ -128,3 +109,4 @@ public class Activator implements BundleActivator {
 	}
 
 }
+

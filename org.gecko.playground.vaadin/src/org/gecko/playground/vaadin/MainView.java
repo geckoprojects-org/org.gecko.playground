@@ -20,8 +20,8 @@ public class MainView extends VerticalLayout {
 	private static final long serialVersionUID = -1606204314748731359L;
 
 	public MainView() {
-        Button button = new Button("Click test me",
-                event -> Notification.show("Clicked test!"));
+        Button button = new Button("Click test me, please",
+                event -> Notification.show("Clicked the button!"));
         add(button);
     }
 }

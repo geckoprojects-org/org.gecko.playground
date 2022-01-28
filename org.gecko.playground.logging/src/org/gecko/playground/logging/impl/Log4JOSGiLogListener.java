@@ -1,4 +1,4 @@
-package org.gecko.playground.logging;
+package org.gecko.playground.logging.impl;
 
 
 import java.util.HashMap;
@@ -11,10 +11,12 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.LogEvent;
 import org.apache.logging.log4j.core.LoggerContext;
 import org.apache.logging.log4j.core.config.LoggerConfig;
+import org.apache.logging.log4j.core.impl.ContextDataFactory;
 import org.apache.logging.log4j.core.impl.Log4jLogEvent;
 import org.apache.logging.log4j.core.impl.Log4jLogEvent.Builder;
 import org.apache.logging.log4j.core.impl.ThrowableProxy;
 import org.apache.logging.log4j.message.Message;
+import org.apache.logging.log4j.util.StringMap;
 import org.osgi.framework.Bundle;
 import org.osgi.service.log.LogEntry;
 import org.osgi.service.log.LogLevel;
@@ -44,14 +46,13 @@ public class Log4JOSGiLogListener implements LogListener {
 	private final Map<String, LogLevel> initialLogLevels;
 	private final org.osgi.service.log.admin.LoggerContext osgiLoggerContext;
 	// Log4J2 logger stuff
-	private volatile LoggerContext loggerContext;
-	private volatile Logger rootLogger;
+	private LoggerContext loggerContext;
+	private Logger rootLogger;
 
 	public Log4JOSGiLogListener(LoggerAdmin loggerAdmin) {
 		osgiLoggerContext = loggerAdmin.getLoggerContext(null);
 		initialLogLevels = osgiLoggerContext.getLogLevels();
-		
-		LoggerContext log4jLoggerContext = (LoggerContext) LogManager.getContext(true);
+		LoggerContext log4jLoggerContext = (LoggerContext) LogManager.getContext(false);
 		initialize(log4jLoggerContext);
 	}
 
@@ -86,7 +87,6 @@ public class Log4JOSGiLogListener implements LogListener {
 				LOG_SERVICE.equals(loggerName)) {
 
 			loggerName = formatBundle(entry.getBundle(), loggerName);
-			loggerName+= "test";
 			avoidCallerData.set(true);
 		} else if (EVENTS_SERVICE.equals(loggerName)) {
 			loggerName = formatBundle(entry.getBundle(), loggerName);
@@ -111,75 +111,20 @@ public class Log4JOSGiLogListener implements LogListener {
 		Builder eventBuilder = Log4jLogEvent.newBuilder();
 		
 		// create/set MDC context information
-//		StringMap contextData = ContextDataFactory.createContextData();
-//		contextData.putValue("corrID", getCorellationId(entry.getThreadInfo()));
-//		contextData.putValue("userID", getUserId());
-//		contextData.putValue("userAndHost", getUserAndHost());
+		StringMap contextData = ContextDataFactory.createContextData();
+		contextData.putValue("threadInfo", entry.getThreadInfo());
 
 		LogEvent event = eventBuilder.setLevel(level)
 				.setLoggerName(loggerName)
 				.setThreadName(entry.getThreadInfo())
 				.setThrownProxy(createThrowableProxy(entry.getException()))
-//				.setSource(entry.getLocation())
+				.setSource(entry.getLocation())
 				.setTimeMillis(entry.getTime())
-//				.setContextData(contextData)
+				.setContextData(contextData)
 				.setMessage(msg).build();
 		// log that event into Log4J2
 		loggerContext.getConfiguration().getLoggerConfig(loggerName).log(event);
 	}
-
-	/**
-	 * Returns the correlation if for requests if available
-	 * @return the correlation if for requests if available
-	 */
-//	private String getCorellationId(String threadName) {
-//		IWorkingContextHolder holder = workingContextHolderRef.get();
-//		if (holder != null && holder instanceof IExtendedWorkingContextHolder) {
-//			IExtendedWorkingContextHolder extHolder = (IExtendedWorkingContextHolder) holder;
-//				WorkingContext context = extHolder.getWorkingContext(threadName);
-//				if (context != null && context.getProcessID() != null) {
-//					return context.getProcessID().toString();
-//				}
-//		} 
-//		return "";
-//	}
-
-	/**
-	 * Returns the authenticated user name or an emtpy string
-	 * @return the authenticated user name or an emtpy string
-	 */
-//	private String getUserId() {
-//		ISubjectHolder holder = subjectHolderRef.get();
-//		if (holder != null) {
-//			Subject subject = holder.getSubject();
-//			if (subject != null) {
-//				Set<Principal> principals = subject.getPrincipals();
-//				if (principals != null && !principals.isEmpty()) {
-//					return principals.iterator().next().getName();
-//				}
-//			}
-//		} 
-//		return "";
-//	}
-
-	/**
-	 * Returns user and host information or an empty string
-	 * @return user and host information or an empty string
-	 */
-//	private String getUserAndHost() {
-//		VariablesPlugin variablesPlugin = VariablesPlugin.getDefault();
-//		if (variablesPlugin != null) {
-//			IStringVariableManager variableManager = variablesPlugin.getStringVariableManager();
-//			if (variableManager != null) {
-//				try {
-//					return variableManager.performStringSubstitution(SYSTEM_USER_AND_HOST_PATTERN);
-//				} catch (CoreException e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		}
-//		return "";
-//	}
 
 	/**
 	 * Format the bundle naming using logger name and bundle information
@@ -254,11 +199,12 @@ public class Log4JOSGiLogListener implements LogListener {
 	 * @return a {@link ThrowableProxy} or <code>null</code>
 	 */
 	ThrowableProxy createThrowableProxy(Throwable t) {
-		if (t == null)
+		if (t == null) {
 			return null;
-
-		ThrowableProxy throwableProxy = new ThrowableProxy(t);
-		return throwableProxy;
+		}
+		return new ThrowableProxy(t) {
+			private static final long serialVersionUID = 1L;
+		};
 	}
 
 	/**
@@ -272,11 +218,7 @@ public class Log4JOSGiLogListener implements LogListener {
 
 		Logger root = loggerContext.getRootLogger();
 		LogLevel rootLevel = from(root.getLevel());
-//		if (rootLevel.implies(LogLevel.INFO)) {
-			copy.put(org.osgi.service.log.Logger.ROOT_LOGGER_NAME, rootLevel);
-//		} else {
-//			copy.put(org.osgi.service.log.Logger.ROOT_LOGGER_NAME, LogLevel.INFO);
-//		}
+		copy.put(org.osgi.service.log.Logger.ROOT_LOGGER_NAME, rootLevel);
 		copy.put(EVENTS_BUNDLE, LogLevel.TRACE);
 		copy.put(EVENTS_FRAMEWORK, LogLevel.TRACE);
 		copy.put(EVENTS_SERVICE, LogLevel.TRACE);

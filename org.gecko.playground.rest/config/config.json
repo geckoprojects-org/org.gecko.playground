@@ -3,13 +3,13 @@
   
 	"org.apache.felix.http~playgroundHttp":
 	{
-		"org.osgi.service.http.port": "8085",
+		"org.osgi.service.http.port": "8080",
 		"org.osgi.service.http.host": "0.0.0.0",
 		"org.apache.felix.http.context_path": "playground/",
 		"org.apache.felix.http.name": "playgroundHttp",
 		"org.apache.felix.http.runtime.init.id": "playgroundHttp"
 	},
-	"JaxRsHttpWhiteboardRuntimeComponent~playerRest":
+	"JaxRsHttpWhiteboardRuntimeComponent~playgroundRest":
 	{
 		"jersey.jaxrs.whiteboard.name" : "playgroundRest",
 		"jersey.context.path" : "rest",

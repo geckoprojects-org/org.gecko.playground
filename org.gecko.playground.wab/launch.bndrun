@@ -1,21 +1,33 @@
--runfw: org.eclipse.osgi;version=3.13
+-runfw: org.eclipse.osgi;version='[3.16.0.v20200828-0759,3.16.0.v20200828-0759]'
 -runee: JavaSE-11
 -runprovidedcapabilities: ${native_capability}
 
--resolve.effective: active
+-resolve.effective: active;skip:='osgi.service'
 
 -runproperties: \
 	osgi.console.enable.builtin=false,\
 	osgi.console=
 
 -runbundles: \
-	org.apache.aries.spifly.dynamic.framework.extension;version='[1.3.2,1.3.3)',\
 	org.apache.felix.gogo.command;version='[1.1.2,1.1.3)',\
 	org.apache.felix.gogo.runtime;version='[1.1.4,1.1.5)',\
 	org.apache.felix.gogo.shell;version='[1.1.4,1.1.5)',\
-	org.apache.felix.http.jetty;version='[4.1.2,4.1.3)',\
 	org.apache.felix.http.servlet-api;version='[1.1.2,1.1.3)',\
-	org.gecko.playground.wab;version=snapshot
+	org.gecko.playground.wab;version=snapshot,\
+	org.apache.felix.http.jetty;version='[4.1.4,4.1.5)',\
+	org.gecko.playground.logging.config;version=snapshot,\
+	org.apache.aries.spifly.dynamic.framework.extension;version='[1.3.4,1.3.5)',\
+	slf4j.api;version='[1.7.30,1.7.31)',\
+	org.apache.logging.log4j.api;version='[2.17.1,2.17.2)',\
+	org.apache.logging.log4j.core;version='[2.17.1,2.17.2)',\
+	org.apache.logging.log4j.slf4j-impl;version='[2.17.1,2.17.2)',\
+	org.gecko.playground.logging.log4j;version=snapshot
+	
+-runbundles+: \
+    org.apache.logging.log4j.api;startlevel=1,\
+    org.apache.logging.log4j.core;startlevel=1,\
+    org.gecko.playground.logging.log4j;startlevel=2,\
+    *;startlevel=4
 
 -runrequires: \
 	playground.logging;filter:='(playground.logging=log4j)',\
@@ -26,3 +38,4 @@
 	
 -runvm: -DlogFolderPath=${build}, \n\
 	-Djetty.home.bundle=org.eclipse.jetty.osgi.boot
+-runblacklist: bnd.identity;id='slf4j.simple'

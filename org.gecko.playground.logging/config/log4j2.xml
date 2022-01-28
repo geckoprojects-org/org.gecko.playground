@@ -19,20 +19,30 @@
         </Console>
         
         <RollingFile name="FILE"
-                  fileName="${sys:logFolderPath}/logs/application.log"
-                     filePattern="${sys:logFolderPath}/logs/application-%d{yyyy-MM-dd}-%i.log">
+                  fileName="${sys:logFolderPath}/application.log"
+                     filePattern="${sys:logFolderPath}/application-%d{yyyy-MM-dd}-%i.log">
             <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
-            <PatternLayout pattern="%d{yyyy.MM.dd HH:mm:ss,SSS} [%X{userID}:%X{userAndHost}] [%X{corrID}] %-5p [%t] %c: %m%n"/>
+            <PatternLayout pattern="%d{yyyy.MM.dd HH:mm:ss,SSS} %-5p [%t] %c: %m%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5"/>
+        </RollingFile>
+        <RollingFile name="GECKO"
+                  fileName="${sys:logFolderPath}/gecko.log"
+                     filePattern="${sys:logFolderPath}/gecko-%d{yyyy-MM-dd}-%i.log">
+            <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{yyyy.MM.dd HH:mm:ss,SSS} %-5p [%t] %c: %m%n"/>
             <Policies>
                 <SizeBasedTriggeringPolicy size="5 MB"/>
             </Policies>
             <DefaultRolloverStrategy max="5"/>
         </RollingFile>
         <RollingFile name="OSGI"
-                  fileName="${sys:logFolderPath}/logs/osgi.log"
-                     filePattern="${sys:logFolderPath}/logs/osgi-%d{yyyy-MM-dd}-%i.log">
+                  fileName="${sys:logFolderPath}/osgi.log"
+                     filePattern="${sys:logFolderPath}/osgi-%d{yyyy-MM-dd}-%i.log">
             <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
-            <PatternLayout pattern="%d{yyyy.MM.dd HH:mm:ss,SSS} [%X{userID}:%X{userAndHost}] %-5p [%t] %c: %m%n"/>
+            <PatternLayout pattern="%d{yyyy.MM.dd HH:mm:ss,SSS} %-5p [%t] %c: %m%n"/>
             <Policies>
                 <SizeBasedTriggeringPolicy size="5 MB"/>
             </Policies>
@@ -42,12 +52,16 @@
     
     <Loggers> 
         <!-- Für OSGi Events: Bundle, Service, Framework -->
-        <Logger name="Events" level="WARN" additivity="false">
-            <AppenderRef ref="CONSOLE"/>
+        <Logger name="Events" level="INFO" additivity="false">
             <AppenderRef ref="OSGI"/>
+            <AppenderRef ref="CONSOLE"/>
+        </Logger> 
+        <Logger name="org.gecko.playground" level="INFO" additivity="false">
+            <AppenderRef ref="GECKO"/>
+            <AppenderRef ref="CONSOLE"/>
         </Logger> 
                           
-        <Root level="INFO">
+        <Root level="DEBUG">
             <AppenderRef ref="CONSOLE"/>
             <AppenderRef ref="FILE"/>
         </Root>

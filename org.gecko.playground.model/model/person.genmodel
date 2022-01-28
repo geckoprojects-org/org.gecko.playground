@@ -37,6 +37,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference person.ecore#//Person/address"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference person.ecore#//Person/contact"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference person.ecore#//Person/tag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Person/comment"/>
     </genClasses>
     <genClasses ecoreClass="person.ecore#//AddressBook">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//AddressBook/id"/>

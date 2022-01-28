@@ -1,0 +1,3 @@
+-privatepackage: \
+	org.geckoprojects.log4j.core,\
+	org.geckoprojects.log4j.factory

@@ -1,4 +1,4 @@
-package org.gecko.playground.logging;
+package org.gecko.playground.logging.impl;
 
 
 import java.text.MessageFormat;
@@ -23,92 +23,87 @@ public class Log4JJULBridgeHandler extends Handler {
 
 	// The caller is java.util.logging.Logger
 	private static final String FQCN = java.util.logging.Logger.class.getName();
-	private static final String UNKNOWN_LOGGER_NAME = "unknown.jul.logger";
+	private static final String UNKNOWN_LOGGER_NAME = "unknown.jul.logger"; //$NON-NLS-1$
 
 	private static final int TRACE_LEVEL_THRESHOLD = Level.FINEST.intValue();
 	private static final int DEBUG_LEVEL_THRESHOLD = Level.FINE.intValue();
 	private static final int INFO_LEVEL_THRESHOLD = Level.INFO.intValue();
 	private static final int WARN_LEVEL_THRESHOLD = Level.WARNING.intValue();
-	
-	
-  /**
-   * Adds a Log4JJULBridgeHandler instance to jul's root logger.
-   * <p/>
-   * <p/>
-   * This handler will redirect j.u.l. logging to Log4J. However, only logs enabled
-   * in j.u.l. will be redirected. For example, if a log statement invoking a
-   * j.u.l. logger is disabled, then the corresponding non-event will <em>not</em>
-   * reach Log4JBridgeHandler and cannot be redirected.
-   */
-  public static void install() {
-      getRootLogger().addHandler(new Log4JJULBridgeHandler());
-  }
 
-  /**
-   * Removes previously installed Log4JJULBridgeHandler instances. 
-   *
-   * @throws SecurityException A <code>SecurityException</code> is thrown, if a security manager
-   *                           exists and if the caller does not have
-   *                           LoggingPermission("control").
-   */
-  public static void uninstall() throws SecurityException {
-      java.util.logging.Logger rootLogger = getRootLogger();
-      Handler[] handlers = rootLogger.getHandlers();
-      for (int i = 0; i < handlers.length; i++) {
-          if (handlers[i] instanceof Log4JJULBridgeHandler) {
-              rootLogger.removeHandler(handlers[i]);
-          }
-      }
-  }
-  
-  /**
-   * Invoking this method removes/unregisters/detaches all handlers currently attached to the root logger
-   * @since 1.6.5
-   */
-  public static void removeHandlersForRootLogger() {
-      java.util.logging.Logger rootLogger = getRootLogger();
-      java.util.logging.Handler[] handlers = rootLogger.getHandlers();
-      for (int i = 0; i < handlers.length; i++) {
-          rootLogger.removeHandler(handlers[i]);
-      }
-  }
-  
-  private static java.util.logging.Logger getRootLogger() {
-    return java.util.logging.LogManager.getLogManager().getLogger("");
-}
+	/**
+	 * Adds a Log4JJULBridgeHandler instance to jul's root logger.
+	 * <p/>
+	 * <p/>
+	 * This handler will redirect j.u.l. logging to Log4J. However, only logs enabled in j.u.l. will be redirected. For
+	 * example, if a log statement invoking a j.u.l. logger is disabled, then the corresponding non-event will
+	 * <em>not</em> reach Log4JBridgeHandler and cannot be redirected.
+	 */
+	public static void install() {
+		getRootLogger().addHandler(new Log4JJULBridgeHandler());
+	}
+
+	/**
+	 * Removes previously installed Log4JJULBridgeHandler instances.
+	 *
+	 * @throws SecurityException A <code>SecurityException</code> is thrown, if a security manager exists and if the
+	 *           caller does not have LoggingPermission("control").
+	 */
+	public static void uninstall() throws SecurityException {
+		java.util.logging.Logger rootLogger = getRootLogger();
+		Handler[] handlers = rootLogger.getHandlers();
+		for (int i = 0; i < handlers.length; i++) {
+			if (handlers[i] instanceof Log4JJULBridgeHandler) {
+				rootLogger.removeHandler(handlers[i]);
+			}
+		}
+	}
+
+	/**
+	 * Invoking this method removes/unregisters/detaches all handlers currently attached to the root logger
+	 *
+	 * @since 1.6.5
+	 */
+	public static void removeHandlersForRootLogger() {
+		java.util.logging.Logger rootLogger = getRootLogger();
+		java.util.logging.Handler[] handlers = rootLogger.getHandlers();
+		for (int i = 0; i < handlers.length; i++) {
+			rootLogger.removeHandler(handlers[i]);
+		}
+	}
+
+	private static java.util.logging.Logger getRootLogger() {
+		return java.util.logging.LogManager.getLogManager().getLogger(""); //$NON-NLS-1$
+	}
 
 	/**
 	 * Publish a LogRecord.
 	 * <p/>
-	 * The logging request was made initially to a Logger object, which
-	 * initialized the LogRecord and forwarded it here.
+	 * The logging request was made initially to a Logger object, which initialized the LogRecord and forwarded it here.
 	 * <p/>
-	 * This handler ignores the Level attached to the LogRecord, as Log4J cares
-	 * about discarding log statements.
+	 * This handler ignores the Level attached to the LogRecord, as Log4J cares about discarding log statements.
 	 *
-	 * @param record Description of the log event. A null record is silently ignored
-	 *               and is not published.
+	 * @param logRecord Description of the log event. A null record is silently ignored and is not published.
 	 */
 	@Override
-	public void publish(LogRecord record) {
+	public void publish(LogRecord logRecord) {
 		// Silently ignore null records.
-		if (record == null) {
+		if (logRecord == null) {
 			return;
 		}
 
-		Logger log4jLogger = getLog4JLogger(record);
-		String message = record.getMessage(); // can be null!
+		Logger log4jLogger = getLog4JLogger(logRecord);
+		String message = logRecord.getMessage(); // can be null!
 		// this is a check to avoid calling the underlying logging system
 		// with a null message. While it is legitimate to invoke j.u.l. with
 		// a null message, other logging frameworks do not support this.
 		// see also http://jira.qos.ch/browse/SLF4J-99
 		if (message == null) {
-			message = "";
+			logRecord.setMessage(""); //$NON-NLS-1$
 		}
 		if (log4jLogger instanceof LocationAwareLogger) {
-			callLocationAwareLogger((LocationAwareLogger) log4jLogger, record);
+			callLocationAwareLogger((LocationAwareLogger) log4jLogger, logRecord);
 		} else {
-			callPlainLog4JLogger(log4jLogger, record);
+			callPlainLog4JLogger(log4jLogger, logRecord);
 		}
 	}
 
@@ -125,8 +120,8 @@ public class Log4JJULBridgeHandler extends Handler {
 	/**
 	 * Return the Logger instance that will be used for logging.
 	 */
-	protected Logger getLog4JLogger(LogRecord record) {
-		String name = record.getLoggerName();
+	protected Logger getLog4JLogger(LogRecord logRecord) {
+		String name = logRecord.getLoggerName();
 		if (name == null) {
 			name = UNKNOWN_LOGGER_NAME;
 		}
@@ -135,11 +130,12 @@ public class Log4JJULBridgeHandler extends Handler {
 
 	/**
 	 * Logs the message with Log4J location aware logger using a JUL {@link LogRecord}
-	 * @param lal the logger 
-	 * @param record the JUL {@link LogRecord}
+	 *
+	 * @param lal the logger
+	 * @param logRecord the JUL {@link LogRecord}
 	 */
-	protected void callLocationAwareLogger(LocationAwareLogger lal, LogRecord record) {
-		int julLevelValue = record.getLevel().intValue();
+	protected void callLocationAwareLogger(LocationAwareLogger lal, LogRecord logRecord) {
+		int julLevelValue = logRecord.getLevel().intValue();
 		org.apache.logging.log4j.Level log4jLevel;
 
 		if (julLevelValue <= TRACE_LEVEL_THRESHOLD) {
@@ -153,51 +149,54 @@ public class Log4JJULBridgeHandler extends Handler {
 		} else {
 			log4jLevel = org.apache.logging.log4j.Level.ERROR;
 		}
-		Message i18nMessage = getMessageI18N(record);
-		lal.logMessage(log4jLevel, null, FQCN, null, i18nMessage, record.getThrown());
+		Message i18nMessage = getMessageI18N(logRecord);
+		lal.logMessage(log4jLevel, null, FQCN, null, i18nMessage, logRecord.getThrown());
 	}
 
 	/**
 	 * Logs the JUL {@link LogRecord} with a Log4J Logger
+	 *
 	 * @param log4jLogger the logger
-	 * @param record the {@link LogRecord}
+	 * @param logRecord the {@link LogRecord}
 	 */
-	protected void callPlainLog4JLogger(Logger log4jLogger, LogRecord record) {
-		String i18nMessage = getMessageStringI18N(record);
-		int julLevelValue = record.getLevel().intValue();
+	protected void callPlainLog4JLogger(Logger log4jLogger, LogRecord logRecord) {
+		String i18nMessage = getMessageStringI18N(logRecord);
+		int julLevelValue = logRecord.getLevel().intValue();
 		if (julLevelValue <= TRACE_LEVEL_THRESHOLD) {
-			log4jLogger.trace(i18nMessage, record.getThrown());
+			log4jLogger.trace(i18nMessage, logRecord.getThrown());
 		} else if (julLevelValue <= DEBUG_LEVEL_THRESHOLD) {
-			log4jLogger.debug(i18nMessage, record.getThrown());
+			log4jLogger.debug(i18nMessage, logRecord.getThrown());
 		} else if (julLevelValue <= INFO_LEVEL_THRESHOLD) {
-			log4jLogger.info(i18nMessage, record.getThrown());
+			log4jLogger.info(i18nMessage, logRecord.getThrown());
 		} else if (julLevelValue <= WARN_LEVEL_THRESHOLD) {
-			log4jLogger.warn(i18nMessage, record.getThrown());
+			log4jLogger.warn(i18nMessage, logRecord.getThrown());
 		} else {
-			log4jLogger.error(i18nMessage, record.getThrown());
+			log4jLogger.error(i18nMessage, logRecord.getThrown());
 		}
 	}
 
 	/**
 	 * Get the record's message, possibly via a resource bundle.
-	 * @param record the JUL {@link LogRecord}
+	 *
+	 * @param logRecord the JUL {@link LogRecord}
 	 * @return the message {@link String}
 	 */
-	private String getMessageStringI18N(LogRecord record) {
-		String message = record.getMessage();
+	private String getMessageStringI18N(LogRecord logRecord) {
+		String message = logRecord.getMessage();
 
 		if (message == null) {
 			return null;
 		}
 
-		ResourceBundle bundle = record.getResourceBundle();
+		ResourceBundle bundle = logRecord.getResourceBundle();
 		if (bundle != null) {
 			try {
 				message = bundle.getString(message);
 			} catch (MissingResourceException e) {
+				message = e.getMessage();
 			}
 		}
-		Object[] params = record.getParameters();
+		Object[] params = logRecord.getParameters();
 		// avoid formatting when there are no or 0 parameters. see also
 		// http://jira.qos.ch/browse/SLF4J-203
 		if (params != null && params.length > 0) {
@@ -214,18 +213,19 @@ public class Log4JJULBridgeHandler extends Handler {
 
 	/**
 	 * Get the record's message, possibly via a resource bundle.
-	 * @param record the JUL {@link LogRecord}
+	 *
+	 * @param logRecord the JUL {@link LogRecord}
 	 * @return Log4J Message instance
 	 */
-	private Message getMessageI18N(LogRecord record) {
-		String message = record.getMessage();
+	private Message getMessageI18N(LogRecord logRecord) {
+		String message = logRecord.getMessage();
 
 		if (message == null) {
 			return null;
 		}
 
-		ResourceBundle bundle = record.getResourceBundle();
-		Object[] params = record.getParameters();
+		ResourceBundle bundle = logRecord.getResourceBundle();
+		Object[] params = logRecord.getParameters();
 		Message m = null;
 		// avoid formatting when there are no or 0 parameters. see also
 		// http://jira.qos.ch/browse/SLF4J-203
@@ -238,3 +238,4 @@ public class Log4JJULBridgeHandler extends Handler {
 	}
 
 }
+

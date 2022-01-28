@@ -1,4 +1,5 @@
 Fragment-Host: org.apache.logging.log4j.core;bundle-version="[2.13.0,3.0)"
+#Fragment-Host: org.gecko.log4.extension
 
 -includeresource: \
 	log4j2.xml=config/log4j2.xml

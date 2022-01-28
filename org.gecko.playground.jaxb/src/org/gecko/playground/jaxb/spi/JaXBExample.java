@@ -10,9 +10,11 @@ import javax.xml.bind.Marshaller;
 import org.gecko.playground.jaxb.Address;
 import org.gecko.playground.jaxb.Person;
 import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
 
-//@Component
-public class Example {
+@RequireJaXB
+@Component
+public class JaXBExample {
 
 	@Activate
 	public void activate() {
@@ -28,9 +30,10 @@ public class Example {
 		try {
 			JAXBContext context = JAXBContext.newInstance(Person.class);
 			Marshaller marshaller = context.createMarshaller();
-			File xmlFile = new File("/home/mark/tmp/testPersonJAXB.xml");
+			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+			File xmlFile = new File("testPersonJAXB.xml");
 			marshaller.marshal(result, xmlFile);
-			System.out.println("Saved file at /home/mark/tmp/testPersonJAXB.xml");
+			System.out.println("Saved file at testPersonJAXB.xml");
 			result = (Person) context.createUnmarshaller().unmarshal(xmlFile);
 			System.out.println("Loaded Person with name: " + result.getFirstName() + " " + result.getLastName());
 		} catch (JAXBException e) {

@@ -1,0 +1,41 @@
+-buildpath: \
+	osgi.annotation;version='7.0.0',\
+	osgi.core;version='7.0.0',\
+	osgi.cmpn;version='7.0.0',\
+	org.apache.logging.log4j.core;version=latest,\
+	org.apache.logging.log4j.api;version=latest
+	
+	
+
+javac.source: 11
+javac.target: 11
+
+Bundle-Version: 2.16.0.${tstamp}
+Private-Package: org.gecko.log4.extension
+Export-Package: \
+	org.gecko.log4.extension.api,\
+	org.apache.logging.log4j.core.*;version="2.16.0"
+	
+-includeresource: \
+	@log4j-core-2.16.0.jar!/META-INF/services/*,\
+	@log4j-core-2.16.0.jar!/META-INF/org/*,\
+	@log4j-core-2.16.0.jar!/*.xsd,\
+	@log4j-core-2.16.0.jar!/*.dtd
+	
+Import-Package: \
+	com.conversantmedia.util.concurrent;resolution:=optional,\
+	com.fasterxml.jackson.*;version="[2.12,3)";resolution:=optional,\
+    com.lmax.*;version="[3.4,4)";resolution:=optional,\
+    javax.activation;version="[1.2,2)";resolution:=optional,\
+	javax.jms;version="[1.1,2)";resolution:=optional,\
+	javax.mail.*;version="[1.6,2)";resolution:=optional,\
+    org.apache.commons.*;version="[1.21,2)";resolution:=optional,\
+	org.apache.kafka.clients.producer;resolution:=optional,\
+	org.codehaus.stax2;version="[4.2,5)";resolution:=optional,\
+	org.fusesource.jansi;version="[2.3,3)";resolution:=optional,\
+	org.jctools.queues;resolution:=optional,\
+	org.zeromq;version="[0.4,1)";resolution:=optional,\
+	sun.reflect;resolution:=optional,\
+	*
+	
+	
