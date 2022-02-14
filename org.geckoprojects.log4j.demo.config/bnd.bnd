@@ -1,0 +1,17 @@
+-buildpath: \
+	org.apache.logging.log4j.core;version=latest
+
+javac.source: 11
+javac.target: 11
+
+
+Fragment-Host: org.apache.logging.log4j.core;bundle-version="[2.13.0,3.0)"
+
+-includeresource: \
+	log4j2.xml=config/log4j2.xml
+
+Provide-Capability: gecko.logging; gecko.logging="logging.config";version:List<Version>="2.0"
+
+Bundle-Name: Gecko Demo Log4j Configuration
+Bundle-Description: Gecko Projects Logging Demo Log4j Configuration
+Bundle-Version: 1.0.0.${tstamp}-SNAPSHOT

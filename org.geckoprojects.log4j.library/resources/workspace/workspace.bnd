@@ -1,0 +1,11 @@
+# bnd workspace extension for log4j dependencies (we use maven here)
+-plugin.geckoLog4J: \
+	aQute.bnd.repository.maven.provider.MavenBndRepository;\
+		releaseUrl			= "https://repo.maven.apache.org/maven2/,https://devel.data-in-motion.biz/nexus/repository/dim-release/"; \
+		snapshotUrl			= "https://devel.data-in-motion.biz/nexus/repository/dim-snapshot/";\
+		index            	= "${.}/gecko-log4j.maven" ;\
+		readOnly            = true;\
+		name="Gecko Log4J Dependencies"
+
+# enable log4j project build path for all projects	
+-library: enable-log4j

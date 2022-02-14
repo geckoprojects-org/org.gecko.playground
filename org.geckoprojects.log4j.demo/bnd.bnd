@@ -1,0 +1,14 @@
+-buildpath: \
+	osgi.annotation;version='7.0.0',\
+	osgi.core;version='7.0.0',\
+	osgi.cmpn;version='7.0.0',\
+	org.apache.logging.log4j.api;version=latest,\
+	slf4j.api;version='1.7.30',\
+	org.geckoprojects.log4j;version=project
+
+javac.source: 11
+javac.target: 11
+
+Bundle-Name: Gecko Log4j Demo Component
+Bundle-Description: Gecko Projects Log4j Demo
+Bundle-Version: 1.0.0.${tstamp}-SNAPSHOT

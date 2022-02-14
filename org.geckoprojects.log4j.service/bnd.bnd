@@ -1,0 +1,20 @@
+-buildpath: \
+	osgi.annotation;version='7.0.0',\
+	osgi.core;version='7.0.0',\
+	osgi.cmpn;version='7.0.0',\
+	org.apache.logging.log4j.api;version=latest,\
+	org.geckoprojects.log4j;version=latest,\
+	org.apache.logging.log4j.core
+
+-testpath: \
+	${junit},\
+	${mockito},\
+	${mockito-deps}
+
+javac.source: 11
+javac.target: 11
+
+Bundle-Version: 1.0.0.${tstamp}-SNAPSHOT
+Bundle-Name: Gecko Log4J Services
+Bundle-Description: Gecko Log4J Extension to inject Loggers
+Bundle-Copyright: (c) 2022 Data In Motion Consulting GmbH

@@ -1,0 +1,2 @@
+# Gets the content of this variable from the bnd.bnd macro
+${mavendeps}

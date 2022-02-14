@@ -1,0 +1,8 @@
+Bundle-Version: 1.0.0.${tstamp}
+
+-baseline: *
+-buildpath: \
+  osgi.annotation; version=7.0.0
+
+javac.source: 11
+javac.target: 11
