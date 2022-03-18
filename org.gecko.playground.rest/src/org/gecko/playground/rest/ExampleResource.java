@@ -14,7 +14,7 @@ public class ExampleResource {
 	@GET
 	@Path("example")
 	public String sayHello() {
-		return "Hello";
+		return "Hello World";
 	}
 
 }

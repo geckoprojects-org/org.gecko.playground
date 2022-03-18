@@ -1,7 +1,0 @@
-# we add bnd library buildpath extension for projects
-# in this case we add log4j API and slf4j api to the buildpath 
--buildpath.log4j = ${log4j.lib}
-
-log4j.lib: \
-	slf4j.api;version='1.7.30',\
-	org.apache.logging.log4j.api;version='2.17.1'

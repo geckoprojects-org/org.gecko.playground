@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="OSGI-INF/l10n/org.gecko.bndtools.templates.emf.model">
-  <OCD id="org.geckoproject.log4j.templates" name="Log4J Configuration Fragment" description="Gecko Log4J Configuration Fragment Project Template">
-  </OCD>
-</metatype:MetaData>

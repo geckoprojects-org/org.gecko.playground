@@ -1,7 +1,9 @@
 Bundle-Version: 1.0.0.SNAPSHOT
 
 -baseline: *
--buildpath: osgi.annotation;version='7.0.0'
+-buildpath: \
+	osgi.annotation;version='7.0.0',\
+	jakarta.json-api;version='1.1'
 
 Export-Package: \
 	org.gecko.playground.configuration,\

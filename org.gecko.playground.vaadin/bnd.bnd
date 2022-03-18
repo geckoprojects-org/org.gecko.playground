@@ -8,7 +8,9 @@
 	com.vaadin.flow.component.notification;version='2.2.2',\
 	com.vaadin.flow.theme.lumo;version='2.4.7',\
 	org.apache.felix.http.servlet-api,\
-	com.vaadin.flow.osgi
+	com.vaadin.flow.osgi,\
+	com.vaadin.flow.data;version='2.4.6',\
+	com.vaadin.flow.component.textfield;version='2.3'
 
 -testpath: \
 	${junit},\

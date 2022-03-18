@@ -198,3 +198,53 @@
 2022.01.28 13:13:05,875 INFO  [Start Level: Equinox Container: 2bc77292-51e9-48e2-b9c8-1c53b9a26a59] Events.Bundle.org.osgi.util.promise: BundleEvent STARTED
 2022.01.28 13:13:05,875 INFO  [Framework Event Dispatcher: Equinox Container: 2bc77292-51e9-48e2-b9c8-1c53b9a26a59] Events.Framework.org.eclipse.osgi: FrameworkEvent STARTLEVEL CHANGED
 2022.01.28 13:13:06,104 INFO  [Jetty HTTP Service] Events.Service.org.gecko.playground.wab.jersey: ServiceEvent REGISTERED
+2022.03.18 08:41:26,739 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.gecko.playground.logging.log4j: BundleEvent STARTED
+2022.03.18 08:41:26,740 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.felix.gogo.command: BundleEvent STARTING
+2022.03.18 08:41:26,743 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.gogo.command: ServiceEvent REGISTERED
+2022.03.18 08:41:26,743 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.gogo.command: ServiceEvent REGISTERED
+2022.03.18 08:41:26,744 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.gogo.command: ServiceEvent REGISTERED
+2022.03.18 08:41:26,744 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.felix.gogo.command: BundleEvent STARTED
+2022.03.18 08:41:26,744 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.felix.gogo.runtime: BundleEvent STARTING
+2022.03.18 08:41:26,747 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.gogo.runtime: ServiceEvent REGISTERED
+2022.03.18 08:41:26,748 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.gogo.runtime: ServiceEvent REGISTERED
+2022.03.18 08:41:26,749 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.felix.gogo.runtime: BundleEvent STARTED
+2022.03.18 08:41:26,749 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.felix.gogo.shell: BundleEvent STARTING
+2022.03.18 08:41:26,751 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.03.18 08:41:26,752 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.03.18 08:41:26,753 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.03.18 08:41:26,754 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.03.18 08:41:26,755 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.03.18 08:41:26,756 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.03.18 08:41:26,757 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.felix.gogo.shell: BundleEvent STARTED
+2022.03.18 08:41:26,758 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.felix.http.servlet-api: BundleEvent STARTING
+2022.03.18 08:41:26,759 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.felix.http.servlet-api: BundleEvent STARTED
+2022.03.18 08:41:26,760 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.gecko.playground.wab: BundleEvent STARTING
+2022.03.18 08:41:26,760 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.gecko.playground.wab: BundleEvent STARTED
+2022.03.18 08:41:26,762 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.felix.http.jetty: BundleEvent STARTING
+2022.03.18 08:41:26,787 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.03.18 08:41:26,795 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.03.18 08:41:26,842 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.03.18 08:41:27,148 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.03.18 08:41:27,148 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.03.18 08:41:27,150 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.03.18 08:41:27,157 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.03.18 08:41:27,158 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.03.18 08:41:27,183 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.03.18 08:41:27,184 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.03.18 08:41:27,184 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.felix.http.jetty: BundleEvent STARTED
+2022.03.18 08:41:27,185 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.logging.log4j.slf4j-impl: BundleEvent STARTING
+2022.03.18 08:41:27,186 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.apache.logging.log4j.slf4j-impl: BundleEvent STARTED
+2022.03.18 08:41:27,187 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.slf4j.api: BundleEvent STARTING
+2022.03.18 08:41:27,187 INFO  [Start Level: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.slf4j.api: BundleEvent STARTED
+2022.03.18 08:41:27,187 INFO  [Framework Event Dispatcher: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Framework.org.eclipse.osgi: FrameworkEvent STARTLEVEL CHANGED
+2022.03.18 08:41:27,244 INFO  [Jetty HTTP Service] Events.Service.org.gecko.playground.wab: ServiceEvent REGISTERED
+2022.03.18 08:42:46,128 INFO  [pool-1-thread-1] Events.Bundle.org.gecko.playground.wab: BundleEvent STOPPING
+2022.03.18 08:42:46,129 INFO  [pool-1-thread-1] Events.Service.org.gecko.playground.wab: ServiceEvent UNREGISTERING
+2022.03.18 08:42:46,130 INFO  [pool-1-thread-1] Events.Bundle.org.gecko.playground.wab: BundleEvent STOPPED
+2022.03.18 08:42:46,131 INFO  [pool-1-thread-1] Events.Bundle.org.gecko.playground.wab: BundleEvent UNRESOLVED
+2022.03.18 08:42:46,132 INFO  [pool-1-thread-1] Events.Bundle.org.gecko.playground.wab: BundleEvent UPDATED
+2022.03.18 08:42:46,142 INFO  [Refresh Thread: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Bundle.org.gecko.playground.wab: BundleEvent RESOLVED
+2022.03.18 08:42:46,142 INFO  [Framework Event Dispatcher: Equinox Container: 9408ead5-e3c9-4dc9-a891-684fd2f5c107] Events.Framework.org.eclipse.osgi: FrameworkEvent PACKAGES REFRESHED
+2022.03.18 08:42:46,142 INFO  [pool-1-thread-1] Events.Bundle.org.gecko.playground.wab: BundleEvent STARTING
+2022.03.18 08:42:46,142 INFO  [pool-1-thread-1] Events.Bundle.org.gecko.playground.wab: BundleEvent STARTED
+2022.03.18 08:42:46,150 INFO  [Jetty HTTP Service] Events.Service.org.gecko.playground.wab: ServiceEvent REGISTERED

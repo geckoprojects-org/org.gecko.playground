@@ -27,3 +27,5 @@ Import-Package: \
 	com.sun.org.apache.xerces.internal.jaxp;'resolution:'=optional,\
 	org.apache.xml.*;'resolution:'=optional,\
 	*
+	
+-resourceonly: true
