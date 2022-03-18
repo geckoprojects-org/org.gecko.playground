@@ -1,0 +1,5 @@
+Bundle-Name: Local Cluster Configuration
+Bundle-Description: Gecko Playground Client Cluster Configiuration
+
+-includeresource: \
+	OSGI-INF/configurator/config.json=config/config-local.json

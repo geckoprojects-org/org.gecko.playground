@@ -75,5 +75,4 @@ public class WorkmodeInitializer {
 		return properties;
 	}
 
-
 }

@@ -1,0 +1,58 @@
+-runfw: org.eclipse.osgi;version=3.13
+-runprovidedcapabilities: ${native_capability}
+
+-resolve.effective: active
+
+-runpath: slf4j.simple, slf4j.api
+-runvm -Dorg.slf4j.simpleLogger.defaultLogLevel=debug
+
+-runproperties: \
+	osgi.console=,\
+	osgi.console.enable.builtin=false
+	
+-runbundles: \
+	org.apache.felix.configadmin;version='[1.9.22,1.9.23)',\
+	org.apache.felix.configurator;version='[1.0.8,1.0.9)',\
+	org.apache.felix.converter;version='[1.0.14,1.0.15)',\
+	org.apache.felix.gogo.command;version='[1.1.2,1.1.3)',\
+	org.apache.felix.gogo.runtime;version='[1.1.4,1.1.5)',\
+	org.apache.felix.gogo.shell;version='[1.1.4,1.1.5)',\
+	org.apache.felix.scr;version='[2.1.26,2.1.27)',\
+	org.gecko.playground.clusterinfo;version=snapshot,\
+	org.gecko.playground.clusterinfo.config.server;version=snapshot,\
+	org.osgi.service.clusterinfo;version='[1.0.0,1.0.1)',\
+	org.osgi.util.pushstream;version='[1.0.0,1.0.1)',\
+	bcprov;version='[1.70.0,1.70.1)',\
+	bctls;version='[1.70.0,1.70.1)',\
+	bcutil;version='[1.70.0,1.70.1)',\
+	org.paremus.netty.tls;version='[1.0.0,1.0.1)',\
+	com.paremus.cluster.api;version='[1.0.0,1.0.1)',\
+	com.paremus.discovery.cluster;version='[1.0.0,1.0.1)',\
+	com.paremus.dosgi.api;version='[1.0.0,1.0.1)',\
+	com.paremus.dosgi.net;version='[1.0.0,1.0.1)',\
+	com.paremus.dosgi.topology.common;version='[1.0.0,1.0.1)',\
+	com.paremus.dosgi.topology.simple;version='[1.0.0,1.0.1)',\
+	com.paremus.gossip.netty;version='[1.0.0,1.0.1)',\
+	io.netty.buffer;version='[4.1.72,4.1.73)',\
+	io.netty.codec;version='[4.1.72,4.1.73)',\
+	io.netty.common;version='[4.1.72,4.1.73)',\
+	io.netty.handler;version='[4.1.72,4.1.73)',\
+	io.netty.resolver;version='[4.1.72,4.1.73)',\
+	io.netty.tcnative-classes;version='[2.0.46,2.0.47)',\
+	io.netty.transport;version='[4.1.72,4.1.73)',\
+	org.apache.felix.eventadmin;version='[1.6.2,1.6.3)',\
+	slf4j.api;version='[1.7.35,1.7.36)',\
+	slf4j.simple;version='[1.7.30,1.7.31)'
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.eventadmin)(version>=1.3.2))',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.configadmin)(version>=1.9.22))',\
+	bnd.identity;id='com.paremus.dosgi.net',\
+	bnd.identity;id='com.paremus.discovery.cluster',\
+	bnd.identity;id='com.paremus.dosgi.topology.simple',\
+	bnd.identity;id='org.gecko.playground.clusterinfo.config.server',\
+	bnd.identity;id='org.gecko.playground.clusterinfo',\
+	bnd.identity;id='slf4j.simple';version:Version='1.7.30'
+-runee: JavaSE-11

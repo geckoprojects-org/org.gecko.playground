@@ -55,9 +55,11 @@ public class WorkmodeServiceImpl implements WorkmodeService {
 			configuration = configadmin.getConfiguration(Namespaces.CONFIGURATION_CORE);
 			Dictionary<String,Object> properties = configuration.getProperties();
 			if (properties != null) {
+				String oldMode = (String) properties.get(WorkmodeConstants.CONFIG_PROP_WORKMODE);
 				Dictionary<String, Object> newProperties = new Hashtable<String, Object>();
 				newProperties.put(WorkmodeConstants.CONFIG_PROP_WORKMODE, workmode.name());
 				configuration.updateIfDifferent(newProperties);
+				System.out.println("Workmode was updated from '" + oldMode + "' to '" + workmode.name() + "'");
 			} else {
 				logger.warn("There is no work mode configuration for '{}'", Namespaces.CONFIGURATION_CORE);
 				throw new IllegalStateException("There is no work mode configuration.");

@@ -3,7 +3,8 @@
 	osgi.core;version='7.0.0',\
 	osgi.cmpn;version='7.0.0',\
 	org.gecko.playground,\
-	org.osgi.service.condition;version='1.0'
+	org.osgi.service.condition;version='1.0',\
+	org.osgi.service.clusterinfo;version='1.0'
 
 -testpath: \
 	${junit},\
