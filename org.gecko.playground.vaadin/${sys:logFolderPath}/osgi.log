@@ -1,0 +1,216 @@
+2022.04.29 15:51:43,643 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.gecko.playground.logging.log4j: BundleEvent STARTED
+2022.04.29 15:51:43,644 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.gogo.command: BundleEvent STARTING
+2022.04.29 15:51:43,646 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.command: ServiceEvent REGISTERED
+2022.04.29 15:51:43,647 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.command: ServiceEvent REGISTERED
+2022.04.29 15:51:43,647 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.command: ServiceEvent REGISTERED
+2022.04.29 15:51:43,647 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.gogo.command: BundleEvent STARTED
+2022.04.29 15:51:43,648 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.gogo.shell: BundleEvent STARTING
+2022.04.29 15:51:43,650 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.gogo.shell: BundleEvent STARTED
+2022.04.29 15:51:43,650 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.helger.ph-commons: BundleEvent STARTING
+2022.04.29 15:51:43,671 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.helger.ph-commons: ServiceEvent REGISTERED
+2022.04.29 15:51:43,677 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.helger.ph-commons: ServiceEvent REGISTERED
+2022.04.29 15:51:43,678 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.helger.ph-commons: ServiceEvent REGISTERED
+2022.04.29 15:51:43,679 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.helger.ph-commons: ServiceEvent REGISTERED
+2022.04.29 15:51:43,689 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.helger.ph-commons: ServiceEvent REGISTERED
+2022.04.29 15:51:43,690 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.helger.ph-commons: ServiceEvent REGISTERED
+2022.04.29 15:51:43,695 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.helger.ph-commons: ServiceEvent REGISTERED
+2022.04.29 15:51:43,701 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.helger.ph-commons: ServiceEvent REGISTERED
+2022.04.29 15:51:43,705 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.helger.ph-commons: ServiceEvent REGISTERED
+2022.04.29 15:51:43,706 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.helger.ph-commons: ServiceEvent REGISTERED
+2022.04.29 15:51:43,708 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.helger.ph-commons: ServiceEvent REGISTERED
+2022.04.29 15:51:43,709 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.helger.ph-commons: BundleEvent STARTED
+2022.04.29 15:51:43,710 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.helger.ph-css: BundleEvent STARTING
+2022.04.29 15:51:43,710 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.helger.ph-css: BundleEvent STARTED
+2022.04.29 15:51:43,711 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.external.gentyref: BundleEvent STARTING
+2022.04.29 15:51:43,711 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.external.gentyref: BundleEvent STARTED
+2022.04.29 15:51:43,712 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.external.gwt: BundleEvent STARTING
+2022.04.29 15:51:43,712 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.external.gwt: BundleEvent STARTED
+2022.04.29 15:51:43,712 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.server: BundleEvent STARTING
+2022.04.29 15:51:43,714 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.server: BundleEvent STARTED
+2022.04.29 15:51:43,715 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.commons.fileupload: BundleEvent STARTING
+2022.04.29 15:51:43,716 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.commons.fileupload: BundleEvent STARTED
+2022.04.29 15:51:43,717 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.commons.io: BundleEvent STARTING
+2022.04.29 15:51:43,718 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.commons.io: BundleEvent STARTED
+2022.04.29 15:51:43,718 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.commons.logging: BundleEvent STARTING
+2022.04.29 15:51:43,718 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.commons.logging: BundleEvent STARTED
+2022.04.29 15:51:43,719 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.httpcomponents.httpclient: BundleEvent STARTING
+2022.04.29 15:51:43,721 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.httpcomponents.httpclient: ServiceEvent REGISTERED
+2022.04.29 15:51:43,730 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.httpcomponents.httpclient: ServiceEvent REGISTERED
+2022.04.29 15:51:43,730 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.httpcomponents.httpclient: ServiceEvent REGISTERED
+2022.04.29 15:51:43,731 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.httpcomponents.httpclient: BundleEvent STARTED
+2022.04.29 15:51:43,732 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.jsoup: BundleEvent STARTING
+2022.04.29 15:51:43,732 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.jsoup: BundleEvent STARTED
+2022.04.29 15:51:43,732 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.client: BundleEvent STARTING
+2022.04.29 15:51:43,733 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.client: BundleEvent STARTED
+2022.04.29 15:51:43,733 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.component.button: BundleEvent STARTING
+2022.04.29 15:51:43,733 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.component.button: BundleEvent STARTED
+2022.04.29 15:51:43,733 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.component.notification: BundleEvent STARTING
+2022.04.29 15:51:43,734 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.component.notification: BundleEvent STARTED
+2022.04.29 15:51:43,734 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.component.orderedlayout: BundleEvent STARTING
+2022.04.29 15:51:43,734 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.component.orderedlayout: BundleEvent STARTED
+2022.04.29 15:51:43,735 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.data: BundleEvent STARTING
+2022.04.29 15:51:43,735 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.data: BundleEvent STARTED
+2022.04.29 15:51:43,735 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.html.components: BundleEvent STARTING
+2022.04.29 15:51:43,735 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.html.components: BundleEvent STARTED
+2022.04.29 15:51:43,736 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.osgi: BundleEvent STARTING
+2022.04.29 15:51:43,736 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.osgi: BundleEvent STARTED
+2022.04.29 15:51:43,737 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.push: BundleEvent STARTING
+2022.04.29 15:51:43,737 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.push: BundleEvent STARTED
+2022.04.29 15:51:43,738 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.gecko.playground.vaadin: BundleEvent STARTING
+2022.04.29 15:51:43,738 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.gecko.playground.vaadin: BundleEvent STARTED
+2022.04.29 15:51:43,739 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.osgi.util.function: BundleEvent STARTING
+2022.04.29 15:51:43,739 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.osgi.util.function: BundleEvent STARTED
+2022.04.29 15:51:43,739 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.sun.activation.jakarta.activation: BundleEvent STARTING
+2022.04.29 15:51:43,739 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.sun.activation.jakarta.activation: BundleEvent STARTED
+2022.04.29 15:51:43,741 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.theme.lumo: BundleEvent STARTING
+2022.04.29 15:51:43,741 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.theme.lumo: BundleEvent STARTED
+2022.04.29 15:51:43,742 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.jakarta.xml.bind-api: BundleEvent STARTING
+2022.04.29 15:51:43,742 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.jakarta.xml.bind-api: BundleEvent STARTED
+2022.04.29 15:51:43,743 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.httpcomponents.httpcore: BundleEvent STARTING
+2022.04.29 15:51:43,743 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.httpcomponents.httpcore: BundleEvent STARTED
+2022.04.29 15:51:43,743 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.component.textfield: BundleEvent STARTING
+2022.04.29 15:51:43,743 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.com.vaadin.flow.component.textfield: BundleEvent STARTED
+2022.04.29 15:51:43,744 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.net.bytebuddy.byte-buddy: BundleEvent STARTING
+2022.04.29 15:51:43,744 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.net.bytebuddy.byte-buddy: BundleEvent STARTED
+2022.04.29 15:51:43,744 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.commons.commons-compress: BundleEvent STARTING
+2022.04.29 15:51:43,745 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.commons.commons-compress: BundleEvent STARTED
+2022.04.29 15:51:43,745 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.gogo.runtime: BundleEvent STARTING
+2022.04.29 15:51:43,748 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.runtime: ServiceEvent REGISTERED
+2022.04.29 15:51:43,749 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.runtime: ServiceEvent REGISTERED
+2022.04.29 15:51:43,750 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.04.29 15:51:43,751 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.04.29 15:51:43,752 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.04.29 15:51:43,752 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.04.29 15:51:43,753 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.04.29 15:51:43,754 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.shell: ServiceEvent REGISTERED
+2022.04.29 15:51:43,756 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.gogo.runtime: BundleEvent STARTED
+2022.04.29 15:51:43,756 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.http.jetty: BundleEvent STARTING
+2022.04.29 15:51:43,759 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.04.29 15:51:43,760 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.04.29 15:51:43,802 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.04.29 15:51:44,168 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.04.29 15:51:44,168 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.04.29 15:51:44,171 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.04.29 15:51:44,181 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.04.29 15:51:44,182 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.04.29 15:51:44,185 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.04.29 15:51:44,185 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.http.jetty: ServiceEvent REGISTERED
+2022.04.29 15:51:44,185 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.http.jetty: BundleEvent STARTED
+2022.04.29 15:51:44,186 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.http.servlet-api: BundleEvent STARTING
+2022.04.29 15:51:44,186 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.http.servlet-api: BundleEvent STARTED
+2022.04.29 15:51:44,187 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.scr: BundleEvent STARTING
+2022.04.29 15:51:44,198 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.scr: ServiceEvent REGISTERED
+2022.04.29 15:51:44,228 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.vaadin.flow.client: ServiceEvent REGISTERED
+2022.04.29 15:51:44,236 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.vaadin.flow.client: ServiceEvent REGISTERED
+2022.04.29 15:51:44,238 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.vaadin.flow.data: ServiceEvent REGISTERED
+2022.04.29 15:51:44,256 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.vaadin.flow.push: ServiceEvent REGISTERED
+2022.04.29 15:51:44,262 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.gecko.playground.vaadin: ServiceEvent REGISTERED
+2022.04.29 15:51:44,867 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.gecko.playground.vaadin: ServiceEvent REGISTERED
+2022.04.29 15:51:44,868 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.gecko.playground.vaadin: ServiceEvent REGISTERED
+2022.04.29 15:51:44,870 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.com.vaadin.flow.theme.lumo: ServiceEvent REGISTERED
+2022.04.29 15:51:44,872 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.scr: ServiceEvent REGISTERED
+2022.04.29 15:51:44,874 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.gogo.runtime: ServiceEvent REGISTERED
+2022.04.29 15:51:44,874 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.scr: ServiceEvent REGISTERED
+2022.04.29 15:51:44,874 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Service.org.apache.felix.scr: ServiceEvent REGISTERED
+2022.04.29 15:51:44,874 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.felix.scr: BundleEvent STARTED
+2022.04.29 15:51:44,875 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.logging.log4j.slf4j-impl: BundleEvent STARTING
+2022.04.29 15:51:44,875 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.apache.logging.log4j.slf4j-impl: BundleEvent STARTED
+2022.04.29 15:51:44,875 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.osgi.service.cm: BundleEvent STARTING
+2022.04.29 15:51:44,875 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.osgi.service.cm: BundleEvent STARTED
+2022.04.29 15:51:44,876 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.osgi.service.log: BundleEvent STARTING
+2022.04.29 15:51:44,876 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.osgi.service.log: BundleEvent STARTED
+2022.04.29 15:51:44,876 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.osgi.util.promise: BundleEvent STARTING
+2022.04.29 15:51:44,877 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.osgi.util.promise: BundleEvent STARTED
+2022.04.29 15:51:44,877 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.osgi.util.pushstream: BundleEvent STARTING
+2022.04.29 15:51:44,877 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.org.osgi.util.pushstream: BundleEvent STARTED
+2022.04.29 15:51:44,878 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.slf4j.api: BundleEvent STARTING
+2022.04.29 15:51:44,878 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Bundle.slf4j.api: BundleEvent STARTED
+2022.04.29 15:51:44,878 INFO  [Framework Event Dispatcher: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] Events.Framework.org.eclipse.osgi: FrameworkEvent STARTLEVEL CHANGED
+2022.04.29 15:54:18,920 INFO  [pool-1-thread-1] Events.Bundle.net.bytebuddy.byte-buddy: BundleEvent STOPPING
+2022.04.29 15:54:18,925 INFO  [pool-1-thread-1] Events.Bundle.net.bytebuddy.byte-buddy: BundleEvent STOPPED
+2022.04.29 15:54:18,926 INFO  [pool-1-thread-1] Events.Bundle.net.bytebuddy.byte-buddy: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,927 INFO  [pool-1-thread-1] Events.Bundle.net.bytebuddy.byte-buddy: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,928 INFO  [pool-1-thread-1] Events.Bundle.org.apache.aries.spifly.dynamic.framework.extension: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,928 INFO  [pool-1-thread-1] Events.Bundle.org.apache.aries.spifly.dynamic.framework.extension: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,928 INFO  [pool-1-thread-1] Events.Bundle.org.apache.commons.commons-compress: BundleEvent STOPPING
+2022.04.29 15:54:18,928 INFO  [pool-1-thread-1] Events.Bundle.org.apache.commons.commons-compress: BundleEvent STOPPED
+2022.04.29 15:54:18,929 INFO  [pool-1-thread-1] Events.Bundle.org.apache.commons.commons-compress: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,929 INFO  [pool-1-thread-1] Events.Bundle.org.apache.commons.commons-compress: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,929 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.gogo.runtime: BundleEvent STOPPING
+2022.04.29 15:54:18,929 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.gogo.runtime: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,930 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.gogo.runtime: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,930 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.gogo.runtime: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,931 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.gogo.runtime: BundleEvent STOPPED
+2022.04.29 15:54:18,931 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.gogo.runtime: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,932 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.gogo.runtime: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,932 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.http.jetty: BundleEvent STOPPING
+2022.04.29 15:54:18,932 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.http.jetty: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,933 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.http.jetty: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,933 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.http.jetty: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,933 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.http.jetty: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,935 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.http.jetty: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,935 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.http.jetty: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,935 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.http.jetty: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,942 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.http.jetty: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,942 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.http.jetty: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,942 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.http.jetty: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,943 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.http.jetty: BundleEvent STOPPED
+2022.04.29 15:54:18,943 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.http.jetty: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,943 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.http.jetty: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,943 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.http.servlet-api: BundleEvent STOPPING
+2022.04.29 15:54:18,943 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.http.servlet-api: BundleEvent STOPPED
+2022.04.29 15:54:18,944 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.http.servlet-api: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,944 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.http.servlet-api: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,944 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.scr: BundleEvent STOPPING
+2022.04.29 15:54:18,944 INFO  [pool-1-thread-1] Events.Service.org.gecko.playground.vaadin: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,945 INFO  [pool-1-thread-1] Events.Service.org.gecko.playground.vaadin: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,945 INFO  [pool-1-thread-1] Events.Service.org.gecko.playground.vaadin: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,945 INFO  [pool-1-thread-1] Events.Service.com.vaadin.flow.client: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,946 INFO  [pool-1-thread-1] Events.Service.com.vaadin.flow.client: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,946 INFO  [pool-1-thread-1] Events.Service.com.vaadin.flow.push: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,947 INFO  [pool-1-thread-1] Events.Service.com.vaadin.flow.theme.lumo: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,947 INFO  [pool-1-thread-1] Events.Service.com.vaadin.flow.data: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,948 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.scr: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,948 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.scr: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,948 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.scr: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,948 INFO  [pool-1-thread-1] Events.Service.org.apache.felix.scr: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,949 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.scr: BundleEvent STOPPED
+2022.04.29 15:54:18,949 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.scr: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,949 INFO  [pool-1-thread-1] Events.Bundle.org.apache.felix.scr: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,949 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.api: BundleEvent STOPPING
+2022.04.29 15:54:18,949 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.api: BundleEvent STOPPED
+2022.04.29 15:54:18,949 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.api: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,949 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.api: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,949 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.slf4j-impl: BundleEvent STOPPING
+2022.04.29 15:54:18,950 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.slf4j-impl: BundleEvent STOPPED
+2022.04.29 15:54:18,950 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.slf4j-impl: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,950 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.slf4j-impl: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,950 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.service.cm: BundleEvent STOPPING
+2022.04.29 15:54:18,950 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.service.cm: BundleEvent STOPPED
+2022.04.29 15:54:18,950 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.service.cm: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,950 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.service.cm: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,950 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.service.log: BundleEvent STOPPING
+2022.04.29 15:54:18,950 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.service.log: BundleEvent STOPPED
+2022.04.29 15:54:18,950 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.service.log: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,952 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.service.log: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,952 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.util.promise: BundleEvent STOPPING
+2022.04.29 15:54:18,952 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.util.promise: BundleEvent STOPPED
+2022.04.29 15:54:18,952 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.util.promise: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,954 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.util.promise: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,954 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.util.pushstream: BundleEvent STOPPING
+2022.04.29 15:54:18,954 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.util.pushstream: BundleEvent STOPPED
+2022.04.29 15:54:18,954 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.util.pushstream: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,955 INFO  [pool-1-thread-1] Events.Bundle.org.osgi.util.pushstream: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,955 INFO  [pool-1-thread-1] Events.Bundle.slf4j.api: BundleEvent STOPPING
+2022.04.29 15:54:18,955 INFO  [pool-1-thread-1] Events.Bundle.slf4j.api: BundleEvent STOPPED
+2022.04.29 15:54:18,955 INFO  [pool-1-thread-1] Events.Bundle.slf4j.api: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,955 INFO  [pool-1-thread-1] Events.Bundle.slf4j.api: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,955 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.core: BundleEvent STOPPING
+2022.04.29 15:54:18,955 INFO  [pool-1-thread-1] Events.Service.org.apache.logging.log4j.core: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,955 INFO  [pool-1-thread-1] Events.Service.org.apache.logging.log4j.core: ServiceEvent UNREGISTERING
+2022.04.29 15:54:18,956 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.core: BundleEvent STOPPED
+2022.04.29 15:54:18,956 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.core: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,956 INFO  [pool-1-thread-1] Events.Bundle.org.apache.logging.log4j.core: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,956 INFO  [pool-1-thread-1] Events.Bundle.org.gecko.playground.logging.config: BundleEvent UNRESOLVED
+2022.04.29 15:54:18,956 INFO  [pool-1-thread-1] Events.Bundle.org.gecko.playground.logging.config: BundleEvent UNINSTALLED
+2022.04.29 15:54:18,956 INFO  [pool-1-thread-1] Events.Bundle.org.gecko.playground.logging.log4j: BundleEvent STOPPING

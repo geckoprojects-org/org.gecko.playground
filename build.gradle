@@ -1,4 +1,74 @@
 // Available to customize the build
+plugins {
+  id "org.sonarqube" version "3.3"
+  id 'jacoco'
+  id 'java'
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectName", "Gecko EMF Utilities"
+    property "sonar.projectKey", "geckoprojects-org_org.gecko.emf.utils"
+    property "sonar.organization", "geckoprojects-org"
+    property "sonar.host.url", "https://sonarcloud.io"
+    property "sonar.coverage.jacoco.xmlReportPaths", "${rootDir}/build/reports/jacoco/codeCoverageReport/codeCoverageReport.xml"
+    property "sonar.exclusions", "org.gecko.emf.collections/**/*.java, org.gecko.emf.pushstreams/**/*.java, org.gecko.emf.util.model/**/*.java, org.gecko.emf.json.tests/**/*.java, org.gecko.emf.bson.tests/**/*.java"
+  }
+}
+
+repositories {
+    mavenCentral()
+}
+
 tasks.named('wrapper') {
   jarFile = rootProject.file('.gradle-wrapper/gradle-wrapper.jar')
 }
+
+// Disable bnd plugin built-in task 'testOSGi' and register custom task for testing
+gradle.startParameter.excludedTaskNames += "testOSGi"
+
+tasks.register('itest'){
+  subprojects.each { sp ->
+    sp.tasks.each { t -> 
+      if(t.name ==~ "resolve\\.(test|export)(.*)?"){
+        dependsOn t
+      }
+    }
+  }
+  subprojects.each { sp ->
+    sp.tasks.each { t -> 
+      if(t.name ==~ "testrun\\.test(.*)?"){
+        dependsOn t
+      }
+    }
+  }
+  subprojects.each { sp ->
+    sp.tasks.each { t -> 
+      if(t.name ==~ "export\\.export(.*)?"){
+        dependsOn t
+      }
+    }
+  }
+}
+
+task codeCoverageReport(type: JacocoReport) {
+    dependsOn itest
+    // Gather execution data from all subprojects
+    executionData fileTree(project.rootDir.absolutePath).include("**/**/jacoco.exec")
+
+    // Add all relevant sourcesets from the subprojects
+    subprojects.each {
+        sourceSets it.sourceSets.main
+    }
+
+    reports {
+        xml.enabled true
+        html.enabled true
+        csv.enabled false
+    }
+}
+
+tasks.named("sonarqube") {
+    dependsOn(codeCoverageReport)
+}
+

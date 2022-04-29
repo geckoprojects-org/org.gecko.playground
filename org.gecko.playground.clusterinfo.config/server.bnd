@@ -1,5 +1,0 @@
-Bundle-Name: Server Cluster Configuration
-Bundle-Description: Gecko Playground Server Cluster Configiuration
-
--includeresource: \
-	OSGI-INF/configurator/config.json=config/config-svr.json

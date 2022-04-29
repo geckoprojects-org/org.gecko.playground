@@ -1,0 +1,19 @@
+lib.version: 9.1.0
+
+-buildpath:  \
+	org.apache.lucene:lucene-core;version=${lib.version}
+	
+-includeresource: \
+	OSGI-OPT/src=@${repo;org.apache.lucene:lucene-core:jar:sources;${lib.version};EXACT},\
+	@${repo;org.apache.lucene:lucene-core:jar;${lib.version};EXACT}!/META-INF/services/*
+
+Bundle-Version: ${lib.version}
+
+Export-Package: org.apache.lucene.*
+Bundle-Name: Apache Lucene OSGi Bundle
+Import-Package: \
+	sun.*;'resolution:'=optional,\
+	com.sun.*;'resolution:'=optional,\
+	*
+	
+-resourceonly: true;

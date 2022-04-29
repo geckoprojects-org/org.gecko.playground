@@ -1,0 +1,49 @@
+2022.04.29 15:51:43,891 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] org.eclipse.jetty.util.log: Logging initialized @1115ms to org.eclipse.jetty.util.log.Slf4jLog
+2022.04.29 15:51:43,954 INFO  [pool-3-thread-1] com.vaadin.flow.server.osgi.OSGiAccess: Unable to detect used OSGi framework version due to null
+2022.04.29 15:51:44,003 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] org.eclipse.jetty.server.Server: jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 11.0.15+10-Ubuntu-0ubuntu0.20.04.1
+2022.04.29 15:51:44,086 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] org.eclipse.jetty.server.session: DefaultSessionIdManager workerName=node0
+2022.04.29 15:51:44,086 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] org.eclipse.jetty.server.session: No SessionScavenger set, using defaults
+2022.04.29 15:51:44,089 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] org.eclipse.jetty.server.session: node0 Scavenging every 600000ms
+2022.04.29 15:51:44,101 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@3c691a29{/,null,AVAILABLE}
+2022.04.29 15:51:44,102 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] org.eclipse.jetty.server.Server: Started @1329ms
+2022.04.29 15:51:44,102 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] org.eclipse.jetty.server.session: node0 Scavenging every 660000ms
+2022.04.29 15:51:44,155 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@598e1881{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022.04.29 15:51:44,157 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] LogService.org.apache.felix.http.jetty: Started Jetty 9.4.45.v20220203 at port(s) HTTP:8080 on context path / [minThreads=8,maxThreads=200,acceptors=2,selectors=8]
+2022.04.29 15:51:44,195 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] ROOT: bundle org.apache.felix.scr:2.2.0 (34) Starting with globalExtender setting: false
+2022.04.29 15:51:44,199 INFO  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] ROOT: bundle org.apache.felix.scr:2.2.0 (34)  Version = 2.2.0
+2022.04.29 15:51:44,265 WARN  [Start Level: Equinox Container: c748b3a6-c779-4b3e-9a04-1ce9503c08bc] com.vaadin.flow.server.DefaultDeploymentConfiguration: Following issues were discovered with deployment configuration:
+Running in Vaadin 13 (Flow 1) compatibility mode.
+
+This mode uses webjars/Bower for client side dependency management and HTML imports for dependency loading.
+
+The default mode in Vaadin 14+ (Flow 2+) is based on npm for dependency management and JavaScript modules for dependency inclusion.
+
+See http://vaadin.com/docs for more information.
+
+Vaadin is running in DEBUG MODE.
+When deploying application for production, remember to disable debug features. See more from https://vaadin.com/docs/
+2022.04.29 15:54:18,940 INFO  [pool-1-thread-1] org.eclipse.jetty.server.AbstractConnector: Stopped ServerConnector@598e1881{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022.04.29 15:54:18,940 INFO  [pool-1-thread-1] org.eclipse.jetty.server.session: node0 Stopped scavenging
+2022.04.29 15:54:18,940 INFO  [pool-1-thread-1] org.eclipse.jetty.server.handler.ContextHandler: Stopped o.e.j.s.ServletContextHandler@3c691a29{/,null,STOPPED}
+2022.04.29 15:54:18,942 INFO  [pool-1-thread-1] LogService.org.apache.felix.http.jetty: Stopped Jetty.
+2022.04.29 15:56:21,270 INFO  [FelixStartLevel] org.eclipse.jetty.util.log: Logging initialized @982ms to org.eclipse.jetty.util.log.Slf4jLog
+2022.04.29 15:56:21,328 INFO  [pool-2-thread-1] com.vaadin.flow.server.osgi.OSGiAccess: Unable to detect used OSGi framework version due to null
+2022.04.29 15:56:21,395 INFO  [FelixStartLevel] org.eclipse.jetty.server.Server: jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 11.0.15+10-Ubuntu-0ubuntu0.20.04.1
+2022.04.29 15:56:21,457 INFO  [FelixStartLevel] org.eclipse.jetty.server.session: DefaultSessionIdManager workerName=node0
+2022.04.29 15:56:21,457 INFO  [FelixStartLevel] org.eclipse.jetty.server.session: No SessionScavenger set, using defaults
+2022.04.29 15:56:21,459 INFO  [FelixStartLevel] org.eclipse.jetty.server.session: node0 Scavenging every 660000ms
+2022.04.29 15:56:21,470 INFO  [FelixStartLevel] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@6af43db{/,null,AVAILABLE}
+2022.04.29 15:56:21,471 INFO  [FelixStartLevel] org.eclipse.jetty.server.Server: Started @1186ms
+2022.04.29 15:56:21,471 INFO  [FelixStartLevel] org.eclipse.jetty.server.session: node0 Scavenging every 600000ms
+2022.04.29 15:56:21,522 INFO  [FelixStartLevel] org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@a5a3534{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022.04.29 15:56:21,646 WARN  [FelixStartLevel] com.vaadin.flow.server.DefaultDeploymentConfiguration: Following issues were discovered with deployment configuration:
+Running in Vaadin 13 (Flow 1) compatibility mode.
+
+This mode uses webjars/Bower for client side dependency management and HTML imports for dependency loading.
+
+The default mode in Vaadin 14+ (Flow 2+) is based on npm for dependency management and JavaScript modules for dependency inclusion.
+
+See http://vaadin.com/docs for more information.
+
+Vaadin is running in DEBUG MODE.
+When deploying application for production, remember to disable debug features. See more from https://vaadin.com/docs/

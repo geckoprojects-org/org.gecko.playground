@@ -1,6 +1,0 @@
-Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
-
-Bundle-Version: 1.0.0.SNAPSHOT
--sub: *.bnd
-
--resourceonly: true
