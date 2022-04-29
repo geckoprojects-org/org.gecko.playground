@@ -1,7 +1,4 @@
 -buildpath: \
-	osgi.annotation;version='7.0.0',\
-	osgi.core;version='7.0.0',\
-	osgi.cmpn;version='7.0.0',\
 	com.vaadin.flow.component.button;version='2.2.2',\
 	com.vaadin.flow.component.orderedlayout;version='2.3.2',\
 	com.vaadin.flow.server;version='2.4.6',\
@@ -10,18 +7,11 @@
 	org.apache.felix.http.servlet-api,\
 	com.vaadin.flow.osgi,\
 	com.vaadin.flow.data;version='2.4.6',\
-	com.vaadin.flow.component.textfield;version='2.3'
-
--testpath: \
-	${junit},\
-	${mockito},\
-	${mockito-deps}
-
-javac.source: 11
-javac.target: 11
+	com.vaadin.flow.component.textfield;version='2.3',\
+	org.osgi.service.http.whiteboard,\
+	org.osgi.framework
 
 Vaadin-OSGi-Extender: true
-Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: Vaadin Component
 Bundle-Description: Gecko Playground Vaadin Component
 Export-Package: org.gecko.playground.vaadin

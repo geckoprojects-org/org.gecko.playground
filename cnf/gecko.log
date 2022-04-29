@@ -1,0 +1,5 @@
+2022.04.29 15:36:27,186 INFO  [FelixStartLevel] org.gecko.playground.tasks.spi.TaskComponent: Register CORE activation condition
+2022.04.29 15:36:27,196 INFO  [EXTERNAL 1 - INITIALIZATION TASK] org.gecko.playground.tasks.demo.ExampleInitializationTask: Started activation EXTERNAL 1 ...
+2022.04.29 15:36:27,217 INFO  [FelixStartLevel] org.gecko.playground.workmode.internal.WorkmodeInitializer: Initialized workmode 'OFFLINE' at Fri Apr 29 15:36:27 CEST 2022
+2022.04.29 15:36:35,197 INFO  [EXTERNAL 1 - INITIALIZATION TASK] org.gecko.playground.tasks.demo.ExampleInitializationTask: Finished initialization EXTERNAL 1
+2022.04.29 15:36:35,199 INFO  [EXTERNAL 1 - INITIALIZATION TASK] org.gecko.playground.tasks.spi.TaskComponent: Updated condition '{active.tasks=[externalTest], osgi.condition.id=playground.task}'

@@ -1,19 +1,9 @@
 -buildpath: \
-	osgi.annotation;version='7.0.0',\
-	osgi.core;version='7.0.0',\
-	osgi.cmpn;version='7.0.0',\
 	org.gecko.rest.jersey,\
-	jakarta.ws.rs-api;version='2.1'
+	jakarta.ws.rs-api;version='2.1',\
+	jakarta.annotation-api,\
+	org.osgi.framework
 
--testpath: \
-	${junit},\
-	${mockito},\
-	${mockito-deps}
-
-javac.source: 11
-javac.target: 11
-
-Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: REST Interface
 Bundle-Description: Gecko Playground REST with JaxRs Whiteboard
 

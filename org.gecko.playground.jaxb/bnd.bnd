@@ -1,8 +1,4 @@
--buildpath: \
-	osgi.annotation;version='7.0.0',\
-	osgi.core;version='7.0.0',\
-	osgi.cmpn;version='7.0.0',\
-	jakarta.xml.bind-api
+-buildpath: jakarta.xml.bind-api
 
 Bundle-Version: 1.0.0.SNAPSHOT
 -privatepackage: org.gecko.playground.jaxb.spi

@@ -1,4 +1,3 @@
-Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Activator: org.gecko.playground.logging.Activator
 
 -privatepackage: \
@@ -8,7 +7,7 @@ Bundle-Activator: org.gecko.playground.logging.Activator
 Bundle-Name: Logging Log4j
 Bundle-Description: Gecko Playground Logging Log4j
 
-Provide-Capability: \
-	osgi.service; \
-		objectClass=org.apache.logging.log4j.Logger
+#Provide-Capability: \
+#	osgi.service; \
+#		objectClass=org.apache.logging.log4j.Logger
 		

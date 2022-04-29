@@ -1,12 +1,11 @@
-Bundle-Version: 1.0.0.SNAPSHOT
-
--baseline: *
 -buildpath: \
-	osgi.annotation;version='7.0.0',\
 	jakarta.ws.rs-api;version='2.1',\
 	org.gecko.playground.http.jersey;version=latest,\
 	jakarta.xml.bind-api,\
-	org.gecko.playground.jaxb;version=latest
+	org.gecko.playground.jaxb;version=latest,\
+	org.osgi.util.promise,\
+	org.osgi.service.jaxrs,\
+	org.osgi.util.function
 
 Bundle-Name: Jersey REST as Web Application Bundle
 Bundle-Description: Gecko Playground Jersey REST as Web Application Bundle

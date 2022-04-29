@@ -21,6 +21,12 @@ import java.util.concurrent.TimeUnit;
  * @since 28.01.2022
  */
 public class DBDriver {
+	
+	static interface ConnectionListener {
+		void onConnected(String result);
+		void onConnectionError(Throwable t, String message);
+		void onDisconnected(String result);
+	}
 
 	/**
 	 * Creates a new instance.
@@ -36,18 +42,12 @@ public class DBDriver {
 		withError = error;
 	}
 
-	static interface ConnectionListener {
-		void onConnected(String result);
-		void onConnectionError(Throwable t, String message);
-		void onDisconnected(String result);
-	}
-
 	private final boolean withError;
 	private String connectionId;
 	private ConnectionListener listener;
 
 	public void connectAsync() {
-		Executors.newScheduledThreadPool(1).schedule(this::doConnect, 10, TimeUnit.SECONDS);
+		Executors.newScheduledThreadPool(1).schedule(this::doConnect, 5, TimeUnit.SECONDS);
 	}
 
 	private void doConnect() {

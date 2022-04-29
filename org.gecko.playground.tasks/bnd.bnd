@@ -1,18 +1,10 @@
 -buildpath: \
-	osgi.annotation;version='7.0.0',\
-	osgi.core;version='7.0.0',\
-	osgi.cmpn;version='7.0.0',\
-	org.osgi.service.condition
+	org.osgi.service.condition,\
+	org.osgi.util.promise;version=latest,\
+	org.osgi.util.function,\
+	org.osgi.framework,\
+	org.osgi.service.log
 
--testpath: \
-	${junit},\
-	${mockito},\
-	${mockito-deps}
-
-javac.source: 11
-javac.target: 11
-
-Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: Tasks Runtime
 Bundle-Description: Gecko Playground Tasks Runtime
 -privatepackage: \

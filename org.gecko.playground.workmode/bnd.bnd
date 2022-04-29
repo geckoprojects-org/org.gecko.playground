@@ -1,20 +1,10 @@
 -buildpath: \
-	osgi.annotation;version='7.0.0',\
-	osgi.core;version='7.0.0',\
-	osgi.cmpn;version='7.0.0',\
 	org.gecko.playground,\
 	org.osgi.service.condition;version='1.0',\
-	org.osgi.service.clusterinfo;version='1.0'
+	org.osgi.service.cm,\
+	org.osgi.service.log,\
+	org.osgi.framework
 
--testpath: \
-	${junit},\
-	${mockito},\
-	${mockito-deps}
-
-javac.source: 11
-javac.target: 11
-
-Bundle-Version: 1.0.0.SNAPSHOT
 Bundle-Name: Workmode 
 Bundle-Description: Gecko Playground Workmode
 -privatepackage: \

@@ -1,16 +1,10 @@
 -buildpath: \
-	osgi.annotation;version='7.0.0',\
-	osgi.core;version='7.0.0',\
-	osgi.cmpn;version='7.0.0',\
 	org.gecko.playground;version=latest,\
 	org.apache.logging.log4j.api;version=latest,\
 	org.apache.logging.log4j.core;version=latest,\
-	slf4j.api;version='1.7'
-
--baseline: *
--testpath: \
-	${junit},\
-	${mockito},\
-	${mockito-deps}
+	slf4j.api;version=latest,\
+	org.osgi.framework;version=latest,\
+	org.osgi.service.log;version=latest,\
+	org.osgi.util.tracker;version=latest
 
 -sub: *.bnd

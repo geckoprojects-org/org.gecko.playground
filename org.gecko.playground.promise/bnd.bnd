@@ -1,15 +1,6 @@
 -buildpath: \
-	osgi.annotation; version=7.0.0,\
-	osgi.core; version=7.0.0,\
-	osgi.cmpn; version=7.0.0,\
-	org.osgi.service.condition;version=latest
-
--testpath: \
-	${junit},\
-	${mockito},\
-	${mockito-deps}
-
-javac.source: 11
-javac.target: 11
-
-Bundle-Version: 0.0.0.${tstamp}
+	org.osgi.service.condition;version=latest,\
+	org.osgi.util.promise,\
+	org.osgi.util.function,\
+	org.osgi.framework,\
+	org.osgi.service.log

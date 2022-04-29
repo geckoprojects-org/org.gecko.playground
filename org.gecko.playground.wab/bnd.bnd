@@ -1,10 +1,9 @@
 Bundle-Version: 1.0.0.SNAPSHOT
 
 -buildpath: \
-	osgi.annotation;version='7.0.0',\
-	osgi.core;version='7.0.0',\
 	org.apache.felix.http.servlet-api,\
-	slf4j.api;version='1.7'
+	slf4j.api;version='1.7',\
+	org.osgi.framework
 
 
 Web-ContextPath: /test

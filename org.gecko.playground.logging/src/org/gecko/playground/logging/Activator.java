@@ -25,12 +25,11 @@ import org.osgi.util.tracker.ServiceTracker;
  * @author xv884az
  *
  */
-//@Requirement(namespace = "osgi.identity", name = "org.gecko.log4.extension", filter = "(&(version>=2.13)(!(version>=3.0)))"),
 @Capability(namespace = Namespaces.CAPABILITY_LOGGING, name = Namespaces.LOGGING_LOG4J, version = "2.0")
 @Requirements({
-	@Requirement(namespace = "osgi.identity", name = "org.apache.logging.log4j.api", filter = "(&(version>=2.13)(!(version>=3.0)))"),
-	@Requirement(namespace = "osgi.identity", name = "org.apache.logging.log4j.core", filter = "(&(version>=2.13)(!(version>=3.0)))"),
-	@Requirement(namespace = "osgi.identity", name = "org.apache.logging.log4j.slf4j-impl", filter = "(&(version>=2.13)(!(version>=3.0)))"),
+	@Requirement(namespace = "osgi.identity", name = "org.apache.logging.log4j.api"),
+	@Requirement(namespace = "osgi.identity", name = "org.apache.logging.log4j.core"),
+	@Requirement(namespace = "osgi.identity", name = "org.apache.logging.log4j.slf4j-impl"),
 	@Requirement(namespace = Namespaces.CAPABILITY_LOGGING, name = Namespaces.LOGGING_CONFIG, version="2.0", filter="(stage=*)")
 })
 public class Activator implements BundleActivator {

@@ -31,7 +31,7 @@
     </genClasses>
     <genClasses ecoreClass="person.ecore#//Person">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Person/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Person/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Person/firstNames"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Person/lastName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Person/birthDate"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference person.ecore#//Person/address"/>
@@ -59,5 +59,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Tag/comment"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference person.ecore#//Tag/tag"/>
     </genClasses>
+    <genClasses ecoreClass="person.ecore#//Test"/>
   </genPackages>
 </genmodel:GenModel>

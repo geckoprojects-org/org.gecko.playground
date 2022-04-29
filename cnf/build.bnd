@@ -1,106 +1,63 @@
--include: https://gitlab.com/gecko.io/geckoEMF/-/raw/develop/cnf/geckoEMF/geckoEMF.bnd,\
-	https://gitlab.com/gecko.io/jersey_jaxrs_whiteboard/-/raw/master/cnf/geckoRest/geckoRest.bnd
+# We include setups for
+#	Gecko EMF OSGi - geckoEMF
+#	OSGi-Test Support - gecko-osgitest
+#	DIMC Github-Configuration - gecko-dimc
+#	Jacoco Support - gecko-jacoco
+-library: \
+	geckoEMF,\
+	geckoOSGi-Test,\
+	geckoDIMC
+	
+# Needed because we enabled library 'gecko-dimc' 	
+github-project: org.gecko.playground
+base-version: 1.0.0.SNAPSHOT
 
-# Configure Repositories
--plugin.1.R7.API: \
-	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
-		snapshotUrls=https://oss.sonatype.org/content/repositories/osgi/; \
-		releaseUrls=https://repo.maven.apache.org/maven2/; \
-		revision=org.osgi.enroute:osgi-api:7.0.0; \
-		readOnly=true; \
-		name="OSGi R7 API"
--plugin.2.Enterprise.API: \
-	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
-		snapshotUrls=https://oss.sonatype.org/content/repositories/osgi/; \
-		releaseUrls=https://repo.maven.apache.org/maven2/; \
-		revision=org.osgi.enroute:enterprise-api:7.0.0; \
-		readOnly=true; \
-		name="Enterprise Java APIs"
--plugin.3.R7.Impl: \
-	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
-		snapshotUrls=https://oss.sonatype.org/content/repositories/osgi/; \
-		releaseUrls=https://repo.maven.apache.org/maven2/; \
-		revision=org.osgi.enroute:impl-index:7.0.0; \
-		readOnly=true; \
-		name="OSGi R7 Reference Implementations"
--plugin.4.Test: \
-	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
-		snapshotUrls=https://oss.sonatype.org/content/repositories/osgi/; \
-		releaseUrls=https://repo.maven.apache.org/maven2/; \
-		revision=org.osgi.enroute:test-bundles:7.0.0; \
-		readOnly=true; \
-		name="Testing Bundles"
--plugin.5.Debug: \
-	aQute.bnd.repository.maven.pom.provider.BndPomRepository; \
-		snapshotUrls=https://oss.sonatype.org/content/repositories/osgi/; \
-		releaseUrls=https://repo.maven.apache.org/maven2/; \
-		revision=org.osgi.enroute:debug-bundles:7.0.0; \
-		readOnly=true; \
-		name="Debug Bundles"
--plugin.6.Central: \
-	aQute.bnd.repository.maven.provider.MavenBndRepository; \
-		releaseUrl=https://repo.maven.apache.org/maven2/; \
-		index=${.}/central.maven; \
-		readOnly=true; \
-		name="Maven Central"
--plugin.7.Local: \
+# Maven Central Group-Id
+-groupid: org.gecko.playground
+-noimportjava: true
+
+# No simultanious release - We only release new version to Maven Central
+#releaseNotNeeded: ${findproviders;osgi.identity;(&(osgi.identity=${bsn})(version=${version}));REPOS}
+
+# If release not needed is empty, no Bundle has been found and for maven we do a release to the remote Repo. If not, we only do a release to the local .m2 Repo
+#-maven-release.local: ${if;${def;releaseNotNeeded};local;remote}
+
+javac.source: 11
+javac.target: 11
+
+-require-bnd "(version>=6.2.0)"
+
+-plugin.Central: \
+    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+        snapshotUrl="https://oss.sonatype.org/content/repositories/snapshots/"; \
+        releaseUrl=https://repo.maven.apache.org/maven2/; \
+        index=${.}/central.maven; \
+        readOnly=true; \
+        poll.time=-1; \
+        name="Central"
+
+-plugin.Local: \
 	aQute.bnd.deployer.repository.LocalIndexedRepo; \
 		name = Local; \
 		pretty = true; \
 		local = ${build}/local
 
--plugin.8.Templates: \
+-plugin.Temp: \
 	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Templates; \
+		name = Temp; \
 		pretty = true; \
-		local = ${build}/templates
-
--plugin.9.Release: \
-	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Release; \
-		pretty = true; \
-		local = ${build}/release
+		local = ${build}/cache/temp
 		
-#-plugin.20.geckoemf:\
-#	aQute.bnd.repository.maven.pom.provider.BndPomRepository;\
-#       name="Gecko EMF";\
-#       releaseUrls=https://repo.maven.apache.org/maven2/;\
-#        snapshotUrls=https://oss.sonatype.org/content/repositories/snapshots/;\
-#        revision="org.geckoprojects.emf:org.gecko.emf.osgi.bom:4.0.0"
+-use-emf: false	
+	
+# Default build path when using EMF and Gecko EMF
+emf.lib: \
+	org.osgi.service.component.annotations;version=1.4,\
+	org.osgi.framework;version=1.9,\
+	org.gecko.emf.osgi.api;version=latest,\
+	org.eclipse.emf.common;version=latest,\
+	org.eclipse.emf.ecore;version=latest,\
+	org.eclipse.emf.ecore.xmi;version=latest
+	
+-buildpath.emf: ${if;${-use-emf};${emf.lib}}
 
-#-plugin.21.geckorest:\
-#	aQute.bnd.repository.maven.pom.provider.BndPomRepository;\
-#        name="Gecko REST";\
-#        releaseUrls=https://repo.maven.apache.org/maven2/;\
-#        snapshotUrls=https://oss.sonatype.org/content/repositories/snapshots/;\
-#        revision="org.geckoprojects.jaxrs:org.gecko.rest.jersey.bom:4.0.5"
-
--releaserepo: Release
--baselinerepo: Release
-
-# Always use contracts
--contract: *
-
-javac.source: 11
-javac.target: 11
-javac.debug:  on
-
-Bundle-Copyright: (c) 2021 Data In Motion Consulting GmbH
-Bundle-Vendor: Data In Motion Consulting GmbH
-Bundle-ContactAddress: info[at]data-in-motion.biz
-
-# Set Git revision information in the manifests of built bundles
-Git-Descriptor:           ${system-allow-fail;git describe --dirty --always}
-Git-SHA:                  ${system-allow-fail;git rev-list -1 HEAD}
-
-# JUnit
-junit: org.apache.servicemix.bundles.junit; version=4.12
-mockito: org.mockito.mockito-core; version=2.13.0
-mockito-deps: org.objenesis; version=2.6.0,\
-  net.bytebuddy.byte-buddy; version=1.7.9,\
-  net.bytebuddy.byte-buddy-agent; version=1.7.9 
- 
-# Fixup for the org.osgi.service.condition SNAPSHOT jar
--fixupmessages 'No metadata for revision';\
-    restrict:=error;\
-    is:=warning

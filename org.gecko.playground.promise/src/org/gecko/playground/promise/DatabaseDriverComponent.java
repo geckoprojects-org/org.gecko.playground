@@ -5,6 +5,7 @@ import java.util.Hashtable;
 import java.util.concurrent.Executors;
 
 import org.gecko.playground.promise.DBDriver.ConnectionListener;
+import org.osgi.annotation.bundle.Capability;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.component.annotations.Activate;
@@ -24,6 +25,7 @@ import org.osgi.util.promise.PromiseFactory;
  * @author mark
  * @since 28.01.2022
  */
+@Capability(namespace = "osgi.service", name = "Database Condition", attribute = {"objectClass=org.osgi.service.condition.Condition"})
 @Component
 public class DatabaseDriverComponent {
 	
