@@ -1,0 +1,15 @@
+# enables JUnit 5 support for this project
+-enable-junit5: true
+
+# sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
+-buildpath: \
+	org.osgi.framework,\
+	org.osgi.util.promise,\
+	org.osgi.service.cm
+
+Private-Package: org.gecko.playground.tasks.tests
+
+Bundle-Version: 1.0.0.SNAPSHOT
+
+# Sometimes without DynamicImport Mockito will not find certain classes
+#DynamicImport-Package: *
