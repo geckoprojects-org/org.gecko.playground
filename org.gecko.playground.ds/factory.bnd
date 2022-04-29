@@ -1,0 +1,3 @@
+-privatepackage: \
+	org.gecko.playground.ds.factory,\
+	org.gecko.playground.ds.factory.cmd
