@@ -60,5 +60,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference person.ecore#//Tag/tag"/>
     </genClasses>
     <genClasses ecoreClass="person.ecore#//Test"/>
+    <genClasses ecoreClass="person.ecore#//Test2"/>
   </genPackages>
 </genmodel:GenModel>

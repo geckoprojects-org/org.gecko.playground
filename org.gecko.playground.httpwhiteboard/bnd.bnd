@@ -1,0 +1,11 @@
+Bundle-Name: Gecko Playground Http Whiteboard
+Bundle-Description: Example for Http Whiteboard
+
+-includeresource: \
+	static=static
+
+-buildpath: \
+	org.apache.felix.http.servlet-api,\
+	org.osgi.service.http.whiteboard,\
+	org.osgi.framework
+-privatepackage: org.gecko.playground.httpwhiteboard

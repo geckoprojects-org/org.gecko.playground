@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<h1>First D3.js document</h1>
+
+<!-- Add a bit of text -->
+<p>This is my first d3.js page</p>
+<!-- Add a svg area, empty -->
+<div id="area">
+</div>
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script>
+margin = ({top: 20, right: 20, bottom: 30, left: 40})
+height = 440
+focusHeight = 100
+width = 800;
+
+
+  function brushed({selection}) {
+    if (selection) {
+      svg.property("value", selection.map(x.invert, x).map(d3.utcDay.round));
+      svg.dispatch("input");
+    }
+  }
+
+  function brushended({selection}) {
+    if (!selection) {
+      gb.call(brush.move, defaultSelection);
+    }
+  }
+
+data = d3.csv("aapl.csv").row(function(d) {
+        return {
+            data: d.data,
+            value: d.value // converting name to upper case 
+        }; 
+   });
+
+
+area = (x, y) => d3.area()
+    .defined(d => !isNaN(d.value))
+    .x(d => x(d.date))
+    .y0(y(0))
+    .y1(d => y(d.value))
+    
+x = d3.scaleUtc()
+    .domain(d3.extent(data, d => d.date))
+    .range([margin.left, width - margin.right])
+    
+y = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.value)])
+    .range([height - margin.bottom, margin.top])
+    
+xAxis = (g, x, height) => g
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0))
+    
+yAxis = (g, y, title) => g
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(y))
+    .call(g => g.select(".domain").remove())
+    .call(g => g.selectAll(".title").data([title]).join("text")
+        .attr("class", "title")
+        .attr("x", -margin.left)
+        .attr("y", 10)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "start")
+        .text(title))
+        
+svg = d3.select("#area")
+  .append("svg")
+      .attr("viewBox", [0, 0, width, focusHeight])
+      .style("display", "block");
+
+brush = d3.brushX()
+      .extent([[margin.left, 0.5], [width - margin.right, focusHeight - margin.bottom + 0.5]])
+      .on("brush", brushed)
+      .on("end", brushended);
+
+defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
+
+  svg.append("g")
+      .call(xAxis, x, focusHeight);
+
+  svg.append("path")
+      .datum(data)
+      .attr("fill", "steelblue")
+      .attr("d", area(x, y.copy().range([focusHeight - margin.bottom, 4])));
+
+  gb = svg.append("g")
+      .call(brush)
+      .call(brush.move, defaultSelection);
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<h1>First D3.js document</h1>
+
+<!-- Add a bit of text -->
+<p>This is my first d3.js page</p>
+<!-- Add a svg area, empty -->
+<div id="area"></div>
+
+<!-- Load d3.js -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script>
+const div = d3.select("#area");
+
+var data;
+d3.csv("aapl.csv", (d) => {
+  return {
+    date: d.date,
+    value: +d.close
+  };
+}, (error, rows) => {
+	console.log(rows);
+	data = rows;
+});
+//data = Object.assign(d3.csvParse(await FileAttachment("aapl.csv").text(), d3.autoType).map(({date, close}) => ({date, value: close})), {y: "Close $"});
+	
+console.log(data)
+
+margin = ({top: 20, right: 20, bottom: 30, left: 40})
+height = 440
+width = 640
+focusHeight = 100
+
+x = d3.scaleUtc()
+    .domain(d3.extent(data, d => d.date))
+    .range([margin.left, width - margin.right])
+const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
+
+   
+</script>

@@ -15,6 +15,9 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
+import org.osgi.service.component.annotations.ReferencePolicyOption;
 
 /**
  * 
@@ -34,9 +37,9 @@ public class GreedyConsumer {
 		System.out.println("De-activate Greedy Consumer");
 	}
 	
-	@Reference
+//	@Reference
 //	@Reference(policy = ReferencePolicy.DYNAMIC, cardinality = ReferenceCardinality.OPTIONAL, policyOption = ReferencePolicyOption.GREEDY)
-//	@Reference(policyOption = ReferencePolicyOption.GREEDY)
+	@Reference(policyOption = ReferencePolicyOption.GREEDY)
 	public void setImportant(Important i) {
 		String importance = i.very() ? "VERY" : "less";
 		System.out.println("Set " + importance + " service; important: " + i.important() + ", very: " + i.very() + " from " + i);

@@ -64,4 +64,5 @@
     <eLiterals name="OTHER" value="100"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Test"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Test2"/>
 </ecore:EPackage>
