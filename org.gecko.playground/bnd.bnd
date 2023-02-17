@@ -1,4 +1,4 @@
--buildpath: jakarta.json-api;version='1.1'
+-buildpath: jakarta.json-api
 
 Export-Package: \
 	org.gecko.playground.configuration,\

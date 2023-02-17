@@ -426,3 +426,21 @@ Caused by: java.lang.IllegalStateException: InjectionManagerFactory not found.
 2022.04.29 16:03:37,970 INFO  [Jetty HTTP Service] org.eclipse.jetty.server.handler.ContextHandler: Stopped o.a.f.h.j.i.w.WebAppBundleContext@5296d0f1{/rest,bundle://b5be084a-0c88-489d-b7c5-5747b9933a19_39.0:0/,STOPPED}{rest}
 2022.04.29 16:03:37,983 INFO  [Jetty HTTP Service] org.eclipse.jetty.webapp.StandardDescriptorProcessor: NO JSP Support for /rest, did not find org.eclipse.jetty.jsp.JettyJspServlet
 2022.04.29 16:03:38,035 INFO  [Jetty HTTP Service] org.eclipse.jetty.server.handler.ContextHandler: Started o.a.f.h.j.i.w.WebAppBundleContext@24b296fd{/rest,bundle://b5be084a-0c88-489d-b7c5-5747b9933a19_39.1:0/,AVAILABLE}{rest}
+2023.02.17 13:59:39,840 INFO  [Start Level: Equinox Container: c53e8998-c4e8-4834-be61-3c6ad74bbc1c] org.eclipse.jetty.server.Server: jetty-11.0.13; built: 2022-12-07T20:47:15.149Z; git: a04bd1ccf844cf9bebc12129335d7493111cbff6; jvm 11.0.17+8-post-Ubuntu-1ubuntu220.04
+2023.02.17 13:59:39,954 INFO  [Start Level: Equinox Container: c53e8998-c4e8-4834-be61-3c6ad74bbc1c] org.eclipse.jetty.server.session.DefaultSessionIdManager: Session workerName=node0
+2023.02.17 13:59:39,977 INFO  [Start Level: Equinox Container: c53e8998-c4e8-4834-be61-3c6ad74bbc1c] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@71f7f71e{/,null,AVAILABLE}
+2023.02.17 13:59:39,982 INFO  [Start Level: Equinox Container: c53e8998-c4e8-4834-be61-3c6ad74bbc1c] org.eclipse.jetty.server.Server: Started Server@6d212c8f{STARTING}[11.0.13,sto=0] @1516ms
+2023.02.17 13:59:40,057 INFO  [Start Level: Equinox Container: c53e8998-c4e8-4834-be61-3c6ad74bbc1c] org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@671dbcf3{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2023.02.17 13:59:40,060 INFO  [Start Level: Equinox Container: c53e8998-c4e8-4834-be61-3c6ad74bbc1c] org.apache.felix.http: Started Jetty 11.0.13 at port(s) HTTP:8080 on context path / [minThreads=8,maxThreads=200,acceptors=1,selectors=6]
+2023.02.17 14:02:03,485 INFO  [FelixStartLevel] org.eclipse.jetty.server.Server: jetty-11.0.13; built: 2022-12-07T20:47:15.149Z; git: a04bd1ccf844cf9bebc12129335d7493111cbff6; jvm 11.0.17+8-post-Ubuntu-1ubuntu220.04
+2023.02.17 14:02:03,529 INFO  [FelixStartLevel] org.eclipse.jetty.server.session.DefaultSessionIdManager: Session workerName=node0
+2023.02.17 14:02:03,548 INFO  [FelixStartLevel] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@79e6fd0a{/,null,AVAILABLE}
+2023.02.17 14:02:03,550 INFO  [FelixStartLevel] org.eclipse.jetty.server.Server: Started Server@4cba6dc0{STARTING}[11.0.13,sto=0] @1041ms
+2023.02.17 14:02:03,593 INFO  [FelixStartLevel] org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@78989286{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2023.02.17 14:02:03,597 INFO  [FelixStartLevel] org.apache.felix.http: Started Jetty 11.0.13 at port(s) HTTP:8080 on context path / [minThreads=8,maxThreads=200,acceptors=1,selectors=6]
+2023.02.17 14:03:58,592 INFO  [FelixStartLevel] org.eclipse.jetty.server.Server: jetty-11.0.13; built: 2022-12-07T20:47:15.149Z; git: a04bd1ccf844cf9bebc12129335d7493111cbff6; jvm 11.0.17+8-post-Ubuntu-1ubuntu220.04
+2023.02.17 14:03:58,649 INFO  [FelixStartLevel] org.eclipse.jetty.server.session.DefaultSessionIdManager: Session workerName=node0
+2023.02.17 14:03:58,665 INFO  [FelixStartLevel] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@36e5828e{/,null,AVAILABLE}
+2023.02.17 14:03:58,667 INFO  [FelixStartLevel] org.eclipse.jetty.server.Server: Started Server@3abd06de{STARTING}[11.0.13,sto=0] @1069ms
+2023.02.17 14:03:58,713 INFO  [FelixStartLevel] org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@32c6b470{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2023.02.17 14:03:58,715 INFO  [FelixStartLevel] org.apache.felix.http: Started Jetty 11.0.13 at port(s) HTTP:8080 on context path / [minThreads=8,maxThreads=200,acceptors=1,selectors=6]

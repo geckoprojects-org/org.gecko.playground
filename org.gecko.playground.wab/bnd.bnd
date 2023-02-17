@@ -2,8 +2,8 @@ Bundle-Version: 1.0.0.SNAPSHOT
 
 -buildpath: \
 	org.apache.felix.http.servlet-api,\
-	slf4j.api;version='1.7',\
-	org.osgi.framework
+	org.osgi.framework,\
+	slf4j.api
 
 
 Web-ContextPath: /test

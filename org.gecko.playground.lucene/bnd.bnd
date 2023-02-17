@@ -1,4 +1,4 @@
-lib.version: 9.1.0
+lib.version: 9.5.0
 
 -buildpath:  \
 	org.apache.lucene:lucene-core;version=${lib.version}

@@ -1,5 +1,6 @@
 -buildpath: \
 	org.osgi.framework,\
-	org.osgi.service.component
+	org.osgi.service.component,\
+	org.apache.felix.configurator
 	
 -sub: *.bnd

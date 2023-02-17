@@ -1,5 +1,5 @@
 # We launch with Eclipse Equinox as OSGi Framework
--runfw: org.eclipse.osgi;version='[3.16.0.v20200828-0759,3.16.0.v20200828-0759]'
+-runfw: org.eclipse.osgi;version='[3.18.200.v20221116-1324,3.18.200.v20221116-1324]'
 
 -runprovidedcapabilities: ${native_capability}
 
@@ -12,22 +12,20 @@
 	osgi.console.enable.builtin=false
 
 -runbundles: \
-	slf4j.api;version='[1.7.30,1.7.31)',\
 	org.apache.felix.gogo.command;version='[1.1.2,1.1.3)',\
 	org.apache.felix.gogo.shell;version='[1.1.4,1.1.5)',\
-	org.osgi.util.function;version='[1.1.0,1.1.1)',\
 	org.gecko.playground.logging.log4j;version=snapshot,\
 	org.gecko.playground.logging.config;version=snapshot,\
 	org.gecko.playground.logging.test;version=snapshot,\
-	org.apache.logging.log4j.api;version='[2.17.1,2.17.2)',\
-	org.apache.logging.log4j.core;version='[2.17.1,2.17.2)',\
-	org.apache.logging.log4j.slf4j-impl;version='[2.17.1,2.17.2)',\
 	org.apache.felix.gogo.runtime;version='[1.1.6,1.1.7)',\
-	org.apache.felix.scr;version='[2.2.0,2.2.1)',\
-	org.osgi.util.promise;version='[1.1.1,1.1.2)',\
-	org.osgi.util.pushstream;version='[1.0.1,1.0.2)',\
-	slf4j.osgi;version='[1.7.0,1.7.1)',\
-	org.osgi.service.log;version='[1.4.0,1.4.1)'
+	org.apache.felix.scr;version='[2.2.6,2.2.7)',\
+	org.apache.logging.log4j.api;version='[2.19.0,2.19.1)',\
+	org.apache.logging.log4j.core;version='[2.19.0,2.19.1)',\
+	org.apache.logging.log4j.slf4j-impl;version='[2.19.0,2.19.1)',\
+	org.osgi.service.component;version='[1.5.1,1.5.2)',\
+	org.osgi.util.function;version='[1.2.0,1.2.1)',\
+	org.osgi.util.promise;version='[1.3.0,1.3.1)',\
+	slf4j.api;version='[1.7.36,1.7.37)'
 
 # Start-Level definition, to start Logging as early as possible
 # OSGi Framework starts with start level 0 right after that Logging follows

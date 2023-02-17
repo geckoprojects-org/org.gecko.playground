@@ -1,11 +1,12 @@
 # enables JUnit 5 support for this project
--enable-junit5: true
+-library: enableOSGi-Test
 
 # sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
 -buildpath: \
 	org.osgi.framework,\
 	org.osgi.util.promise,\
-	org.osgi.service.cm
+	org.osgi.service.cm,\
+	org.gecko.playground.tasks
 
 Private-Package: org.gecko.playground.tasks.tests
 

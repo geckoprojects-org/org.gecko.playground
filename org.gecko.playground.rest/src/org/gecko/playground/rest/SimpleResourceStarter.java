@@ -19,7 +19,7 @@ import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
-import org.osgi.service.jaxrs.whiteboard.JaxrsWhiteboardConstants;
+import org.osgi.service.jakartars.whiteboard.JakartarsWhiteboardConstants;
 
 /**
  * 
@@ -35,8 +35,8 @@ public class SimpleResourceStarter {
 	public void activate(BundleContext ctx) {
 		System.out.println("Activate SimpleResourceStarter");
 		Dictionary<String, Object> properties = new Hashtable<>();
-		properties.put(JaxrsWhiteboardConstants.JAX_RS_RESOURCE, Boolean.TRUE);
-		properties.put(JaxrsWhiteboardConstants.JAX_RS_NAME, "MySimpleResource");
+		properties.put(JakartarsWhiteboardConstants.JAKARTA_RS_RESOURCE, Boolean.TRUE);
+		properties.put(JakartarsWhiteboardConstants.JAKARTA_RS_NAME, "MySimpleResource");
 		System.out.println("Register SimpleResource");
 		resourceRegistration = ctx.registerService(SimpleResource.class, new SimpleResource(), properties);
 		System.out.println("Registered SimpleResource");
