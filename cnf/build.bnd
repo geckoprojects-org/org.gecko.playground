@@ -25,7 +25,7 @@ base-version: 1.0.0.SNAPSHOT
 javac.source: 11
 javac.target: 11
 
--require-bnd "(version>=6.2.0)"
+-require-bnd "(version>=6.4.0)"
 
 -plugin.Central: \
     aQute.bnd.repository.maven.provider.MavenBndRepository; \

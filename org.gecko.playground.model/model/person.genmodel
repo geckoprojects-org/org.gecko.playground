@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.gecko.playground.model/src" modelPluginID="org.gecko.playground.model"
     modelName="Person" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="11.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
+    operationReflection="true" importOrganizing="true" oSGiCompatible="true">
   <foreignModel>person.ecore</foreignModel>
   <genPackages prefix="Person" basePackage="org.gecko.playground.model" resource="XMI"
       disposableProviderFactory="true" ecorePackage="person.ecore#/">

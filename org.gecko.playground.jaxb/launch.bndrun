@@ -1,4 +1,4 @@
--runfw: org.eclipse.osgi;version='[3.16.0.v20200828-0759,3.16.0.v20200828-0759]'
+-runfw: org.eclipse.osgi;version='[3.18.200.v20221116-1324,3.18.200.v20221116-1324]'
 -runprovidedcapabilities: ${native_capability}
 
 -resolve.effective: active
@@ -8,18 +8,21 @@
 	osgi.console.enable.builtin=false
 
 -runbundles: \
-	com.sun.activation.jakarta.activation;version='[1.2.1,1.2.2)',\
-	com.sun.xml.bind.jaxb-impl;version='[2.3.3,2.3.4)',\
-	jakarta.activation-api;version='[1.2.1,1.2.2)',\
-	jakarta.xml.bind-api;version='[2.3.3,2.3.4)',\
 	org.apache.felix.gogo.command;version='[1.1.2,1.1.3)',\
 	org.apache.felix.gogo.shell;version='[1.1.4,1.1.5)',\
 	org.gecko.playground.jaxb;version=snapshot,\
-	org.glassfish.hk2.osgi-resource-locator;version='[1.0.3,1.0.4)',\
-	org.osgi.util.function;version='[1.1.0,1.1.1)',\
-	org.osgi.util.promise;version='[1.1.1,1.1.2)',\
 	org.apache.felix.gogo.runtime;version='[1.1.6,1.1.7)',\
-	org.apache.felix.scr;version='[2.2.0,2.2.1)'
+	com.sun.istack.commons-runtime;version='[4.1.1,4.1.2)',\
+	com.sun.xml.bind.jaxb-impl;version='[4.0.2,4.0.3)',\
+	jakarta.activation-api;version='[2.1.1,2.1.2)',\
+	jakarta.xml.bind-api;version='[4.0.0,4.0.1)',\
+	org.apache.felix.scr;version='[2.2.6,2.2.7)',\
+	org.gecko.playground.txw2;version=snapshot,\
+	org.glassfish.jaxb.core;version='[4.0.2,4.0.3)',\
+	org.osgi.service.component;version='[1.5.1,1.5.2)',\
+	org.osgi.util.function;version='[1.2.0,1.2.1)',\
+	org.osgi.util.promise;version='[1.3.0,1.3.1)',\
+	org.glassfish.hk2.osgi-resource-locator;version='[1.0.3,1.0.4)'
 
 -runrequires: \
 	playground.jaxb;filter:='(playground.jaxb=sun.xml.bind)',\

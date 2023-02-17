@@ -8,7 +8,7 @@
 	com.vaadin.flow.osgi,\
 	com.vaadin.flow.data;version='2.4.6',\
 	com.vaadin.flow.component.textfield;version='2.3',\
-	org.osgi.service.http.whiteboard,\
+	org.osgi.service.servlet,\
 	org.osgi.framework
 
 Vaadin-OSGi-Extender: true

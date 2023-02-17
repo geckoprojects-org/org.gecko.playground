@@ -3,11 +3,11 @@ Bundle-Name: Jersey Fragment for Felix HTTP Jetty
 Fragment-Host: org.apache.felix.http.jetty
 
 -buildpath: \
-	org.apache.felix.http.jetty;version='4.0.6',\
-	org.glassfish.jersey.core.jersey-server;version='2.32.0',\
-	org.glassfish.jersey.core.jersey-common;version='2.32.0',\
-	org.glassfish.jersey.containers.jersey-container-servlet-core;version='2.32.0',\
-	org.glassfish.jersey.containers.jersey-container-servlet;version='2.32.0',\
+	org.apache.felix.http.jetty;version='5.0.0',\
+	org.glassfish.jersey.core.jersey-server;version='3.1.1',\
+	org.glassfish.jersey.core.jersey-common;version='3.1.1',\
+	org.glassfish.jersey.containers.jersey-container-servlet-core;version='3.1.1',\
+	org.glassfish.jersey.containers.jersey-container-servlet;version='3.1.1',\
 	org.osgi.framework
 	
 Require-Bundle: \

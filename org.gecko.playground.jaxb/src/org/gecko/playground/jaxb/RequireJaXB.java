@@ -26,10 +26,10 @@ import org.osgi.annotation.bundle.Requirements;
  * @since 28.01.2022
  */
 @Requirements({
-	@Requirement(namespace = "osgi.identity", name = "com.sun.xml.bind.jaxb-impl", filter = "(&(version>=2.3.3)(!(version>=3.0)))"),
+	@Requirement(namespace = "osgi.identity", name = "com.sun.xml.bind.jaxb-impl", filter = "(&(version>=4.0.2)(!(version>=5.0)))"),
 	@Requirement(namespace = "osgi.identity", name = "org.glassfish.hk2.osgi-resource-locator")
 })
-@Capability(namespace = "playground.jaxb", name = "sun.xml.bind", version = "2.3")
+@Capability(namespace = "playground.jaxb", name = "sun.xml.bind", version = "4.0.2")
 public @interface RequireJaXB {
 
 }

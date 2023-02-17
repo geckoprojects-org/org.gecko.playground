@@ -2,7 +2,7 @@ package org.gecko.playground.vaadin;
 
 import org.osgi.annotation.bundle.Requirement;
 import org.osgi.annotation.bundle.Requirements;
-import org.osgi.service.http.whiteboard.annotations.RequireHttpWhiteboard;
+import org.osgi.service.servlet.whiteboard.annotations.RequireHttpWhiteboard;
 
 @RequireHttpWhiteboard
 @Requirements({

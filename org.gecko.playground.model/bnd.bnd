@@ -1,10 +1,15 @@
+-library: enable-emf
+
+-buildpath :\
+	org.osgi.service.condition
+
 # The code generation takes a bit of time and makes the build a bit slower.
 # It might be a good idea to put comments around it, when you don't need it
--generate:\
-	model/person.genmodel;\
-		generate=geckoEMF;\
-		genmodel=model/person.genmodel;\
-		output=src
+#-generate:\
+#	model/person.genmodel;\
+#		generate=geckoEMF;\
+#		genmodel=model/person.genmodel;\
+#		output=src
 # Add this attribute to find some logging information
 #		logfile=test.log;\
 
@@ -12,6 +17,3 @@
 # to take full control over whats exported and imported and will ignore @Export
 # Bundle Annotations		
 -includeresource.model: model=model
-
-# Activate build path using macros, that evaluate variables
--use-emf: true

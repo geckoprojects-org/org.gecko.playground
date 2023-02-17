@@ -6,6 +6,6 @@ Bundle-Description: Example for Http Whiteboard
 
 -buildpath: \
 	org.apache.felix.http.servlet-api,\
-	org.osgi.service.http.whiteboard,\
-	org.osgi.framework
+	org.osgi.framework,\
+	org.osgi.service.servlet
 -privatepackage: org.gecko.playground.httpwhiteboard

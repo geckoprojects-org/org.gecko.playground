@@ -3,9 +3,9 @@ package org.gecko.playground.jaxb.spi;
 import java.io.File;
 import java.util.Collections;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
 
 import org.gecko.playground.jaxb.Address;
 import org.gecko.playground.jaxb.Person;

@@ -9,9 +9,9 @@
 		"org.apache.felix.http.name": "playgroundHttp",
 		"org.apache.felix.http.runtime.init.id": "playgroundHttp"
 	},
-	"JaxRsHttpWhiteboardRuntimeComponent~playgroundRest":
+	"JakartarsServletWhiteboardRuntimeComponent~playgroundRest":
 	{
-		"jersey.jaxrs.whiteboard.name" : "playgroundRest",
+		"jersey.jakartars.whiteboard.name" : "playgroundRest",
 		"jersey.context.path" : "rest",
 		"osgi.http.whiteboard.target" : "(id=playgroundHttp)"
 	}

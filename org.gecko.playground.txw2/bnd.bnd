@@ -1,0 +1,16 @@
+lib.version: 4.0.2
+
+-buildpath:  \
+	org.glassfish.jaxb:txw2;version=${lib.version}
+	
+-includeresource: \
+	OSGI-OPT/src=@${repo;org.glassfish.jaxb:txw2:jar:sources;${lib.version};EXACT}
+
+Bundle-Version: ${lib.version}
+Bundle-Localization: bundle
+Bundle-Name: Re-packaged of txw2 JAR
+Bundle-Vendor: Eclipse Foundation
+
+Export-Package: *
+
+-resourceonly: true;
