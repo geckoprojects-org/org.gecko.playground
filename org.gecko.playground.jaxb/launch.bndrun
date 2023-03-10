@@ -30,4 +30,4 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	bnd.identity;id='org.gecko.playground.jaxb'
 
--runee: JavaSE-11
+-runee: JavaSE-17

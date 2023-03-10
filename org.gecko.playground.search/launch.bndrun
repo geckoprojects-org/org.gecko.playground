@@ -1,0 +1,43 @@
+#-runfw: org.apache.felix.framework;version=5
+#-runee: JavaSE-1.8
+
+-runprovidedcapabilities: \${native_capability}
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runbundles: \
+	org.apache.felix.cm.json;version='[2.0.0,2.0.1)',\
+	org.apache.felix.configadmin;version='[1.9.26,1.9.27)',\
+	org.apache.felix.configurator;version='[1.0.18,1.0.19)',\
+	org.apache.felix.gogo.command;version='[1.1.2,1.1.3)',\
+	org.apache.felix.gogo.runtime;version='[1.1.6,1.1.7)',\
+	org.apache.felix.gogo.shell;version='[1.1.4,1.1.5)',\
+	org.apache.felix.scr;version='[2.2.6,2.2.7)',\
+	org.eclipse.emf.common;version='[2.27.0,2.27.1)',\
+	org.eclipse.emf.ecore;version='[2.29.0,2.29.1)',\
+	org.eclipse.emf.ecore.xmi;version='[2.17.0,2.17.1)',\
+	org.gecko.emf.osgi.api;version='[4.5.0,4.5.1)',\
+	org.gecko.emf.osgi.component;version='[4.5.0,4.5.1)',\
+	org.gecko.playground.lucene;version=snapshot,\
+	org.gecko.playground.model;version=snapshot,\
+	org.gecko.playground.search;version=snapshot,\
+	org.gecko.search;version='[1.0.0,1.0.1)',\
+	org.gecko.search.document.api;version='[1.0.0,1.0.1)',\
+	org.gecko.search.document.impl;version='[1.0.0,1.0.1)',\
+	org.gecko.search.util;version='[1.0.0,1.0.1)',\
+	org.osgi.service.cm;version='[1.6.1,1.6.2)',\
+	org.osgi.service.component;version='[1.5.1,1.5.2)',\
+	org.osgi.util.converter;version='[1.0.9,1.0.10)',\
+	org.osgi.util.function;version='[1.2.0,1.2.1)',\
+	org.osgi.util.promise;version='[1.3.0,1.3.1)',\
+	org.osgi.util.pushstream;version='[1.1.0,1.1.1)',\
+	org.eclipse.parsson.jakarta.json;version='[1.1.1,1.1.2)'
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	bnd.identity;id='org.gecko.playground.search',\
+	bnd.identity;id='org.gecko.search.document.impl',\
+	bnd.identity;id='org.eclipse.parsson.jakarta.json'
+-runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
+-runee: JavaSE-17

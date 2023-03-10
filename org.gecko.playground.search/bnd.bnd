@@ -1,0 +1,20 @@
+-library: enable-emf
+
+Bundle-Version: 1.0.0.SNAPSHOT
+Private-Package: org.gecko.playground.search
+-buildpath: \
+	org.osgi.service.component,\
+	org.gecko.search,\
+	org.gecko.search.util,\
+	org.gecko.search.document.api,\
+	org.apache.lucene.core;version=latest,\
+	org.gecko.playground.model;version=latest,\
+	org.osgi.util.promise;version=latest
+	
+-includeresource: \
+	OSGI-INF/configurator/=configs/
+Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
+	
+-privatepackage: \
+	org.gecko.playground.search.helper,\
+	org.gecko.playground.search.cmd

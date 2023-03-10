@@ -1,0 +1,7 @@
+-library: enable-emf
+
+Bundle-Version: 1.0.0.SNAPSHOT
+Private-Package: org.gecko.playground.mongo
+-buildpath: \
+	org.gecko.emf.repository.api,\
+	org.gecko.playground.model;version=latest
