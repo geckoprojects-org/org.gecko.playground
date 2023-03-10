@@ -17,7 +17,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstNames" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="address" eType="#//Address"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="address" upperBound="-1"
+        eType="#//Address"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contact" upperBound="-1"
         eType="#//Contact" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tag" upperBound="-1" eType="#//Tag"/>
@@ -63,6 +64,4 @@
     <eLiterals name="INSTAGRAM" value="5"/>
     <eLiterals name="OTHER" value="100"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Test"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Test2"/>
 </ecore:EPackage>

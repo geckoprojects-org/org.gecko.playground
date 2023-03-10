@@ -1,5 +1,5 @@
 -runfw: org.eclipse.osgi;version='[3.18.200.v20221116-1324,3.18.200.v20221116-1324]'
--runee: JavaSE-11
+-runee: JavaSE-17
 
 -library: enableOSGi-Test
 

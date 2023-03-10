@@ -22,8 +22,8 @@ base-version: 1.0.0.SNAPSHOT
 # If release not needed is empty, no Bundle has been found and for maven we do a release to the remote Repo. If not, we only do a release to the local .m2 Repo
 #-maven-release.local: ${if;${def;releaseNotNeeded};local;remote}
 
-javac.source: 11
-javac.target: 11
+javac.source: 17
+javac.target: 17
 
 -require-bnd "(version>=6.4.0)"
 

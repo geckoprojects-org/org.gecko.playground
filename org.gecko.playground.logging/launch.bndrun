@@ -46,7 +46,7 @@
 	bnd.identity;id='org.gecko.playground.logging.log4j',\
 	bnd.identity;id='org.gecko.playground.logging.test'
 	
--runee: JavaSE-11
+-runee: JavaSE-17
 
 # Bundles excluded from resolving. Sometimes necessary to achieve best results
 -runblacklist: \

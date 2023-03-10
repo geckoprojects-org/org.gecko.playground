@@ -1,5 +1,5 @@
--runfw: org.eclipse.osgi;version=3.13
--runee: JavaSE-11
+-runfw: org.eclipse.osgi;version='[3.18.200.v20221116-1324,3.18.200.v20221116-1324]'
+-runee: JavaSE-17
 -runprovidedcapabilities: ${native_capability}
 
 -resolve.effective: active
@@ -25,7 +25,8 @@
 	org.osgi.service.component;version='[1.5.1,1.5.2)',\
 	org.osgi.util.converter;version='[1.0.9,1.0.10)',\
 	org.osgi.util.function;version='[1.2.0,1.2.1)',\
-	org.osgi.util.promise;version='[1.3.0,1.3.1)'
+	org.osgi.util.promise;version='[1.3.0,1.3.1)',\
+	org.osgi.service.cm;version='[1.6.1,1.6.2)'
 
 -runrequires: \
 	playground.config;filter:='(playground.config=default)',\
