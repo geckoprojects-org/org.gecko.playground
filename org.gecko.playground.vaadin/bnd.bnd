@@ -1,21 +1,30 @@
+-library: \
+	enableVaadin,\
+	enable-emf
+
+Bundle-Version: 1.0.0.SNAPSHOT
+Export-Package: \
+	org.gecko.playground.vaadin,\
+	org.gecko.playground.vaadin.views.main,\
+	org.gecko.playground.vaadin.service,\
+	org.gecko.playground.vaadin.views.form,\
+	org.gecko.playground.vaadin.views.search,\
+	org.gecko.playground.vaadin.helpers
+
+-includeresource: \
+	OSGI-INF/configurator/=configs/,\
+	META-INF/resources=resources,\
+	META-INF/resources=frontend,\
+	META-INF/frontend=frontend
+Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 -buildpath: \
-	com.vaadin.flow.component.button;version='2.2.2',\
-	com.vaadin.flow.component.orderedlayout;version='2.3.2',\
-	com.vaadin.flow.server;version='2.4.6',\
-	com.vaadin.flow.component.notification;version='2.2.2',\
-	com.vaadin.flow.theme.lumo;version='2.4.7',\
-	org.apache.felix.http.servlet-api,\
-	com.vaadin.flow.osgi,\
-	com.vaadin.flow.data;version='2.4.6',\
-	com.vaadin.flow.component.textfield;version='2.3',\
-	org.osgi.service.servlet,\
-	org.osgi.framework
-
-Vaadin-OSGi-Extender: true
-Bundle-Name: Vaadin Component
-Bundle-Description: Gecko Playground Vaadin Component
-Export-Package: org.gecko.playground.vaadin
-
--includeresource: resources=resources, \
-	frontend=frontend
--privatepackage: org.gecko.playground.vaadin.servlet
+	org.gecko.playground.model;version=latest,\
+	com.vaadin.flow.component.combobox,\
+	com.vaadin.flow.component.dialog,\
+	com.vaadin.flow.component.grid,\
+	com.vaadin.flow.component.icon,\
+	com.vaadin.flow.component.datepicker,\
+	com.vaadin.flow.data,\
+	com.vaadin.flow.data.renderer,\
+	com.vaadin.external.gwt,\
+	com.vaadin.flow.component.radiobutton

@@ -6,7 +6,9 @@
 -library: \
 	geckoEMF,\
 	geckoOSGi-Test,\
-	geckoDIMC
+	geckoDIMC,\
+	geckoBndEclipse,\
+	geckoVaadin
 	
 # Needed because we enabled library 'gecko-dimc' 	
 github-project: org.gecko.playground

@@ -1,3 +1,4 @@
 /bin/
+/frontend/bower_components/*
 /bin_test/
 /generated/

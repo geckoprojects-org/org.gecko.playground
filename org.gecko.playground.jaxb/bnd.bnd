@@ -1,4 +1,4 @@
--buildpath: jakarta.xml.bind-api
+-buildpath: jakarta.xml.bind-api;version=latest
 
 Bundle-Version: 1.0.0.SNAPSHOT
 -privatepackage: org.gecko.playground.jaxb.spi

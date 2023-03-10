@@ -5,7 +5,7 @@ Bundle-Description: Example for Http Whiteboard
 	static=static
 
 -buildpath: \
-	org.apache.felix.http.servlet-api,\
+	org.apache.felix.http.servlet-api;version=latest,\
 	org.osgi.framework,\
-	org.osgi.service.servlet
+	org.osgi.service.servlet;version=latest
 -privatepackage: org.gecko.playground.httpwhiteboard

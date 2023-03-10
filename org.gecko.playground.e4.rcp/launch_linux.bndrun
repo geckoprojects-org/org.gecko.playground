@@ -1,0 +1,34 @@
+-include: ~launch_base.bndrun
+
+-runsystemcapabilities: ${native_capability;osname=Linux;osversion=3.14;processor=x86_64}
+-runprovidedcapabilities: ${native_capability;osname=Linux;osversion=3.14;processor=x86_64}
+
+-runblacklist.linux: \
+	osgi.identity;filter:='(osgi.identity=*macosx*)',\
+	osgi.identity;filter:='(osgi.identity=*win32*)',\
+
+-runvm.linux: \
+	-Dosgi.dataAreaRequiresExplicitInit=true, \
+	-Dosgi.requiredJavaVersion=11, \
+	-XX:+UseG1GC, \
+	-XX:+UseStringDeduplication
+
+-runproperties.linux: \
+	osgi.ws=gtk,\
+	osgi.arch=x86_64,\
+	osgi.os=linux
+
+-runrequires.linux: \
+	bnd.identity;id='org.eclipse.e4.ui.swt.gtk',\
+	bnd.identity;id='org.eclipse.swt.gtk.linux.x86_64',\
+	bnd.identity;id='org.eclipse.core.filesystem.linux.x86_64',\
+	bnd.identity;id='org.eclipse.core.net.linux',\
+	bnd.identity;id='org.eclipse.equinox.security.linux'
+	
+-runbundles.linux: \
+	org.eclipse.core.filesystem.linux.x86_64;version='[1.2.400,1.5)',\
+	org.eclipse.core.net.linux;version='[1.0.200,1.1)',\
+	org.eclipse.equinox.security.linux;version='[1.0.200,1.1)',\
+	org.eclipse.e4.ui.swt.gtk;version='[1.1.100,2)',\
+	org.eclipse.swt.gtk.linux.x86_64;version='[3.121.0,4)'
+

@@ -1,0 +1,32 @@
+Bundle-SymbolicName: ${project.name};singleton:=true
+Bundle-Version: 1.0.0.SNAPSHOT
+
+-includeresource: \
+	Application.e4xmi,\
+	icons=icons,\
+	css=css,\
+	plugin.xml
+	
+-buildpath: \
+	javax.inject;version=latest,\
+	org.osgi.service.event,\
+	javax.annotation;version=latest,\
+	org.eclipse.equinox.common;version=latest,\
+	org.eclipse.equinox.registry;version=latest,\
+	org.eclipse.core.commands;version=latest,\
+	org.eclipse.swt.gtk.linux.x86_64;version=latest,\
+	org.eclipse.jface;version=latest,\
+	org.eclipse.ui.workbench;version=latest,\
+	org.eclipse.e4.core.di.annotations;version=latest,\
+	org.eclipse.e4.ui.workbench;version=latest,\
+	org.eclipse.e4.ui.di;version=latest,\
+	org.eclipse.e4.ui.model.workbench;version=latest,\
+	org.gecko.eclipse.api;version=latest,\
+	org.gecko.playground.search;version=latest,\
+	org.gecko.playground.model,\
+	org.gecko.search.document.api
+
+-privatepackage: \
+	org.gecko.playground.e4.rcp.handlers,\
+	org.gecko.playground.e4.rcp.parts
+

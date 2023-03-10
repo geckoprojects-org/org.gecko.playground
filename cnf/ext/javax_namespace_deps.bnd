@@ -1,0 +1,8 @@
+-plugin.Central: \
+    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+        snapshotUrl="https://oss.sonatype.org/content/repositories/snapshots/"; \
+        releaseUrl=https://repo.maven.apache.org/maven2/; \
+        index=${.}/javax_namesapce.maven; \
+        readOnly=true; \
+        poll.time=-1; \
+        name="Javax Namespace"
