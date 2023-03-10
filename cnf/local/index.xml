@@ -1,2 +1,717 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1651659795834"/>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="Local" increment="1678444451303">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.eclipse.product.template"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.bnd.eclipse"/>
+      <attribute name="description" value="This bundle provides bnd templates for Eclipse RCP application"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.eclipse.product.template"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.eclipse.product.template"/>
+    </capability>
+    <capability namespace="org.bndtools.template">
+      <attribute name="help" value="launch/gecko-rcp-run-small.xml"/>
+      <attribute name="engine" value="mustache"/>
+      <attribute name="name" value="Gecko Equinox BND Run"/>
+      <attribute name="icon" value="data:image/gif;base64,AAABAAIAEBAAAAEAIABoBAAAJgAAABAQAgABAAEAsAAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECY+AAAAAAAaP2dbG0BqeRk8ZHsaPWWNAAAAJQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgTH6PI1aMFAAAAAAAAAAAAAAAACNTinIPIzlVAAAAAAAAAAAAAAAAAAAAAAAAAAAONx85AAAAABRUKykfSHp8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEp7fwAAAA0AAAAAAAAAAAAAAAAXWTNZGF02uA45IUAWXC1ZHURxdSWUVhgQQCV1CSYVMQAAAAAAAAAZAAAACShfnTcOIzlDAAAAAAAAAAAhfkkAAAAAABtqPYgXXDSaGjtmTw4cPzQZYDejGmk82gMPBigbWE6qHG48jQAAAAcoXpseGT1kXAAAAAAAAAAAAAAAAAAAAAAAAAAAFlYxTyhboz0BAwgpHXJBVhJHKEgAAAAAGUNclwAAAAAAAAAAIU+BaAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAABVRL2YrZKY0DR8zPyebWRcMMRxDAAAAACJSiU8ZPGOSHUVyhh9LfEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATTCteAAAAABg5X34AAAAAE0srYAAAAAAAAAAAAAAAAAAAAACH//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAigEoAGmc8SQAAAAgaQGqFAAAAABJJKVMGGw8qFVIvqAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACulXwoQPSNfKWGfQwkXJkYbajxpF102Ph50Qv4AAgIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH3xHMgYfBUIgTH6NAAAAGwAAAAAppF8JAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjiE8lED4jcBo7aqQMLh5MEUYlYBlhOFgXXC5PEkknaQwwHD4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF1kzbxNLK20WYCdJIk+HXRczYIQYOWFtHUJzeBZKPnUUUS8VAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIoJLACGCTD8XWzTGDjkhQAAAAAAcdjYzEUggWRVYLFsYXjYUSP+fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhg0oaG2g8RAAAAAAAAAAAIVgiAAAAAAAAAAAAI4lOAAAAAAAAAAAAAAAAAP//AAD/3wAA/f8AAP//AADf/wAAzJ8AAP+/AAD/zwAA//8AAPu/AAD/vwAA/f8AAP7/AAD/vwAA/f8AAP//AAAoAAAAEAAAACAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="/>
+      <attribute name="org.bndtools.template" value="bndrun"/>
+      <attribute name="category" value="bbb/Gecko RCP Templates"/>
+      <attribute name="dir" value="launch/gecko-rcp-run-small"/>
+    </capability>
+    <capability namespace="org.bndtools.template">
+      <attribute name="help" value="e4-rcp.xml"/>
+      <attribute name="engine" value="mustache"/>
+      <attribute name="name" value="Eclipse E4 RCP Application Template"/>
+      <attribute name="icon" value="data:image/gif;base64,AAABAAIAEBAAAAEAIABoBAAAJgAAABAQAgABAAEAsAAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECY+AAAAAAAaP2dbG0BqeRk8ZHsaPWWNAAAAJQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgTH6PI1aMFAAAAAAAAAAAAAAAACNTinIPIzlVAAAAAAAAAAAAAAAAAAAAAAAAAAAONx85AAAAABRUKykfSHp8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEp7fwAAAA0AAAAAAAAAAAAAAAAXWTNZGF02uA45IUAWXC1ZHURxdSWUVhgQQCV1CSYVMQAAAAAAAAAZAAAACShfnTcOIzlDAAAAAAAAAAAhfkkAAAAAABtqPYgXXDSaGjtmTw4cPzQZYDejGmk82gMPBigbWE6qHG48jQAAAAcoXpseGT1kXAAAAAAAAAAAAAAAAAAAAAAAAAAAFlYxTyhboz0BAwgpHXJBVhJHKEgAAAAAGUNclwAAAAAAAAAAIU+BaAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAABVRL2YrZKY0DR8zPyebWRcMMRxDAAAAACJSiU8ZPGOSHUVyhh9LfEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATTCteAAAAABg5X34AAAAAE0srYAAAAAAAAAAAAAAAAAAAAACH//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAigEoAGmc8SQAAAAgaQGqFAAAAABJJKVMGGw8qFVIvqAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACulXwoQPSNfKWGfQwkXJkYbajxpF102Ph50Qv4AAgIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH3xHMgYfBUIgTH6NAAAAGwAAAAAppF8JAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjiE8lED4jcBo7aqQMLh5MEUYlYBlhOFgXXC5PEkknaQwwHD4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF1kzbxNLK20WYCdJIk+HXRczYIQYOWFtHUJzeBZKPnUUUS8VAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIoJLACGCTD8XWzTGDjkhQAAAAAAcdjYzEUggWRVYLFsYXjYUSP+fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhg0oaG2g8RAAAAAAAAAAAIVgiAAAAAAAAAAAAI4lOAAAAAAAAAAAAAAAAAP//AAD/3wAA/f8AAP//AADf/wAAzJ8AAP+/AAD/zwAA//8AAPu/AAD/vwAA/f8AAP7/AAD/vwAA/f8AAP//AAAoAAAAEAAAACAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="/>
+      <attribute name="metaType" value="e4-rcp-metatype.xml"/>
+      <attribute name="ranking" value="1001.0" type="Double"/>
+      <attribute name="org.bndtools.template" value="project"/>
+      <attribute name="category" value="bbb/Gecko BND Eclipse RCP Templates"/>
+      <attribute name="dir" value="e4-rcp"/>
+    </capability>
+    <capability namespace="org.bndtools.template">
+      <attribute name="help" value="e3-rcp.xml"/>
+      <attribute name="engine" value="mustache"/>
+      <attribute name="name" value="Eclipse E3 RCP Application Template"/>
+      <attribute name="icon" value="data:image/gif;base64,AAABAAIAEBAAAAEAIABoBAAAJgAAABAQAgABAAEAsAAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECY+AAAAAAAaP2dbG0BqeRk8ZHsaPWWNAAAAJQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgTH6PI1aMFAAAAAAAAAAAAAAAACNTinIPIzlVAAAAAAAAAAAAAAAAAAAAAAAAAAAONx85AAAAABRUKykfSHp8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEp7fwAAAA0AAAAAAAAAAAAAAAAXWTNZGF02uA45IUAWXC1ZHURxdSWUVhgQQCV1CSYVMQAAAAAAAAAZAAAACShfnTcOIzlDAAAAAAAAAAAhfkkAAAAAABtqPYgXXDSaGjtmTw4cPzQZYDejGmk82gMPBigbWE6qHG48jQAAAAcoXpseGT1kXAAAAAAAAAAAAAAAAAAAAAAAAAAAFlYxTyhboz0BAwgpHXJBVhJHKEgAAAAAGUNclwAAAAAAAAAAIU+BaAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAABVRL2YrZKY0DR8zPyebWRcMMRxDAAAAACJSiU8ZPGOSHUVyhh9LfEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATTCteAAAAABg5X34AAAAAE0srYAAAAAAAAAAAAAAAAAAAAACH//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAigEoAGmc8SQAAAAgaQGqFAAAAABJJKVMGGw8qFVIvqAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACulXwoQPSNfKWGfQwkXJkYbajxpF102Ph50Qv4AAgIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH3xHMgYfBUIgTH6NAAAAGwAAAAAppF8JAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjiE8lED4jcBo7aqQMLh5MEUYlYBlhOFgXXC5PEkknaQwwHD4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF1kzbxNLK20WYCdJIk+HXRczYIQYOWFtHUJzeBZKPnUUUS8VAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIoJLACGCTD8XWzTGDjkhQAAAAAAcdjYzEUggWRVYLFsYXjYUSP+fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhg0oaG2g8RAAAAAAAAAAAIVgiAAAAAAAAAAAAI4lOAAAAAAAAAAAAAAAAAP//AAD/3wAA/f8AAP//AADf/wAAzJ8AAP+/AAD/zwAA//8AAPu/AAD/vwAA/f8AAP7/AAD/vwAA/f8AAP//AAAoAAAAEAAAACAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="/>
+      <attribute name="metaType" value="e3-rcp-metatype.xml"/>
+      <attribute name="ranking" value="1001.0" type="Double"/>
+      <attribute name="org.bndtools.template" value="project"/>
+      <attribute name="category" value="bbb/Gecko BND Eclipse RCP Templates"/>
+      <attribute name="dir" value="e3-rcp"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="203322" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.eclipse.product.template/org.gecko.eclipse.product.template-1.2.1.jar"/>
+      <attribute name="osgi.content" value="0A786FD4CDBCFC0A15B958E3F4C4C3DE5A4E01464796A6E94109E2E9E16505AD"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.bnd.eclipse.launcher.plugin"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.bnd.eclipse"/>
+      <attribute name="description" value="Gecko Bndtools Launcher for Eclipse applications"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.bnd.eclipse.launcher.plugin"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.bnd.eclipse.launcher.plugin"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="731479" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.bnd.eclipse.launcher.plugin/org.gecko.bnd.eclipse.launcher.plugin-1.2.1.jar"/>
+      <attribute name="osgi.content" value="023ED2BE747752FA1F69297FB3E677514329CBCB48CCCCF04D703A3B5822E9B0"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=11))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.bnd.eclipse.library"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.bnd.eclipse"/>
+      <attribute name="description" value="Gecko Bnd Eclipse Library for Eclipse and RCP Support"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.bnd.eclipse.library"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.bnd.eclipse.library"/>
+    </capability>
+    <capability namespace="bnd.library">
+      <attribute name="bnd.library" value="geckoBndEclipse"/>
+      <attribute name="path" value="template"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="8889" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.bnd.eclipse.library/org.gecko.bnd.eclipse.library-1.2.1.jar"/>
+      <attribute name="osgi.content" value="4745034B4D46F56285D4CE9C6F6DAF883AFC99F790B751BEBF52206751A01F45"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.bnd.equinox.launcher.splashscreen"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.bnd.eclipse"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.bnd.equinox.launcher.splashscreen"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.bnd.equinox.launcher.splashscreen"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="27707" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.bnd.equinox.launcher.splashscreen/org.gecko.bnd.equinox.launcher.splashscreen-1.2.1.jar"/>
+      <attribute name="osgi.content" value="9F76241A62F2D46553C4B34106EEDC7EE644C61B6D696BA7ED0979F272CFC210"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.io)"/>
+      <attribute name="osgi.wiring.package" value="java.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.invoke)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.invoke"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.net)"/>
+      <attribute name="osgi.wiring.package" value="java.net"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
+      <attribute name="osgi.wiring.package" value="java.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.concurrent)"/>
+      <attribute name="osgi.wiring.package" value="java.util.concurrent"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.concurrent.atomic)"/>
+      <attribute name="osgi.wiring.package" value="java.util.concurrent.atomic"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.function)"/>
+      <attribute name="osgi.wiring.package" value="java.util.function"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.logging)"/>
+      <attribute name="osgi.wiring.package" value="java.util.logging"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.equinox.launcher)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.equinox.launcher"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.osgi.service.runnable)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.osgi.service.runnable"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.10.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=11))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.eclipse.api"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.bnd.eclipse"/>
+      <attribute name="description" value="Gecko Eclipse general API"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.1.202303070511-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.gecko.eclipse.api"/>
+      <attribute name="bundle-version" value="1.2.1.202303070511-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.eclipse.annotations"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1224434866,-2017265227,1827943761,831682588,831686152,831692879,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.gecko.eclipse.api"/>
+      <attribute name="bundle-version" value="1.2.1.202303070511-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.eclipse.api"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1473926048,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.1.202303070511-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.eclipse.api"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.1.202303070511-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.eclipse.api"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="23572" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.eclipse.api/org.gecko.eclipse.api-1.2.1.jar"/>
+      <attribute name="osgi.content" value="CF7FF335C2CDAD8520DAAF5E545B9D4C060C9B0FC3D8A46DD90ADC2F36C07A51"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.annotation)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=11))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.bnd.equinox.executable.linux"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.bnd.eclipse"/>
+      <attribute name="description" value="Gecko Bnd Eclipse Launcher Linux x86_64"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.1.202303070511-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.1.202303070511-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.bnd.equinox.executable.linux"/>
+      <attribute name="type" value="equinox.executable"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.1.202303070511-SNAPSHOT" type="Version"/>
+      <attribute name="type" value="equinox.executable"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.bnd.equinox.executable.linux"/>
+    </capability>
+    <capability namespace="equinox.launcher">
+      <attribute name="osgi.native.osname" value="Linux" type="List&lt;String&gt;"/>
+      <attribute name="osgi.native.processor" value="x86-64,amd64,em64t,x86_64" type="List&lt;String&gt;"/>
+      <attribute name="type" value="executable"/>
+    </capability>
+    <capability namespace="equinox.launcher">
+      <attribute name="osgi.native.osname" value="Linux" type="List&lt;String&gt;"/>
+      <attribute name="osgi.native.processor" value="x86-64,amd64,em64t,x86_64" type="List&lt;String&gt;"/>
+      <attribute name="type" value="lib"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="122316" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.bnd.equinox.executable.linux/org.gecko.bnd.equinox.executable.linux-1.2.1.jar"/>
+      <attribute name="osgi.content" value="0E93AC01C5D9AFFC1F82B17819ED8FBDC6AF6B2BF37ECEA8600912DA87C23B57"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion Consuling GmbH - All rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.vaadin.bnd.project.library"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.vaadin"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.0.0.SNAPSHOTSNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.0.0.SNAPSHOTSNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.vaadin.bnd.project.library"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.0.0.SNAPSHOTSNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.vaadin.bnd.project.library"/>
+    </capability>
+    <capability namespace="bnd.library">
+      <attribute name="bnd.library" value="enableVaadin"/>
+      <attribute name="path" value="library"/>
+    </capability>
+    <capability namespace="org.bndtools.template">
+      <attribute name="help" value="vaadin.xml"/>
+      <attribute name="engine" value="mustache"/>
+      <attribute name="name" value="Gecko Vaadin Example"/>
+      <attribute name="icon" value="data:image/gif;base64,AAABAAIAEBAAAAEAIABoBAAAJgAAABAQAgABAAEAsAAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECY+AAAAAAAaP2dbG0BqeRk8ZHsaPWWNAAAAJQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgTH6PI1aMFAAAAAAAAAAAAAAAACNTinIPIzlVAAAAAAAAAAAAAAAAAAAAAAAAAAAONx85AAAAABRUKykfSHp8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEp7fwAAAA0AAAAAAAAAAAAAAAAXWTNZGF02uA45IUAWXC1ZHURxdSWUVhgQQCV1CSYVMQAAAAAAAAAZAAAACShfnTcOIzlDAAAAAAAAAAAhfkkAAAAAABtqPYgXXDSaGjtmTw4cPzQZYDejGmk82gMPBigbWE6qHG48jQAAAAcoXpseGT1kXAAAAAAAAAAAAAAAAAAAAAAAAAAAFlYxTyhboz0BAwgpHXJBVhJHKEgAAAAAGUNclwAAAAAAAAAAIU+BaAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAABVRL2YrZKY0DR8zPyebWRcMMRxDAAAAACJSiU8ZPGOSHUVyhh9LfEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATTCteAAAAABg5X34AAAAAE0srYAAAAAAAAAAAAAAAAAAAAACH//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAigEoAGmc8SQAAAAgaQGqFAAAAABJJKVMGGw8qFVIvqAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACulXwoQPSNfKWGfQwkXJkYbajxpF102Ph50Qv4AAgIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH3xHMgYfBUIgTH6NAAAAGwAAAAAppF8JAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjiE8lED4jcBo7aqQMLh5MEUYlYBlhOFgXXC5PEkknaQwwHD4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF1kzbxNLK20WYCdJIk+HXRczYIQYOWFtHUJzeBZKPnUUUS8VAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIoJLACGCTD8XWzTGDjkhQAAAAAAcdjYzEUggWRVYLFsYXjYUSP+fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhg0oaG2g8RAAAAAAAAAAAIVgiAAAAAAAAAAAAI4lOAAAAAAAAAAAAAAAAAP//AAD/3wAA/f8AAP//AADf/wAAzJ8AAP+/AAD/zwAA//8AAPu/AAD/vwAA/f8AAP7/AAD/vwAA/f8AAP//AAAoAAAAEAAAACAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="/>
+      <attribute name="metaType" value="vaadin-metatype.xml"/>
+      <attribute name="ranking" value="1001.0" type="Double"/>
+      <attribute name="org.bndtools.template" value="project"/>
+      <attribute name="category" value="ccc/Gecko OSGi Standard Templates"/>
+      <attribute name="dir" value="templates/vaadin"/>
+    </capability>
+    <capability namespace="org.bndtools.template">
+      <attribute name="help" value="vaadin-frontend.xml"/>
+      <attribute name="engine" value="mustache"/>
+      <attribute name="name" value="Gecko Vaadin Frontend Example"/>
+      <attribute name="icon" value="data:image/gif;base64,AAABAAIAEBAAAAEAIABoBAAAJgAAABAQAgABAAEAsAAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECY+AAAAAAAaP2dbG0BqeRk8ZHsaPWWNAAAAJQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgTH6PI1aMFAAAAAAAAAAAAAAAACNTinIPIzlVAAAAAAAAAAAAAAAAAAAAAAAAAAAONx85AAAAABRUKykfSHp8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEp7fwAAAA0AAAAAAAAAAAAAAAAXWTNZGF02uA45IUAWXC1ZHURxdSWUVhgQQCV1CSYVMQAAAAAAAAAZAAAACShfnTcOIzlDAAAAAAAAAAAhfkkAAAAAABtqPYgXXDSaGjtmTw4cPzQZYDejGmk82gMPBigbWE6qHG48jQAAAAcoXpseGT1kXAAAAAAAAAAAAAAAAAAAAAAAAAAAFlYxTyhboz0BAwgpHXJBVhJHKEgAAAAAGUNclwAAAAAAAAAAIU+BaAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAABVRL2YrZKY0DR8zPyebWRcMMRxDAAAAACJSiU8ZPGOSHUVyhh9LfEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATTCteAAAAABg5X34AAAAAE0srYAAAAAAAAAAAAAAAAAAAAACH//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAigEoAGmc8SQAAAAgaQGqFAAAAABJJKVMGGw8qFVIvqAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACulXwoQPSNfKWGfQwkXJkYbajxpF102Ph50Qv4AAgIkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH3xHMgYfBUIgTH6NAAAAGwAAAAAppF8JAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjiE8lED4jcBo7aqQMLh5MEUYlYBlhOFgXXC5PEkknaQwwHD4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF1kzbxNLK20WYCdJIk+HXRczYIQYOWFtHUJzeBZKPnUUUS8VAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIoJLACGCTD8XWzTGDjkhQAAAAAAcdjYzEUggWRVYLFsYXjYUSP+fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhg0oaG2g8RAAAAAAAAAAAIVgiAAAAAAAAAAAAI4lOAAAAAAAAAAAAAAAAAP//AAD/3wAA/f8AAP//AADf/wAAzJ8AAP+/AAD/zwAA//8AAPu/AAD/vwAA/f8AAP7/AAD/vwAA/f8AAP//AAAoAAAAEAAAACAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="/>
+      <attribute name="metaType" value="vaadin-frontend-metatype.xml"/>
+      <attribute name="ranking" value="1001.0" type="Double"/>
+      <attribute name="org.bndtools.template" value="project"/>
+      <attribute name="category" value="ccc/Gecko OSGi Standard Templates"/>
+      <attribute name="dir" value="templates/vaadin-frontend"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="61760" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.vaadin.bnd.project.library/org.gecko.vaadin.bnd.project.library-2.0.0.jar"/>
+      <attribute name="osgi.content" value="030E66B908B830D08624C868EC1CFC139BEE2C5F9DDC4DFF96E6CAE96C8CD71A"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.eclipse.compatibility"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.bnd.eclipse"/>
+      <attribute name="description" value="Gecko Eclipse Compatibility for lauching Eclipse from outside the PDE"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.gecko.eclipse.compatibility"/>
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.eclipse.annotations"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1224434866,-2017265227,1827943761,831682588,831686152,831692879,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.gecko.eclipse.compatibility"/>
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.eclipse.api"/>
+      <attribute name="version" value="1.0.0" type="Version"/>
+      <attribute name="bnd.hashes" value="-1473926048,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.eclipse.compatibility"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.eclipse.compatibility"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="36221" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.eclipse.compatibility/org.gecko.eclipse.compatibility-1.2.1.jar"/>
+      <attribute name="osgi.content" value="FBD2CA7C25EB559B877994AFCB76261633C106EBC2C93090CC9AC21D9A3E5198"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.osgi.util.tracker"/>
+      <attribute name="objectClass" value="org.osgi.util.tracker.ServiceTrackerCustomizer" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.identity">
+      <directive name="filter" value="(&amp;(osgi.identity=org.gecko.eclipse.compatibility.equinox.config))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.annotation)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.annotation"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.invoke)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.invoke"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
+      <attribute name="osgi.wiring.package" value="java.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.concurrent)"/>
+      <attribute name="osgi.wiring.package" value="java.util.concurrent"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.concurrent.atomic)"/>
+      <attribute name="osgi.wiring.package" value="java.util.concurrent.atomic"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.logging)"/>
+      <attribute name="osgi.wiring.package" value="java.util.logging"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.core.runtime.internal.adaptor)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.core.runtime.internal.adaptor"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.osgi.framework.log)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.osgi.framework.log"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.osgi.internal.framework)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.osgi.internal.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.osgi.service.environment)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.osgi.service.environment"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.osgi.service.runnable)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.osgi.service.runnable"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.10.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.application)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.application"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.condition)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.condition"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.function)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.function"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.promise)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.promise"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=11))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.osgi.framework.log.FrameworkLog)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.osgi.service.environment.EnvironmentInfo)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.osgi.service.condition.Condition)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.bnd.equinox.executable.win32"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.bnd.eclipse"/>
+      <attribute name="description" value="Gecko Bnd Eclipse Launcher Windows x86_64"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.1.202303070511-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.1.202303070511-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.bnd.equinox.executable.win32"/>
+      <attribute name="type" value="equinox.executable"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.1.202303070511-SNAPSHOT" type="Version"/>
+      <attribute name="type" value="equinox.executable"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.bnd.equinox.executable.win32"/>
+    </capability>
+    <capability namespace="equinox.launcher">
+      <attribute name="osgi.native.osname" value="Win32,win32" type="List&lt;String&gt;"/>
+      <attribute name="osgi.native.processor" value="x86-64,amd64,em64t,x86_64" type="List&lt;String&gt;"/>
+      <attribute name="type" value="executable"/>
+    </capability>
+    <capability namespace="equinox.launcher">
+      <attribute name="osgi.native.osname" value="Win32,win32" type="List&lt;String&gt;"/>
+      <attribute name="osgi.native.processor" value="x86-64,amd64,em64t,x86_64" type="List&lt;String&gt;"/>
+      <attribute name="type" value="lib"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="408732" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.bnd.equinox.executable.win32/org.gecko.bnd.equinox.executable.win32-1.2.1.jar"/>
+      <attribute name="osgi.content" value="68FB4E74386D58EEA6E78E50774514B694ACF8457CC76E26BA60282CAC6F2D5D"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.eclipse.compatibility.equinox.config"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.bnd.eclipse"/>
+      <attribute name="description" value="Builds the Eclipse / Equinox specific launch configuration"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.gecko.eclipse.compatibility.equinox.config"/>
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.eclipse.compatibility.equinox.config.api"/>
+      <attribute name="version" value="1.2.1.SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.eclipse.compatibility.equinox.config"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.eclipse.compatibility.equinox.config"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="16454" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.eclipse.compatibility.equinox.config/org.gecko.eclipse.compatibility.equinox.config-1.2.1.jar"/>
+      <attribute name="osgi.content" value="B85BA7CD14E17961A6BBD56F9FA234F25B09C357413F8B7C6D271227B79D6DEC"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <directive name="uses" value="org.osgi.service.condition"/>
+      <attribute name="objectClass" value="org.osgi.service.condition.Condition" type="List&lt;String&gt;"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="java.lang.Object" type="List&lt;String&gt;"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.logging)"/>
+      <attribute name="osgi.wiring.package" value="java.util.logging"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.eclipse.osgi.internal.framework)"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.osgi.internal.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.osgi.service.environment)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.eclipse.osgi.service.environment"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.10.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.component)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.component"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.condition)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="org.osgi.service.condition"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=11))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=java.lang.Object)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.eclipse.osgi.service.environment.EnvironmentInfo)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion GmbH all rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.bnd.eclipse.launcher.pre"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.bnd.eclipse"/>
+      <attribute name="description" value="Gecko Bndtools Pre-Launcher for Eclipse"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="bundle-symbolic-name" value="org.gecko.bnd.eclipse.launcher.pre"/>
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.bnd.eclipse.launcher.pre"/>
+      <attribute name="version" value="1.2.1.SNAPSHOT" type="Version"/>
+      <attribute name="bnd.hashes" value="-1678077400,-2136232908,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <directive name="uses" value="org.gecko.bnd.eclipse.launcher.pre"/>
+      <attribute name="bundle-symbolic-name" value="org.gecko.bnd.eclipse.launcher.pre"/>
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.bnd.eclipse.launcher.util"/>
+      <attribute name="version" value="1.2.1.SNAPSHOT" type="Version"/>
+      <attribute name="bnd.hashes" value="-1116963667,-1923478059" type="List&lt;Long&gt;"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.bnd.eclipse.launcher.pre"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.bnd.eclipse.launcher.pre"/>
+    </capability>
+    <capability namespace="bnd.mainclass">
+      <attribute name="bnd.mainclass" value="org.gecko.bnd.eclipse.launcher.pre.EclipseStyleEmbeddedLauncher"/>
+      <attribute name="version" value="1.2.1.202303070512-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="40615" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.bnd.eclipse.launcher.pre/org.gecko.bnd.eclipse.launcher.pre-1.2.1.jar"/>
+      <attribute name="osgi.content" value="ECBC5F6E6B86B60AF99DC95D3B36D9F63E72A2787ADB0C715D2B20EB4BE87DD5"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=aQute.bnd.exceptions)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))"/>
+      <attribute name="osgi.wiring.package" value="aQute.bnd.exceptions"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.io)"/>
+      <attribute name="osgi.wiring.package" value="java.io"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang)"/>
+      <attribute name="osgi.wiring.package" value="java.lang"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.invoke)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.invoke"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.lang.reflect)"/>
+      <attribute name="osgi.wiring.package" value="java.lang.reflect"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.net)"/>
+      <attribute name="osgi.wiring.package" value="java.net"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.nio.file)"/>
+      <attribute name="osgi.wiring.package" value="java.nio.file"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.nio.file.attribute)"/>
+      <attribute name="osgi.wiring.package" value="java.nio.file.attribute"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.security)"/>
+      <attribute name="osgi.wiring.package" value="java.security"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util)"/>
+      <attribute name="osgi.wiring.package" value="java.util"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.function)"/>
+      <attribute name="osgi.wiring.package" value="java.util.function"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.jar)"/>
+      <attribute name="osgi.wiring.package" value="java.util.jar"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=java.util.stream)"/>
+      <attribute name="osgi.wiring.package" value="java.util.stream"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.gecko.bnd.eclipse.launcher.pre)"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.bnd.eclipse.launcher.pre"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.gecko.bnd.eclipse.launcher.util)"/>
+      <attribute name="osgi.wiring.package" value="org.gecko.bnd.eclipse.launcher.util"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=11))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="license" value="Eclipse Public License 2.0"/>
+      <attribute name="copyright" value="Data In Motion Consuling GmbH - All rights reserved"/>
+      <attribute name="osgi.identity" value="org.gecko.vaadin.bnd.library"/>
+      <attribute name="documentation" value="https://github.com/geckoprojects-org/org.gecko.vaadin"/>
+      <attribute name="description" value="Vaadin Dependencies for the Gecko Vaadin Whiteboard"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="2.0.0.202303101033-SNAPSHOT" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="2.0.0.202303101033-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="org.gecko.vaadin.bnd.library"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="2.0.0.202303101033-SNAPSHOT" type="Version"/>
+      <attribute name="osgi.wiring.host" value="org.gecko.vaadin.bnd.library"/>
+    </capability>
+    <capability namespace="bnd.library">
+      <attribute name="bnd.library" value="geckoVaadin"/>
+      <attribute name="path" value="library/workspace"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="10345" type="Long"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="url" value="org.gecko.vaadin.bnd.library/org.gecko.vaadin.bnd.library-2.0.0.jar"/>
+      <attribute name="osgi.content" value="50B788C5F243900421C98AEDEF55686156F4072A069114B1FBDB42EC104D433F"/>
+    </capability>
+  </resource>
+</repository>

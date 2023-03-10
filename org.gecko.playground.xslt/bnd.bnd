@@ -1,6 +1,6 @@
 -buildpath: \
 	org.gecko.playground.jaxb;version=latest,\
-	jakarta.xml.bind-api
+	jakarta.xml.bind-api;version=latest
 
 -includeresource: xsl
 

@@ -1,0 +1,38 @@
+# Jakarta EE
+jakarta.xml.ws:jakarta.xml.ws-api:4.0.0
+jakarta.xml.bind:jakarta.xml.bind-api:4.0.0
+jakarta.jws:jakarta.jws-api:3.0.0
+jakarta.activation:jakarta.activation-api:2.1.1
+jakarta.ws.rs:jakarta.ws.rs-api:3.1.0
+jakarta.annotation:jakarta.annotation-api:2.1.1
+jakarta.validation:jakarta.validation-api:3.0.2
+jakarta.ejb:jakarta.ejb-api:4.0.1
+jakarta.el:jakarta.el-api:5.0.1
+jakarta.enterprise:jakarta.enterprise.cdi-api:4.0.1
+jakarta.interceptor:jakarta.interceptor-api:2.1.0
+jakarta.transaction:jakarta.transaction-api:2.0.1
+jakarta.inject:jakarta.inject-api:2.0.1
+jakarta.json:jakarta.json-api:2.1.1
+jakarta.websocket:jakarta.websocket-api:2.1.0
+com.sun.activation:jakarta.activation:2.0.1
+
+#This now has the jakarta namespace in its import requirements
+com.sun.xml.bind:jaxb-impl:4.0.2
+com.sun.istack:istack-commons-runtime:4.1.1
+org.glassfish.jaxb:jaxb-core:4.0.2
+org.glassfish.jaxb:txw2:4.0.2
+org.glassfish.jaxb:txw2:jar:sources:4.0.2
+
+# Apache Felix with Jakarta namespace
+org.apache.felix:org.apache.felix.http.jetty:5.0.0 
+org.apache.felix:org.apache.felix.http.servlet-api:2.1.0
+
+# OSGi
+org.osgi:org.osgi.service.servlet:2.0.0
+org.osgi:org.osgi.service.jakartars:2.0.0
+
+# Gecko
+org.geckoprojects.jakartars:org.gecko.rest.jersey:6.0.0.RC2
+org.geckoprojects.jakartars:org.gecko.rest.jersey.sse:6.0.0.RC2
+org.geckoprojects.jakartars:org.gecko.rest.jersey.multipart:6.0.0.RC2
+org.geckoprojects.jakartars:org.gecko.rest.jersey.servlet.whiteboard:6.0.0.RC2

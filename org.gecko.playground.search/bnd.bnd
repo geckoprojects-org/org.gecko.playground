@@ -1,7 +1,6 @@
 -library: enable-emf
 
 Bundle-Version: 1.0.0.SNAPSHOT
-Private-Package: org.gecko.playground.search
 -buildpath: \
 	org.osgi.service.component,\
 	org.gecko.search,\
@@ -18,3 +17,4 @@ Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 -privatepackage: \
 	org.gecko.playground.search.helper,\
 	org.gecko.playground.search.cmd
+Export-Package: org.gecko.playground.search

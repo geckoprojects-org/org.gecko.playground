@@ -1,7 +1,7 @@
 Bundle-Version: 1.0.0.SNAPSHOT
 
 -buildpath: \
-	org.apache.felix.http.servlet-api,\
+	org.apache.felix.http.servlet-api;version=latest,\
 	org.osgi.framework,\
 	slf4j.api
 
