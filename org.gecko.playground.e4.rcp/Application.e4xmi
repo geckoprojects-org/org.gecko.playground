@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_6wlLcMgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.application" bindingContexts="_6wlLecgZEeSyMNYR5xypkQ">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.window.main" label="Gecko Playground RCP Application" width="500" height="400">
-    <children xsi:type="basic:PartSashContainer" xmi:id="_6wlLksgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.partsashcontainer.form" containerData="10000">
-      <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.partstack.form">
-        <children xsi:type="basic:Part" xmi:id="_FgK0cr8jEe2yM4X3tynCdw" elementId="org.gecko.playground.e4.rcp.part.search" visible="false" contributionURI="bundleclass://org.gecko.playground.e4.rcp/org.gecko.playground.e4.rcp.parts.SearchPart" label="Search Part" iconURI="platform:/plugin/org.gecko.playground.e4.rcp/icons/search.png"/>
-        <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.part.form" visible="false" contributionURI="bundleclass://org.gecko.playground.e4.rcp/org.gecko.playground.e4.rcp.parts.PersonFormPart" label="Person Form Part" iconURI="platform:/plugin/org.gecko.playground.e4.rcp/icons/form_icon.png"/>
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.window.main" label="Gecko Playground RCP Application" iconURI="platform:/plugin/org.gecko.playground.e4.rcp/icons/CI_CIM_16x4.png" width="500" height="400">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_FobXUMI-Ee2oqdX5HfLSZw" elementId="org.gecko.playground.e4.rcp.partsashcontainer.0">
+      <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.partstack.form" containerData="5000">
+        <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.part.form" visible="false" contributionURI="bundleclass://org.gecko.playground.e4.rcp/org.gecko.playground.e4.rcp.parts.PersonFormPart" label="Person Form Part" iconURI="platform:/plugin/org.gecko.playground.e4.rcp/icons/form_icon.png" closeable="true"/>
+      </children>
+      <children xsi:type="basic:PartStack" xmi:id="_T-k9gMI-Ee2oqdX5HfLSZw" elementId="org.gecko.playground.e4.rcp.partstack.0" containerData="5000">
+        <children xsi:type="basic:Part" xmi:id="_FgK0cr8jEe2yM4X3tynCdw" elementId="org.gecko.playground.e4.rcp.part.search" visible="false" contributionURI="bundleclass://org.gecko.playground.e4.rcp/org.gecko.playground.e4.rcp.parts.SearchPart" label="Search Part" iconURI="platform:/plugin/org.gecko.playground.e4.rcp/icons/search.png" closeable="true"/>
       </children>
     </children>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
@@ -19,8 +21,9 @@
     </mainMenu>
     <trimBars xmi:id="_6wlLlcgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.trimbar.top">
       <children xsi:type="menu:ToolBar" xmi:id="_6wlLlsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.toolbar">
-        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLmMgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.handleditem.trimbar.top.save" iconURI="platform:/plugin/org.gecko.playground.e4.rcp/icons/save_edit.png" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLl8gZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.handleditem.trimbar.top.open" iconURI="platform:/plugin/org.gecko.playground.e4.rcp/icons/open_in_app.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLl8gZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.handleditem.trimbar.top.open" iconURI="platform:/plugin/org.gecko.playground.e4.rcp/icons/form_icon.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_0UIWQMJDEe2GialD90Jrog" elementId="org.gecko.playground.e4.rcp.handleditem.trimbar.top.search" iconURI="platform:/plugin/org.gecko.playground.e4.rcp/icons/search.png" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLmMgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.handleditem.trimbar.top.save" iconURI="platform:/plugin/org.gecko.playground.e4.rcp/icons/save_icon.png" command="_5lqhUMJDEe2GialD90Jrog"/>
       </children>
     </trimBars>
   </children>
@@ -28,6 +31,8 @@
   <handlers xmi:id="_6wlLgcgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.handler.formCommand" contributionURI="bundleclass://org.gecko.playground.e4.rcp/org.gecko.playground.e4.rcp.handlers.FormHandler" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
   <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.handler.searchCommand" contributionURI="bundleclass://org.gecko.playground.e4.rcp/org.gecko.playground.e4.rcp.handlers.SearchHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
   <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.handler.aboutCommand" contributionURI="bundleclass://org.gecko.playground.e4.rcp/org.gecko.playground.e4.rcp.handlers.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_DhIr8MJEEe2GialD90Jrog" elementId="org.gecko.playground.e4.rcp.handler.saveCommand" contributionURI="bundleclass://org.gecko.playground.e4.rcp/org.gecko.playground.e4.rcp.handlers.SaveHandler" command="_5lqhUMJDEe2GialD90Jrog"/>
+  <handlers xmi:id="_s_8dUMJLEe2GialD90Jrog" elementId="org.gecko.playground.e4.rcp.handler.exitFormCommand" contributionURI="bundleclass://org.gecko.playground.e4.rcp/org.gecko.playground.e4.rcp.handlers.ExitFormHandler" command="_P2KqwMJLEe2GialD90Jrog"/>
   <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
     <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
     <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="org.gecko.playground.e4.rcp.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
@@ -42,6 +47,8 @@
   <commands xmi:id="_6wlLgMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.menu.form" commandName="formCommand"/>
   <commands xmi:id="_6wlLg8gZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.menu.search" commandName="searchCommand"/>
   <commands xmi:id="_6wlLhsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_5lqhUMJDEe2GialD90Jrog" elementId="org.eclipse.ui.help.saveAction" commandName="saveCommand"/>
+  <commands xmi:id="_P2KqwMJLEe2GialD90Jrog" elementId="org.eclipse.ui.help.exitFormAction" commandName="exitFormCommand"/>
   <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

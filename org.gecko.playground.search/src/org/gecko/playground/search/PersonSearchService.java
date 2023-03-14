@@ -44,13 +44,13 @@ import org.osgi.service.component.annotations.Reference;
  */
 @Component(name = "PersonSearchService", service = PersonSearchService.class)
 public class PersonSearchService {
-	
+
 	@Reference(target = "(id=person)")
 	private LuceneIndexService personIndex;
-	
+
 	@Reference
 	private ResourceSet resourceSet;
-	
+
 	public Person searchPersonById(String personId) {
 		Objects.requireNonNull(personId, "Cannot search Person by null id!");
 		Query query = new TermQuery(new Term(PersonIndexHelper.PERSON_ID, personId));
@@ -65,7 +65,7 @@ public class PersonSearchService {
 		Query query;
 		if(exactMatch) {
 			query = new TermQuery(new Term(PersonIndexHelper.PERSON_FIRST_NAME, firstName));
-			
+
 		} else {
 			Query q1 = new WildcardQuery(new Term(PersonIndexHelper.PERSON_FIRST_NAME_LOWER, "*" + firstName.toLowerCase() + "*"));
 			Query q2 = new FuzzyQuery(new Term(PersonIndexHelper.PERSON_FIRST_NAME_LOWER, firstName.toLowerCase()));
@@ -80,7 +80,7 @@ public class PersonSearchService {
 		Query query;
 		if(exactMatch) {
 			query = new TermQuery(new Term(PersonIndexHelper.PERSON_LAST_NAME, lastName));
-			
+
 		} else {
 			Query q1 = new WildcardQuery(new Term(PersonIndexHelper.PERSON_LAST_NAME_LOWER, "*" + lastName.toLowerCase() + "*"));
 			Query q2 = new FuzzyQuery(new Term(PersonIndexHelper.PERSON_LAST_NAME_LOWER, lastName.toLowerCase()));
@@ -88,7 +88,17 @@ public class PersonSearchService {
 		}
 		return executeTermSearch(query);
 	}
-	
+
+	public List<Person> searchPersonsName(String name) {
+		Objects.requireNonNull(name, "Cannot search Person by null name!");
+		Query q1 = new WildcardQuery(new Term(PersonIndexHelper.PERSON_FIRST_NAME_LOWER, "*" + name.toLowerCase() + "*"));
+		Query q2 = new FuzzyQuery(new Term(PersonIndexHelper.PERSON_FIRST_NAME_LOWER, name.toLowerCase()));
+		Query q3 = new WildcardQuery(new Term(PersonIndexHelper.PERSON_LAST_NAME_LOWER, "*" + name.toLowerCase() + "*"));
+		Query q4 = new FuzzyQuery(new Term(PersonIndexHelper.PERSON_LAST_NAME_LOWER, name.toLowerCase()));
+		Query query = new BooleanQuery.Builder().add(q1, Occur.SHOULD).add(q2, Occur.SHOULD).add(q3, Occur.SHOULD).add(q4, Occur.SHOULD).build();
+		return executeTermSearch(query);
+	}
+
 	private List<Person> executeTermSearch(Query query) {
 
 		IndexSearcher searcher = personIndex.aquireSearch();		

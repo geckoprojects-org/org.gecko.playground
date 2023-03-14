@@ -15,6 +15,10 @@
                name="applicationCSS"
                value="platform:/plugin/org.gecko.playground.e4.rcp/css/default.css">
          </property>
+         <property
+      			name="applicationCSSResources"
+      			value="platform:/plugin/org.gecko.playground.e4.rcp/icons/">
+		</property> 
       </product>
    </extension>
 </plugin>
