@@ -8,26 +8,22 @@ import org.eclipse.e4.ui.workbench.modeling.EPartService;
 public class SearchHandler {
 
 	@CanExecute
-	public boolean canExecute(EPartService partService) {
+	public boolean canExecute(EPartService ePartService) {
+		if(ePartService == null) return false;
 		return true;
 	}
 
 	@Execute
 	public void execute(EPartService ePartService) {
-		if(ePartService != null) {
-			MPart activePart = ePartService.getActivePart();
-			if(activePart != null) activePart.setVisible(false);
-			MPart formPart = ePartService.findPart("org.gecko.playground.e4.rcp.part.search");
-			if(formPart != null) {
-				ePartService.activate(formPart);
-				formPart.setVisible(true);
-			}
-			else {
-				System.err.println("Form Part not found!");
-			}
+		MPart searchPart = ePartService.findPart("org.gecko.playground.e4.rcp.part.search");
+		if(searchPart != null) {				
+			searchPart.setVisible(true);
+			ePartService.activate(searchPart);
 		}
 		else {
-			System.err.println("EPartService not injected!");
-		}		
+			System.err.println("Search Part not found!");
+		}
 	}
+
+
 }
