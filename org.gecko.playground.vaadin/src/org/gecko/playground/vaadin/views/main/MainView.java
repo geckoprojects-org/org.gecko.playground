@@ -14,6 +14,7 @@ package org.gecko.playground.vaadin.views.main;
 import java.util.Optional;
 
 import org.gecko.playground.vaadin.views.form.PersonFormView;
+import org.gecko.playground.vaadin.views.search.PersonSearchView;
 import org.gecko.vaadin.whiteboard.annotations.VaadinComponent;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -102,7 +103,8 @@ public class MainView extends AppLayout {
 
     private com.vaadin.flow.component.Component[] createMenuItems() {
         return new Tab[]{        		
-        		createTab("Person Form", PersonFormView.class)
+        		createTab("Person Form", PersonFormView.class),
+        		createTab("Search", PersonSearchView.class)
         		};
     }
 

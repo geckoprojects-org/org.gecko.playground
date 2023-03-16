@@ -27,4 +27,7 @@ Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 	com.vaadin.flow.data,\
 	com.vaadin.flow.data.renderer,\
 	com.vaadin.external.gwt,\
-	com.vaadin.flow.component.radiobutton
+	com.vaadin.flow.component.radiobutton,\
+	com.vaadin.flow.component.checkbox,\
+	org.gecko.playground.search;version=latest,\
+	org.gecko.playground.mongo;version=latest
