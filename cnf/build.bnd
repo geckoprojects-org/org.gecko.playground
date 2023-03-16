@@ -8,7 +8,8 @@
 	geckoOSGi-Test,\
 	geckoDIMC,\
 	geckoBndEclipse,\
-	geckoVaadin
+	geckoVaadin,\
+	geckoEMFUtil
 	
 # Needed because we enabled library 'gecko-dimc' 	
 github-project: org.gecko.playground
