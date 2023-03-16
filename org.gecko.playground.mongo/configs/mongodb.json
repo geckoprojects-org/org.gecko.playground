@@ -1,0 +1,11 @@
+{
+  ":configurator:resource-version": 1,
+  
+	"EMFMongoRepositoryConfigurator~playground": 
+  	{
+	    "mongo.instances": "playground",
+		"playground.baseUris" : "mongodb://localhost:27017",
+		"playground.databases" : "playground", 
+		"playground.playground.repoType" : "PROTOTYPE" 
+	}
+}

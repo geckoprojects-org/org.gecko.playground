@@ -11,8 +11,10 @@
  */
 package org.gecko.playground.mongo;
 
+import java.util.Collection;
 import java.util.Objects;
 
+import org.eclipse.emf.ecore.EObject;
 import org.gecko.emf.repository.EMFRepository;
 import org.gecko.playground.model.person.Person;
 import org.gecko.playground.model.person.PersonPackage;
@@ -24,16 +26,15 @@ import org.osgi.service.component.annotations.ServiceScope;
 @Component(name = "PersonPersistenceService", service = PersonPersistenceService.class, scope = ServiceScope.PROTOTYPE)
 public class PersonPersistenceService {
 
-	@Reference(target="(repo.id=playgrund.playground)", scope = ReferenceScope.PROTOTYPE_REQUIRED)
+	@Reference(target="(repo_id=playground.playground)", scope = ReferenceScope.PROTOTYPE_REQUIRED)
 	EMFRepository repository;
 	
 	@Reference
 	PersonPackage personPackage;
 
 	public Person savePerson(Person person) {
-		
-//		repository.save(person.getTag());
-//		repository.save(person.getAddress());
+		save(person.getAddress());
+		save(person.getTag());
 		repository.save(person);
 		repository.detach(person);
 		return person;
@@ -45,9 +46,8 @@ public class PersonPersistenceService {
 	}
 	
 	
-	
-//	TODO:fixme
-//	private void save(List<? super EObject> objects) {
-//		repository.save(objects);
-//	}
+	@SuppressWarnings("unchecked")
+	private <T extends EObject> void save(Collection<T> objects) {
+		repository.save((Collection<EObject>)objects);
+	}
 }

@@ -2,6 +2,12 @@
 
 Bundle-Version: 1.0.0.SNAPSHOT
 Private-Package: org.gecko.playground.mongo
+
+-includeresource: \
+	OSGI-INF/configurator/=configs/
+Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
+
 -buildpath: \
 	org.gecko.emf.repository.api,\
 	org.gecko.playground.model;version=latest
+-privatepackage: org.gecko.playground.mongo.cmd
