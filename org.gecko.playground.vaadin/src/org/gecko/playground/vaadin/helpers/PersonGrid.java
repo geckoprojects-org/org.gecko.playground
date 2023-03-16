@@ -13,9 +13,14 @@
  */
 package org.gecko.playground.vaadin.helpers;
 
+import java.text.SimpleDateFormat;
+import java.util.Collection;
+
 import org.gecko.playground.model.person.Person;
 
 import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.grid.dataview.GridListDataView;
+import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 
@@ -28,11 +33,14 @@ public class PersonGrid extends Grid<Person>{
 
 	/** serialVersionUID */
 	private static final long serialVersionUID = 6662887168435220121L;
+	public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy");
 	
 	public PersonGrid() {
 		addColumn(Person::getFirstNames).setHeader("First Names").setAutoWidth(true);
 		addColumn(Person::getLastName).setHeader("Last Name").setAutoWidth(true);
-		addColumn(Person::getBirthDate).setHeader("Birth Date").setAutoWidth(true);
+		addComponentColumn(person -> {
+			return new Label(DATE_FORMAT.format(person.getBirthDate()));
+		}).setHeader("Birth Date").setAutoWidth(true);
 		setItemDetailsRenderer(new ComponentRenderer<HorizontalLayout,Person>(HorizontalLayout::new, (layout, person) -> {
 			AddressGrid addressGrid = new AddressGrid();
 			addressGrid.setItems(person.getAddress());			
@@ -40,6 +48,17 @@ public class PersonGrid extends Grid<Person>{
 			contactGrid.setItems(person.getContact());
 			layout.add(addressGrid, contactGrid);
 		}));
+	}
+	
+	@Override
+	public GridListDataView<Person> setItems(Collection<Person> items) {
+		if(items == null || items.isEmpty()) {
+			setVisible(false);
+		}
+		else {
+			setVisible(true);
+		}
+		return super.setItems(items);
 	}
 
 }

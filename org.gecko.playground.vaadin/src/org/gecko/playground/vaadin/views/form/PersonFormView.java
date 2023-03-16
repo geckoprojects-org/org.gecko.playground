@@ -12,6 +12,8 @@ import org.gecko.playground.model.person.Address;
 import org.gecko.playground.model.person.Contact;
 import org.gecko.playground.model.person.Person;
 import org.gecko.playground.model.person.PersonPackage;
+import org.gecko.playground.mongo.PersonPersistenceService;
+import org.gecko.playground.search.PersonIndexService;
 import org.gecko.playground.vaadin.helpers.AddressDialog;
 import org.gecko.playground.vaadin.helpers.AddressGrid;
 import org.gecko.playground.vaadin.helpers.ContactDialog;
@@ -21,10 +23,13 @@ import org.gecko.vaadin.whiteboard.annotations.VaadinComponent;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceScope;
 import org.osgi.service.component.annotations.ServiceScope;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.datepicker.DatePicker;
+import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
@@ -41,6 +46,12 @@ public class PersonFormView extends VerticalLayout {
 	
 	@Reference
 	PersonPackage personPackage;
+	
+	@Reference
+	PersonIndexService indexService;
+	
+	@Reference(scope = ReferenceScope.PROTOTYPE_REQUIRED)
+	PersonPersistenceService personService;
 
 	private static final long serialVersionUID = 6928570077895818105L;
 	private List<Address> addresses = new ArrayList<>();
@@ -113,7 +124,15 @@ public class PersonFormView extends VerticalLayout {
 			if(birthDate.getValue() != null) person.setBirthDate(Date.from(birthDate.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant()));
 			person.getAddress().addAll(addressGrid.getItems());
 			person.getContact().addAll(contactGrid.getItems());
-//			TODO: SAVE Person object in mongodb and index it with index!
+			try {
+				personService.savePerson(person);
+				indexService.indexPerson(person, true);
+				Notification.show("Person saved and indexed successfully!").addThemeVariants(NotificationVariant.LUMO_SUCCESS);
+			} catch(Exception e) {
+				Notification.show("Something went wrong when saving Person object.").addThemeVariants(NotificationVariant.LUMO_ERROR);
+				e.printStackTrace();
+			}
+		
 		});
 		
 		clearBtn.addClickListener(evt -> {

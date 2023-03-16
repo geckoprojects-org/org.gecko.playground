@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
-encoding//configs/config.json=UTF-8
+encoding//configs/vaadin.json=UTF-8
 encoding//frontend/themes/wbapp/styles.css=UTF-8
 encoding//frontend/themes/wbapp/theme.json=UTF-8
 encoding//frontend/themes/wbapp/views/main-view.css=UTF-8

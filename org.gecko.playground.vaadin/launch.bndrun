@@ -20,7 +20,13 @@
 	bnd.identity;id='org.apache.felix.gogo.shell',\
 	bnd.identity;id='org.apache.felix.http.whiteboard',\
 	bnd.identity;id='org.apache.felix.configadmin',\
-	bnd.identity;id='org.eclipse.parsson.jakarta.json'
+	bnd.identity;id='org.eclipse.parsson.jakarta.json',\
+	bnd.identity;id='org.gecko.emf.mongo.api',\
+	bnd.identity;id='org.mongodb.mongo-java-driver',\
+	bnd.identity;id='org.gecko.emf.repository.mongo',\
+	bnd.identity;id='org.gecko.search.document.impl',\
+	bnd.identity;id='org.gecko.search.util',\
+	bnd.identity;id='org.gecko.emf.mongo.pushstream'
 
 # we need to run our project
 -runbundles: \
@@ -103,12 +109,36 @@
 	org.eclipse.emf.gwt.common;version='[2.13.0,2.13.1)',\
 	org.gecko.emf.osgi.api;version='[4.5.0,4.5.1)',\
 	org.gecko.emf.osgi.component;version='[4.5.0,4.5.1)',\
-	org.gecko.playground.model;version=snapshot
+	org.gecko.playground.model;version=snapshot,\
+	com.vaadin.flow.component.checkbox;version='[23.3.0,23.3.1)',\
+	com.vaadin.flow.component.radiobutton;version='[23.3.0,23.3.1)',\
+	org.gecko.emf.repository.api;version='[9.2.2,9.2.3)',\
+	org.gecko.playground.lucene;version=snapshot,\
+	org.gecko.playground.mongo;version=snapshot,\
+	org.gecko.playground.search;version=snapshot,\
+	org.gecko.search;version='[1.0.0,1.0.1)',\
+	org.gecko.search.document.api;version='[1.0.0,1.0.1)',\
+	org.gecko.search.util;version='[1.0.0,1.0.1)',\
+	org.gecko.emf.collections;version='[2.1.1,2.1.2)',\
+	org.gecko.emf.mongo.api;version='[6.0.0,6.0.1)',\
+	org.gecko.emf.mongo.component;version='[6.0.0,6.0.1)',\
+	org.gecko.mongo.osgi.component;version='[6.0.0,6.0.1)',\
+	org.mongodb.mongo-java-driver;version='[3.9.1,3.9.2)',\
+	org.osgi.service.log;version='[1.5.0,1.5.1)',\
+	org.osgi.service.metatype;version='[1.4.1,1.4.2)',\
+	org.gecko.emf.repository.mongo;version='[3.1.0,3.1.1)',\
+	org.gecko.search.document.impl;version='[1.0.0,1.0.1)',\
+	org.gecko.util.common;version='[2.0.0,2.0.1)',\
+	org.gecko.util.pushstream;version='[6.0.0,6.0.1)',\
+	org.osgi.util.pushstream;version='[1.0.1,1.0.2)',\
+	org.gecko.emf.pushstreams;version='[1.1.1,1.1.2)',\
+	org.gecko.emf.mongo.pushstream;version='[6.0.0,6.0.1)'
 
 -runblacklist: \
 	bnd.identity;id='org.osgi.service.http.whiteboard',\
 	bnd.identity;id='slf4j.simple';version:Version='1.7.30',\
 	bnd.identity;id='org.gecko.emf.osgi.component';version='[4.0.0,4.1)',\
+	bnd.identity;id='org.gecko.emf.pushstreams';version='[1.0.15,1.0.16)',\
 	
 -runproperties: \
 	osgi.console=,\
@@ -129,4 +159,5 @@
 	Gecko Vaadin,\
 	OSGi-Test Dependencies,\
 	Workspace,\
-	Javax Namespace
+	Javax Namespace,\
+	GeckoEMF Util Dependencies

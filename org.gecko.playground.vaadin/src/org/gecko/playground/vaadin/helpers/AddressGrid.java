@@ -35,11 +35,11 @@ public class AddressGrid extends Grid<Address> {
 		}).setHeader("Context").setAutoWidth(true);	
 		addComponentColumn(address -> {
 			StringBuilder formattedAddress = new StringBuilder();
-			formattedAddress.append(address.getStreet() != null ? address.getStreet().concat(",") : "");
-			formattedAddress.append(address.getZip() != null ? address.getZip().concat(",") : "");
+			formattedAddress.append(address.getStreet() != null ? address.getStreet().concat(", ") : "");
+			formattedAddress.append(address.getZip() != null ? address.getZip().concat(", ") : "");
 			formattedAddress.append(address.getCity() != null ? address.getCity() : "");
 			String formattedAddressStr = formattedAddress.toString();
-			if(formattedAddressStr.endsWith(",")) formattedAddressStr = formattedAddressStr.substring(0, formattedAddressStr.length()-1);
+			if(formattedAddressStr.endsWith(", ")) formattedAddressStr = formattedAddressStr.substring(0, formattedAddressStr.length()-2);
 			return new Label(formattedAddressStr);
 		}).setHeader("Address").setAutoWidth(true);	
 		setVisible(false);

@@ -16,7 +16,7 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	cleanup=ALL
 
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-11
+-runee: JavaSE-17
 -runrequires: \
 	bnd.identity;id='org.gecko.vaadin.whiteboard.api',\
 	bnd.identity;id='org.gecko.vaadin.whiteboard',\
@@ -84,7 +84,6 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.osgi.util.converter;version='[1.0.9,1.0.10)',\
 	org.osgi.util.function;version='[1.2.0,1.2.1)',\
 	org.osgi.util.promise;version='[1.3.0,1.3.1)',\
-	org.osgi.util.pushstream;version='[1.1.0,1.1.1)',\
 	slf4j.api;version='[1.7.36,1.7.37)',\
 	org.apache.commons.lang3;version='[3.12.0,3.12.1)',\
 	org.apache.felix.http.jetty;version='[4.2.2,4.2.3)',\
@@ -96,7 +95,20 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.eclipse.equinox.cm;version='[1.5.100,1.5.101)',\
 	org.gecko.emf.osgi.api;version='[4.5.0,4.5.1)',\
 	org.gecko.emf.osgi.component;version='[4.5.0,4.5.1)',\
-	org.gecko.playground.model;version=snapshot
+	org.gecko.playground.model;version=snapshot,\
+	com.vaadin.flow.component.checkbox;version='[23.3.0,23.3.1)',\
+	com.vaadin.flow.component.radiobutton;version='[23.3.0,23.3.1)',\
+	org.gecko.emf.pushstreams;version='[1.0.15,1.0.16)',\
+	org.gecko.emf.repository.api;version='[9.2.2,9.2.3)',\
+	org.gecko.playground.lucene;version=snapshot,\
+	org.gecko.playground.mongo;version=snapshot,\
+	org.gecko.playground.search;version=snapshot,\
+	org.gecko.search;version='[1.0.0,1.0.1)',\
+	org.gecko.search.document.api;version='[1.0.0,1.0.1)',\
+	org.gecko.search.util;version='[1.0.0,1.0.1)',\
+	org.gecko.util.common;version='[2.0.0,2.0.1)',\
+	org.gecko.util.pushstream;version='[6.0.0,6.0.1)',\
+	org.osgi.util.pushstream;version='[1.0.2,1.0.3)'
 -runrepos: \
 	Workspace,\
 	Workspace,\
