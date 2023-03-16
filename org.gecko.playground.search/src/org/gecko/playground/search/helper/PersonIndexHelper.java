@@ -12,11 +12,13 @@
 package org.gecko.playground.search.helper;
 
 import java.util.Collections;
+import java.util.Map;
 
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field.Store;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.index.Term;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.gecko.playground.model.person.Person;
 import org.gecko.search.api.IndexActionType;
 import org.gecko.search.document.DocumentIndexContextObject;
@@ -55,7 +57,9 @@ public class PersonIndexHelper {
 			Deferred<Boolean> deferred) {
 		
 		Document doc = new Document();
-		DocumentUtil.toDocument(doc, person);
+		EcoreUtil.resolveAll(person);
+		DocumentUtil.toDocument(doc, person, Map.of(DocumentUtil.INDEX_NON_CONTAINEMENT, true));
+		
 
 		doc.add(new StringField(PERSON_ID, person.getId(), Store.YES));
 

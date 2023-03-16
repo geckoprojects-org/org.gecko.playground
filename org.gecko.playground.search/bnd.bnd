@@ -8,7 +8,14 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.gecko.search.document.api,\
 	org.apache.lucene.core;version=latest,\
 	org.gecko.playground.model;version=latest,\
-	org.osgi.util.promise;version=latest
+	org.osgi.util.promise;version=latest,\
+	org.gecko.emf.repository.api,\
+	org.osgi.util.function,\
+	org.gecko.emf.mongo.pushstream,\
+	org.gecko.emf.pushstreams,\
+	org.osgi.util.pushstream,\
+	org.gecko.util.pushstream,\
+	org.gecko.emf.mongo.api
 	
 -includeresource: \
 	OSGI-INF/configurator/=configs/

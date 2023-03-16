@@ -27,7 +27,7 @@ public class PersonIndexService {
 
 	@Reference(target = "(id=person)")
 	private LuceneIndexService personIndex;	
-
+	
 	public void indexPerson(Person person, boolean isFirstSave) {
 		if(isFirstSave) {
 			indexPerson(person, IndexActionType.ADD);

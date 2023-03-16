@@ -1,7 +1,6 @@
 -library: enable-emf
 
 Bundle-Version: 1.0.0.SNAPSHOT
-Private-Package: org.gecko.playground.mongo
 
 -includeresource: \
 	OSGI-INF/configurator/=configs/
@@ -11,3 +10,4 @@ Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 	org.gecko.emf.repository.api,\
 	org.gecko.playground.model;version=latest
 -privatepackage: org.gecko.playground.mongo.cmd
+Export-Package: org.gecko.playground.mongo
