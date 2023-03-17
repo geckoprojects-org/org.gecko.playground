@@ -9,13 +9,15 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package org.gecko.playground.e4.rcp.parts;
+package org.gecko.playground.e4.rcp.helpers;
 
 import java.text.SimpleDateFormat;
 
 import org.eclipse.jface.viewers.ILabelProviderListener;
 import org.eclipse.jface.viewers.ITableLabelProvider;
 import org.eclipse.swt.graphics.Image;
+import org.gecko.playground.model.person.Address;
+import org.gecko.playground.model.person.Contact;
 import org.gecko.playground.model.person.Person;
 
 /**
@@ -95,8 +97,52 @@ public class PersonTableLabelProvider implements ITableLabelProvider {
 		case 2:
 			result = DATE_FORMAT.format(person.getBirthDate());
 			break;
+		case 3:
+			result = createAddressesList(person);
+			break;
+		case 4:
+			result = createContactsList(person);
+			break;
 		}
 		return result;
 	}
 
+	private String createContactsList(Person person) {
+		String result = "";
+		if(person.getContact().isEmpty()) {
+			result = "N/A";
+		} else {
+			for(Contact contact : person.getContact()) {
+				if(contact.getValue() == null) continue;
+				StringBuilder formattedContact = new StringBuilder();
+				formattedContact.append(contact.getContext().toString().concat(", "));
+				formattedContact.append(contact.getType().toString().concat(", "));
+				formattedContact.append(contact.getValue().concat("\n"));
+				String formattedContactStr = formattedContact.toString();
+				result += formattedContactStr;
+			}
+			result = result.substring(0, result.length()-1);				
+		}
+		return result;
+	}
+	
+	private String createAddressesList(Person person) {
+		String result = "";
+		if(person.getAddress().isEmpty()) {
+			result = "N/A";
+		} else {
+			for(Address address : person.getAddress()) {
+				StringBuilder formattedAddress = new StringBuilder();
+				formattedAddress.append(address.getStreet() != null ? address.getStreet().concat(", ") : "");
+				formattedAddress.append(address.getZip() != null ? address.getZip().concat(", ") : "");
+				formattedAddress.append(address.getCity() != null ? address.getCity() : "");
+				String formattedAddressStr = formattedAddress.toString();
+				if(formattedAddressStr.endsWith(", ")) formattedAddressStr = formattedAddressStr.substring(0, formattedAddressStr.length()-2);
+				formattedAddressStr += "\n";
+				result += formattedAddressStr;
+			}
+			result = result.substring(0, result.length()-1);				
+		}
+		return result;
+	}
 }

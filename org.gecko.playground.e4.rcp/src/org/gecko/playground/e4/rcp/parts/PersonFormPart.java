@@ -2,7 +2,10 @@ package org.gecko.playground.e4.rcp.parts;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import javax.annotation.PostConstruct;
@@ -30,8 +33,15 @@ import org.gecko.eclipse.annotations.RequireEclipseCompatibility;
 import org.gecko.eclipse.annotations.RequireEclipseConsole;
 import org.gecko.eclipse.annotations.RequireEclipseE4;
 import org.gecko.playground.e4.rcp.handlers.ExitFormHandler;
+import org.gecko.playground.e4.rcp.helpers.AddressDialog;
+import org.gecko.playground.e4.rcp.helpers.AddressTableViewer;
+import org.gecko.playground.e4.rcp.helpers.ContactDialog;
+import org.gecko.playground.e4.rcp.helpers.ContactTableViewer;
+import org.gecko.playground.model.person.Address;
+import org.gecko.playground.model.person.Contact;
 import org.gecko.playground.model.person.Person;
 import org.gecko.playground.model.person.PersonPackage;
+import org.gecko.playground.mongo.PersonPersistenceService;
 import org.gecko.playground.search.PersonIndexService;
 import org.osgi.service.component.annotations.Component;
 
@@ -46,6 +56,9 @@ public class PersonFormPart {
 
 	@Inject
 	PersonIndexService indexService;
+	
+	@Inject
+	PersonPersistenceService personPersistenceService;
 
 	@Inject
 	private MPart part;
@@ -56,6 +69,9 @@ public class PersonFormPart {
 	private Composite parent;
 	private Text firstName, lastName;
 	private DateTime birthDateField;
+	
+	private List<Address> addresses = new ArrayList<>();
+	private List<Contact> contacts = new ArrayList<>();
 
 
 
@@ -106,6 +122,39 @@ public class PersonFormPart {
 			dialog.pack();
 			dialog.open();
 		}).create(infoComposite);
+		
+		Composite refComposite = new Composite(parent, SWT.FILL);
+		refComposite.setLayout(new GridLayout(2, true));
+		
+		Composite tablesComposite = new Composite(parent, SWT.FILL);
+		tablesComposite.setLayout(new GridLayout(2, true));
+		tablesComposite.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+		AddressTableViewer addressTable = new AddressTableViewer(tablesComposite);
+		ContactTableViewer contactTable = new ContactTableViewer(tablesComposite);
+		
+		ButtonFactory.newButton(SWT.PUSH).text("Add Address").onSelect(evt -> {
+			AddressDialog addDialog = new AddressDialog(personPackage, parent.getShell(), SWT.DIALOG_TRIM);
+			addDialog.getDialog().getDefaultButton().addSelectionListener(new SelectionAdapter() {
+				public void widgetSelected( SelectionEvent e ) {
+					addresses.add(addDialog.getObject());
+					addressTable.setInput(addresses);
+					addDialog.getDialog().close();
+				}
+			});
+			addDialog.getDialog().open();
+		}).create(refComposite);
+		
+		ButtonFactory.newButton(SWT.PUSH).text("Add Contact").onSelect(evt -> {
+			ContactDialog contactDialog = new ContactDialog(personPackage, parent.getShell(), SWT.DIALOG_TRIM);
+			contactDialog.getDialog().getDefaultButton().addSelectionListener(new SelectionAdapter() {
+				public void widgetSelected( SelectionEvent e ) {
+					contacts.add(contactDialog.getObject());
+					contactTable.setInput(contacts);
+					contactDialog.getDialog().close();
+				}
+			});
+			contactDialog.getDialog().open();
+		}).create(refComposite);
 
 		Composite btnComposite = new Composite(parent, SWT.FILL);
 		btnComposite.setLayout(new GridLayout(2, true));
@@ -114,6 +163,10 @@ public class PersonFormPart {
 		}).create(btnComposite);
 
 		ButtonFactory.newButton(SWT.BORDER).text("Clear").onSelect(evt -> {
+			contactTable.setInput(Collections.emptyList());
+			addressTable.setInput(Collections.emptyList());
+			contacts.clear();
+			addresses.clear();
 			firstName.setText("");
 			lastName.setText("");
 			birthDateField.setDate(LocalDate.now().getYear(), LocalDate.now().getMonthValue(), LocalDate.now().getDayOfMonth());
@@ -146,7 +199,10 @@ public class PersonFormPart {
 		person.setFirstNames(firstName.getText());
 		person.setLastName(lastName.getText());
 		person.setBirthDate(Date.from(LocalDate.of(birthDateField.getYear(), birthDateField.getMonth()+1, birthDateField.getDay()).atStartOfDay(ZoneId.systemDefault()).toInstant()));
+		person.getContact().addAll(contacts);
+		person.getAddress().addAll(addresses);
 		indexService.indexPerson(person, true);
-		MessageDialog.openInformation(parent.getShell(), "Person Saved", "Person Added to the Index!");
+		personPersistenceService.savePerson(person);
+		MessageDialog.openInformation(parent.getShell(), "Person Saved", "Person successfully added to the Index and to the DB!");
 	}
 }

@@ -10,8 +10,6 @@ import javax.inject.Inject;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.jface.viewers.ArrayContentProvider;
-import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.widgets.ButtonFactory;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -20,14 +18,15 @@ import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
 import org.gecko.eclipse.annotations.RequireEclipseCompatibility;
 import org.gecko.eclipse.annotations.RequireEclipseConsole;
 import org.gecko.eclipse.annotations.RequireEclipseE4;
+import org.gecko.playground.e4.rcp.helpers.PersonTableViewer;
 import org.gecko.playground.model.person.Person;
 import org.gecko.playground.search.PersonSearchService;
 import org.osgi.service.component.annotations.Component;
+
 
 @RequireEclipseConsole
 @RequireEclipseE4
@@ -41,7 +40,7 @@ public class SearchPart {
 	@Inject
 	MPart part;
 
-	private TableViewer tableViewer;
+	private PersonTableViewer personTableViewer;
 	private Composite parent;
 	private String searchOption;
 	
@@ -53,8 +52,10 @@ public class SearchPart {
 	public void createComposite(Composite parent) {
 
 		this.parent = parent;
+		
 		parent.setLayout(new GridLayout(1, false));
-
+		parent.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+		
 		Composite searchOptionsLayout = new Composite(parent, SWT.NONE);
 		searchOptionsLayout.setLayout(new GridLayout(2, false));
 		
@@ -67,8 +68,7 @@ public class SearchPart {
 		
 		Button searchByLastNameBtn = new Button(searchOptions, SWT.RADIO);
 		searchByLastNameBtn.setText(SEARCH_OPTION_BY_LAST_NAME);
-		
-		
+			
 		Button searchByBothBtn = new Button(searchOptions, SWT.RADIO);
 		searchByBothBtn.setText(SEARCH_OPTION_BY_BOTH);
 		
@@ -96,10 +96,14 @@ public class SearchPart {
 		
 
 		Composite searchLayout = new Composite(parent, SWT.FILL);
-		searchLayout.setLayout(new GridLayout(3, false));
+		searchLayout.setLayout(new GridLayout(3, true));
 
 		Text searchField = new Text(searchLayout, SWT.BORDER);
 		ButtonFactory.newButton(SWT.BORDER).text("Search").onSelect(evt -> {
+			if(searchOption == null) {
+				MessageDialog.openWarning(parent.getShell(), "Search Options not set", "Please, select one search criteria first!");
+				return;
+			}
 			List<Person> searchResult = new ArrayList<>();
 			switch(searchOption) {
 			case SEARCH_OPTION_BY_FIRST_NAME:
@@ -114,22 +118,14 @@ public class SearchPart {
 			}
 			if(searchResult == null || searchResult.isEmpty()) {
 				MessageDialog.openWarning(parent.getShell(), "No Result", "No Person matching your search criteria has been found!");
-				if(tableViewer != null) {
-					tableViewer.setInput(Collections.emptyList());
-					tableViewer.getTable().setVisible(false);
-				}
+				personTableViewer.setInput(Collections.emptyList());
 				return;
-			}			
-			tableViewer.setInput(searchResult);
-			tableViewer.getTable().setVisible(true);
-			tableViewer.getTable().forceFocus();
+			}		
+			personTableViewer.setInput(searchResult);
 		}).create(searchLayout);
 		
 		ButtonFactory.newButton(SWT.PUSH).text("Clear").onSelect(evt -> {
-			if(tableViewer != null) {
-				tableViewer.setInput(Collections.emptyList());
-				tableViewer.getTable().setVisible(false);
-			}
+			personTableViewer.setInput(Collections.emptyList());
 			exactMatchBtn.setSelection(false);
 			exactMatchBtn.setVisible(false);
 			searchByFirstNameBtn.setSelection(false);
@@ -138,26 +134,12 @@ public class SearchPart {
 			searchField.setText("");
 		}).create(searchLayout);
 
-		tableViewer = new TableViewer(parent);
-		tableViewer.setContentProvider(ArrayContentProvider.getInstance());
-		tableViewer.setInput(Collections.emptyList());
-		tableViewer.getTable().setHeaderVisible(true);
-		TableColumn firstNameColumn = new TableColumn(tableViewer.getTable(), SWT.LEFT, 0);
-		firstNameColumn.setText("First Name");
-		firstNameColumn.setWidth(400);
-		TableColumn lastNameColumn = new TableColumn(tableViewer.getTable(), SWT.LEFT, 1);
-		lastNameColumn.setText("Last Name");
-		lastNameColumn.setWidth(400);
-		TableColumn birthDateColumn = new TableColumn(tableViewer.getTable(), SWT.LEFT, 2);
-		birthDateColumn.setText("Birth Date");
-		birthDateColumn.setWidth(400);
-		tableViewer.setLabelProvider(new PersonTableLabelProvider());
-		tableViewer.getTable().setLayoutData(new GridData(GridData.FILL_BOTH));		
-		tableViewer.getTable().setVisible(false);
+		personTableViewer = new PersonTableViewer(parent);
 	}
 
 	@Focus
 	public void setFocus() {
 		parent.setFocus();
 	}
+	
 }

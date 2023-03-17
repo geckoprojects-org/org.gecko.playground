@@ -1,6 +1,8 @@
 Bundle-SymbolicName: ${project.name};singleton:=true
 Bundle-Version: 1.0.0.SNAPSHOT
 
+-library: enable-emf
+
 -includeresource: \
 	Application.e4xmi,\
 	icons=icons,\
@@ -25,9 +27,11 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.gecko.playground.search;version=latest,\
 	org.gecko.playground.model,\
 	org.gecko.search.document.api,\
-	org.eclipse.e4.core.contexts
+	org.eclipse.e4.core.contexts,\
+	org.gecko.playground.mongo;version=latest
 
 -privatepackage: \
 	org.gecko.playground.e4.rcp.handlers,\
-	org.gecko.playground.e4.rcp.parts
+	org.gecko.playground.e4.rcp.parts,\
+	org.gecko.playground.e4.rcp.helpers
 
