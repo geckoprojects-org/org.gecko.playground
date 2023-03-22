@@ -4,7 +4,7 @@
 	"EMFMongoRepositoryConfigurator~playground": 
   	{
 	    "mongo.instances": "playground",
-		"playground.baseUris" : "mongodb://localhost:27017",
+		"playground.baseUris" : "mongodb://mongodb",
 		"playground.databases" : "playground", 
 		"playground.playground.repoType" : "PROTOTYPE" 
 	}
