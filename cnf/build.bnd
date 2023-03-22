@@ -9,7 +9,8 @@
 	geckoDIMC,\
 	geckoBndEclipse,\
 	geckoVaadin,\
-	geckoEMFUtil
+	geckoEMFUtil,\
+	geckoSearch
 	
 # Needed because we enabled library 'gecko-dimc' 	
 github-project: org.gecko.playground

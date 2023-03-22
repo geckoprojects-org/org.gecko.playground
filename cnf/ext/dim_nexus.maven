@@ -1,18 +1,5 @@
-org.geckoprojects.search:org.gecko.search:1.0.0-SNAPSHOT
-org.geckoprojects.search:org.gecko.search.document.api:1.0.0-SNAPSHOT
-org.geckoprojects.search:org.gecko.search.document.impl:1.0.0-SNAPSHOT
-org.geckoprojects.search:org.gecko.search.suggest.api:1.0.0-SNAPSHOT
-org.geckoprojects.search:org.gecko.search.suggest.impl:1.0.0-SNAPSHOT
-org.geckoprojects.search:org.gecko.search.util:1.0.0-SNAPSHOT
-
-
-org.geckoprojects.search:org.apache.lucene.codecs:9.5.0-SNAPSHOT
-org.geckoprojects.search:org.apache.lucene.core:9.5.0-SNAPSHOT
-org.geckoprojects.search:org.apache.lucene.facet:9.5.0-SNAPSHOT
-org.geckoprojects.search:org.apache.lucene.grouping:9.5.0-SNAPSHOT
-org.geckoprojects.search:org.apache.lucene.memory:9.5.0-SNAPSHOT
-org.geckoprojects.search:org.apache.lucene.queries:9.5.0-SNAPSHOT
-org.geckoprojects.search:org.apache.lucene.queryparser:9.5.0-SNAPSHOT
+org.geckoprojects.search:org.gecko.emf.search.bnd.project.library:1.1.0-SNAPSHOT
+org.geckoprojects.search:org.gecko.search.bnd.library:1.1.0-SNAPSHOT
 
 org.gecko.runtime:org.gecko.templates:1.0.31
 org.geckoprojects.emf:org.gecko.emf.pushstreams:1.0.15

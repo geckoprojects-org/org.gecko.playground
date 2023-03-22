@@ -19,13 +19,11 @@ import org.apache.lucene.document.Field.Store;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.index.Term;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.gecko.emf.search.document.EObjectContextObjectBuilder;
+import org.gecko.emf.search.document.EObjectDocumentIndexObjectContext;
 import org.gecko.playground.model.person.Person;
-import org.gecko.search.api.IndexActionType;
-import org.gecko.search.document.DocumentIndexContextObject;
-import org.gecko.search.document.DocumentIndexContextObjectImpl;
-import org.gecko.search.util.DeferredCommitCallback;
+import org.gecko.search.IndexActionType;
 import org.gecko.search.util.DocumentUtil;
-import org.osgi.util.promise.Deferred;
 
 /**
  * 
@@ -41,20 +39,15 @@ public class PersonIndexHelper {
 	public static final String PERSON_LAST_NAME = "person_last_name";
 
 	
-	public static DocumentIndexContextObject mapPersonNew(Person person) {		
-		return mapPerson(person, IndexActionType.ADD, null);
+	public static EObjectDocumentIndexObjectContext mapPersonNew(Person person) {		
+		return mapPerson(person, IndexActionType.ADD);
 	}
 
-	public static DocumentIndexContextObject mapPersonNew(Person person, Deferred<Boolean> deferred) {
-		return mapPerson(person, IndexActionType.ADD, deferred);
-	}
-
-	public static DocumentIndexContextObject mapPersonUpdate(Person person, Deferred<Boolean> deferred) {
-		return mapPerson(person, IndexActionType.MODIFY, deferred);
+	public static EObjectDocumentIndexObjectContext mapPersonUpdate(Person person) {
+		return mapPerson(person, IndexActionType.MODIFY);
 	}
 	
-	public static DocumentIndexContextObject mapPerson(Person person, IndexActionType indexAction,
-			Deferred<Boolean> deferred) {
+	public static EObjectDocumentIndexObjectContext mapPerson(Person person, IndexActionType indexAction) {
 		
 		Document doc = new Document();
 		EcoreUtil.resolveAll(person);
@@ -72,17 +65,13 @@ public class PersonIndexHelper {
 			doc.add(new StringField(PERSON_LAST_NAME, person.getLastName(), Store.NO));
 		}
 
-		DocumentIndexContextObjectImpl.Builder builder = DocumentIndexContextObjectImpl.builder()
+		EObjectContextObjectBuilder builder = (EObjectContextObjectBuilder) EObjectContextObjectBuilder.create()
 				.withDocuments(Collections.singletonList(doc)).withSourceObject(person)
 				.withIndexActionType(indexAction);
 
 		if (IndexActionType.MODIFY.equals(indexAction) || IndexActionType.REMOVE.equals(indexAction)) {
 			builder.withIdentifyingTerm(new Term("id", person.getId()));
 		}
-		if (deferred != null) {
-			builder = builder.withCommitCallback(new DeferredCommitCallback(deferred));
-		}
-
 		return builder.build();
 	}
 
