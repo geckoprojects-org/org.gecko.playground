@@ -15,18 +15,19 @@ import java.io.IOException;
 
 import org.gecko.playground.model.person.Person;
 import org.gecko.playground.search.helper.PersonIndexHelper;
-import org.gecko.search.api.IndexActionType;
-import org.gecko.search.document.DocumentIndexContextObject;
+import org.gecko.search.IndexActionType;
 import org.gecko.search.document.LuceneIndexService;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ServiceScope;
+import org.gecko.emf.search.document.EObjectDocumentIndexObjectContext;
 
-@Component(name = "PersonIndexService", service = PersonIndexService.class, scope = ServiceScope.SINGLETON)
+@Component(immediate = true, name = "PersonIndexService", service = PersonIndexService.class, scope = ServiceScope.SINGLETON)
 public class PersonIndexService {
 
+	
 	@Reference(target = "(id=person)")
-	private LuceneIndexService personIndex;	
+	private LuceneIndexService<EObjectDocumentIndexObjectContext> personIndex;
 	
 	public void indexPerson(Person person, boolean isFirstSave) {
 		if(isFirstSave) {
@@ -54,7 +55,7 @@ public class PersonIndexService {
 	}
 
 	private void indexPerson(Person person, IndexActionType actionType) {
-		DocumentIndexContextObject context = PersonIndexHelper.mapPerson(person, actionType, null);			
+		EObjectDocumentIndexObjectContext context = PersonIndexHelper.mapPerson(person, actionType);			
 		personIndex.handleContextSync(context);
 	}
 }

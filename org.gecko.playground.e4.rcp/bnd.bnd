@@ -26,7 +26,7 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.gecko.eclipse.api;version=latest,\
 	org.gecko.playground.search;version=latest,\
 	org.gecko.playground.model,\
-	org.gecko.search.document.api,\
+	org.gecko.search.document,\
 	org.eclipse.e4.core.contexts,\
 	org.gecko.playground.mongo;version=latest
 

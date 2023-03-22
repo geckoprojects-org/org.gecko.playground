@@ -32,8 +32,8 @@ import org.apache.lucene.search.WildcardQuery;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.gecko.playground.model.person.Person;
 import org.gecko.playground.search.helper.PersonIndexHelper;
-import org.gecko.search.document.LuceneIndexService;
 import org.gecko.search.util.DocumentUtil;
+import org.osgi.service.component.ComponentServiceObjects;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
@@ -46,7 +46,7 @@ import org.osgi.service.component.annotations.Reference;
 public class PersonSearchService {
 
 	@Reference(target = "(id=person)")
-	private LuceneIndexService personIndex;
+	private ComponentServiceObjects<IndexSearcher> searcherSO;
 
 	@Reference
 	private ResourceSet resourceSet;
@@ -101,7 +101,7 @@ public class PersonSearchService {
 
 	private List<Person> executeTermSearch(Query query) {
 
-		IndexSearcher searcher = personIndex.aquireSearch();		
+		IndexSearcher searcher = searcherSO.getService();		
 		try {
 			TopDocs topDocs = searcher.search(query, Integer.MAX_VALUE);
 			if (topDocs.scoreDocs.length == 0) {
@@ -124,7 +124,7 @@ public class PersonSearchService {
 			e.printStackTrace();
 			return Collections.emptyList();
 		} finally {
-			personIndex.releaseSearcher(searcher);
+			searcherSO.ungetService(searcher);
 		}
 	}
 }
