@@ -189,7 +189,10 @@ public class PersonFormPart {
 		if(part.isDirty()) {
 			if(MessageDialog.openQuestion(parent.getShell(), "Save Before Closing", "Do you want to save the data before closing?")) {
 				save();
-			}			
+			}	
+			else {
+				part.setDirty(false);
+			}
 		}
 	}
 
