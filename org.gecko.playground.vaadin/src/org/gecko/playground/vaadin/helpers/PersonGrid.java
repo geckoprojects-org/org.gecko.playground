@@ -39,6 +39,9 @@ public class PersonGrid extends Grid<Person>{
 		addColumn(Person::getFirstNames).setHeader("First Names").setAutoWidth(true);
 		addColumn(Person::getLastName).setHeader("Last Name").setAutoWidth(true);
 		addComponentColumn(person -> {
+			if(person.getBirthDate() == null) {
+				return new Label("N/A");
+			} 
 			return new Label(DATE_FORMAT.format(person.getBirthDate()));
 		}).setHeader("Birth Date").setAutoWidth(true);
 		setItemDetailsRenderer(new ComponentRenderer<HorizontalLayout,Person>(HorizontalLayout::new, (layout, person) -> {
