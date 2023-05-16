@@ -9,23 +9,11 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package org.gecko.playground.ds.factory;
+package org.gecko.playground.ds.factory.api;
 
-/**
- * 
- * @author mark
- * @since 29.04.2022
- */
-public interface Device {
+public interface DeviceHandler {
 	
-	String getType();
-	
-	String getName();
-	
-	void initialize();
+	Device createDevice(String type, String name);
+	void deleteDevice(String type, String name);
 
-	void start();
-	
-	void stop();
-	
 }

@@ -5,7 +5,7 @@
 	org.osgi.service.log,\
 	org.osgi.framework
 
-Bundle-Name: Workmode 
+Bundle-Name: Playground Workmode 
 Bundle-Description: Gecko Playground Workmode
 -privatepackage: \
 	org.gecko.playground.workmode.command,\
@@ -13,3 +13,4 @@ Bundle-Description: Gecko Playground Workmode
 Export-Package: \
 	org.gecko.playground.workmode,\
 	org.gecko.playground.workmode.annotations
+	

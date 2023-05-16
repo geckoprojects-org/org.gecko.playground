@@ -19,11 +19,6 @@ import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ReferencePolicy;
 import org.osgi.service.component.annotations.ReferencePolicyOption;
 
-/**
- * 
- * @author mark
- * @since 29.04.2022
- */
 @Component
 public class GreedyConsumer {
 	
@@ -38,21 +33,21 @@ public class GreedyConsumer {
 	}
 	
 //	@Reference
-//	@Reference(policy = ReferencePolicy.DYNAMIC, cardinality = ReferenceCardinality.OPTIONAL, policyOption = ReferencePolicyOption.GREEDY)
-	@Reference(policyOption = ReferencePolicyOption.GREEDY)
+	@Reference(policy = ReferencePolicy.DYNAMIC, cardinality = ReferenceCardinality.OPTIONAL, policyOption = ReferencePolicyOption.GREEDY)
+//	@Reference(policyOption = ReferencePolicyOption.GREEDY)
 	public void setImportant(Important i) {
 		String importance = i.very() ? "VERY" : "less";
-		System.out.println("Set " + importance + " service; important: " + i.important() + ", very: " + i.very() + " from " + i);
+		System.out.println("Set " + importance + " important service: " + i.important() + ", very: " + i.very() + " from " + i);
 	}
 	
 	public void modifiedImportant(Important i) {
 		String importance = i.very() ? "VERY" : "less";
-		System.out.println("Modified " + importance + " service; important: " + i.important() + ", very: " + i.very() + " from " + i);
+		System.out.println("Modified " + importance + " important service: " + i.important() + ", very: " + i.very() + " from " + i);
 	}
 	
 	public void unsetImportant(Important i) {
 		String importance = i.very() ? "VERY" : "less";
-		System.out.println("Unset " + importance + " service; important: " + i.important() + ", very: " + i.very() + " from " + i);
+		System.out.println("Unset " + importance + " important service: " + i.important() + ", very: " + i.very() + " from " + i);
 	}
 
 }

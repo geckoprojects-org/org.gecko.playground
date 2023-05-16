@@ -2,21 +2,20 @@
 
 Bundle-Version: 1.0.0.SNAPSHOT
 -buildpath: \
-	org.osgi.service.component,\
-	org.gecko.search,\
-	org.gecko.search.util,\
+	org.osgi.service.component;version=latest,\
+	org.gecko.search;version=latest,\
+	org.gecko.search.util;version=latest,\
 	org.apache.lucene.core;version=latest,\
 	org.gecko.playground.model;version=latest,\
 	org.osgi.util.promise;version=latest,\
-	org.gecko.emf.repository.api,\
-	org.osgi.util.function,\
-	org.gecko.emf.mongo.pushstream,\
-	org.gecko.emf.pushstreams,\
-	org.osgi.util.pushstream,\
-	org.gecko.util.pushstream,\
-	org.gecko.emf.mongo.api,\
-	org.gecko.emf.search,\
-	org.gecko.search.document
+	org.gecko.emf.repository.api;version=latest,\
+	org.osgi.util.function;version=latest,\
+	org.gecko.emf.mongo.pushstream;version=latest,\
+	org.gecko.emf.pushstreams;version=latest,\
+	org.osgi.util.pushstream;version=latest,\
+	org.gecko.emf.mongo.api;version=latest,\
+	org.gecko.emf.search;version=latest,\
+	org.gecko.search.document;version=latest
 	
 -includeresource: \
 	OSGI-INF/configurator/=configs/

@@ -1,0 +1,3 @@
+-buildpath: \
+	org.gecko.playground.ds.simple;version=latest,\
+	org.gecko.playground.exchange.api;version=latest

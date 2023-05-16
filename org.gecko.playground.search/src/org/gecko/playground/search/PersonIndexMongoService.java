@@ -29,7 +29,6 @@ import org.gecko.emf.repository.query.IQuery;
 import org.gecko.emf.repository.query.QueryRepository;
 import org.gecko.playground.model.person.Person;
 import org.gecko.playground.model.person.PersonPackage;
-import org.gecko.util.pushstreams.GeckoPushbackPolicyOption;
 import org.osgi.service.component.ComponentServiceObjects;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -40,6 +39,7 @@ import org.osgi.util.promise.Promise;
 import org.osgi.util.promise.PromiseFactory;
 import org.osgi.util.pushstream.PushEvent;
 import org.osgi.util.pushstream.PushStream;
+import org.osgi.util.pushstream.PushbackPolicyOption;
 import org.osgi.util.pushstream.QueuePolicyOption;
 
 
@@ -97,7 +97,7 @@ public class PersonIndexMongoService {
 		}
 		
 		PushStream<EObject> indexNew = psp.createPushStreamBuilder()
-				.withPushbackPolicy(GeckoPushbackPolicyOption.LINEAR_AFTER_THRESHOLD.getPolicy(50))
+				.withPushbackPolicy(PushbackPolicyOption.LINEAR, 50)
 				.withQueuePolicy(QueuePolicyOption.BLOCK)
 				.withExecutor(Executors.newSingleThreadExecutor())
 				.withBuffer(new ArrayBlockingQueue<PushEvent<? extends EObject>>(100))

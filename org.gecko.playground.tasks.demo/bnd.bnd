@@ -5,5 +5,5 @@
 	org.osgi.service.condition;version='1.0',\
 	org.osgi.service.log
 
-Bundle-Name: Tasks Demo 
+Bundle-Name: Playground Tasks Demo 
 Bundle-Description: Gecko Playground Tasks Demo

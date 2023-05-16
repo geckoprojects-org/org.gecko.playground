@@ -16,14 +16,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
 
-/**
- * 
- * @author mark
- * @since 29.04.2022
- */
 //@Component(scope=ServiceScope.PROTOTYPE)
 @Component(scope=ServiceScope.SINGLETON)
-public class ProtoypeComponent implements Counter{
+public class CounterService implements Counter{
 	
 	private final AtomicInteger counter = new AtomicInteger();
 	

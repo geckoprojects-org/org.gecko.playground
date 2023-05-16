@@ -12,7 +12,6 @@ Bundle-Version: ${lib.version}
 Export-Package: org.apache.lucene.*
 Bundle-Name: Apache Lucene OSGi Bundle
 Import-Package: \
-	sun.*;'resolution:'=optional,\
 	com.sun.*;'resolution:'=optional,\
 	*
 	

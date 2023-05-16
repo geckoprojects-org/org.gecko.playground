@@ -16,6 +16,8 @@ import java.util.Hashtable;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.gecko.playground.ds.factory.api.Device;
+import org.gecko.playground.ds.factory.api.DeviceHandler;
 import org.osgi.service.component.ComponentFactory;
 import org.osgi.service.component.ComponentInstance;
 import org.osgi.service.component.annotations.Component;
@@ -23,11 +25,6 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ReferencePolicy;
 
-/**
- * 
- * @author mark
- * @since 29.04.2022
- */
 @Component(immediate = true)
 public class DeviceHandlerService implements DeviceHandler {
 	

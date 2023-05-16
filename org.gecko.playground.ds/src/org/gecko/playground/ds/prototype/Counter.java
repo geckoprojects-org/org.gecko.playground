@@ -11,11 +11,6 @@
  */
 package org.gecko.playground.ds.prototype;
 
-/**
- * 
- * @author mark
- * @since 29.04.2022
- */
 public interface Counter {
 	
 	int getCurrentCount();

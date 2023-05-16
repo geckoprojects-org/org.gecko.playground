@@ -13,11 +13,6 @@ package org.gecko.playground.ds.greedy;
 
 import org.osgi.service.component.annotations.Component;
 
-/**
- * 
- * @author mark
- * @since 29.04.2022
- */
 @Component(name="IS")
 public class ImportantService implements Important{
 

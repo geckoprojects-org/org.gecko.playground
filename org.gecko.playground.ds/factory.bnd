@@ -1,3 +1,4 @@
 -privatepackage: \
 	org.gecko.playground.ds.factory,\
 	org.gecko.playground.ds.factory.cmd
+Export-Package: org.gecko.playground.ds.factory.api
