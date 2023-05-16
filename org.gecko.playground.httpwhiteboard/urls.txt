@@ -1,0 +1,8 @@
+Default Hello;
+http://localhost:8080/hello
+
+Static Index:
+http://localhost:8080/myapp/index.html
+
+Default d3.js;
+http://localhost:8080/myapp/d3-demo2.html
