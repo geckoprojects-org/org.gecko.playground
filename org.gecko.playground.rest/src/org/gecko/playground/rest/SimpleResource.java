@@ -25,7 +25,7 @@ public class SimpleResource {
 	@GET
 	@Path("example")
 	public String sayHello() {
-		return "Hello Tragwerk-Testteam!";
+		return "Hello programmatische Resource!";
 	}
 
 }

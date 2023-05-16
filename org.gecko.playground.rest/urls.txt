@@ -1,0 +1,5 @@
+Programmatic resource;
+http://localhost:8080/playground/rest/test/example
+
+Default resource;
+http://localhost:8080/playground/rest/example

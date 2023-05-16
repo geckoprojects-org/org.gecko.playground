@@ -4,4 +4,5 @@
 		releaseUrl			=https://devel.data-in-motion.biz/nexus/repository/dim-release/;\
 		index				=${.}/dim_nexus.maven;\
 		readOnly 			= true;\
+		poll.time           = -1;\
 		name		        = "DIM Nexus"
