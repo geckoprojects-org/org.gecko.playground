@@ -50,6 +50,7 @@ public class ExampleXSLT {
 			System.out.println("Source XML: ");
 			System.out.println(sw.toString());
 			// Create Transformer
+			long start = System.currentTimeMillis();
 			Transformer transformer = templates.newTransformer();
 
 			// Source
@@ -62,8 +63,18 @@ public class ExampleXSLT {
 
 			// Transform
 			transformer.transform(source, result);
+			start = System.currentTimeMillis() - start;
 			System.out.println("Transformation resulted in: ");
 			System.out.println(new String(baos.toByteArray()));
+			System.out.println("1. Transformation took : " + start + " ms (Transformer warm-up)");
+			for (int i = 0; i < 5; i++) {
+				start = System.currentTimeMillis();
+				transformer.transform(source, result);
+				start = System.currentTimeMillis() - start;
+				System.out.println((i + 2) + ". Transformation took : " + start + " ms");
+				
+			}
+			
 		} catch (TransformerConfigurationException e) {
 			e.printStackTrace();
 		} catch (JAXBException e) {

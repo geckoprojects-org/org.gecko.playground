@@ -17,11 +17,6 @@ import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Modified;
 
-/**
- * 
- * @author mark
- * @since 29.04.2022
- */
 @Component(name = "MyFancyConfig", configurationPolicy = ConfigurationPolicy.REQUIRE)
 public class ConfigComponent {
 	

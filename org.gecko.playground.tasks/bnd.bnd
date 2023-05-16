@@ -5,7 +5,7 @@
 	org.osgi.framework,\
 	org.osgi.service.log
 
-Bundle-Name: Tasks Runtime
+Bundle-Name: Playground Tasks Runtime
 Bundle-Description: Gecko Playground Tasks Runtime
 -privatepackage: \
 	org.gecko.playground.tasks.commands,\

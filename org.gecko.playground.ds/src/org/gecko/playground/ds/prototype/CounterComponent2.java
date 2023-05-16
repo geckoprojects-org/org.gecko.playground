@@ -11,15 +11,14 @@
  */
 package org.gecko.playground.ds.prototype;
 
+import java.util.Objects;
+
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceScope;
 
-/**
- * 
- * @author mark
- * @since 29.04.2022
- */
 @Component
 public class CounterComponent2 {
 	
@@ -30,9 +29,18 @@ public class CounterComponent2 {
 	
 	@Activate
 	public void activate() {
-		for (int i = 0; i < 3; i++) {
-			System.out.println("Counter 2 " + counter.getCurrentCount() + " with instance " + counter.toString());
+		if (Objects.isNull(counter)) {
+			System.out.println("Counter 2: No counter available");
+			return;
 		}
+		for (int i = 0; i < 3; i++) {
+			System.out.println("Counter 2: " + counter.getCurrentCount() + " with instance " + counter.toString());
+		}
+	}
+	
+	@Deactivate
+	public void deactivate() {
+		System.out.println("------ Deactivate Counter 2 ------");
 	}
 
 }

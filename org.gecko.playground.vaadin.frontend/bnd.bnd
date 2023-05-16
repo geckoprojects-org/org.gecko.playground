@@ -8,12 +8,15 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	
 -dependson: \
 	org.gecko.playground.vaadin
+	
+-buildpath: \
+	org.gecko.playground.vaadin;version=project
 
--generate:\
-	test.txt;\
-	generate=geckoVaadinNPM;\
-	output=META-INF/VAADIN;\
-	cleanup=ALL
+#-generate:\
+#	test.txt;\
+#	generate=geckoVaadinNPM;\
+#	output=META-INF/VAADIN;\
+#	cleanup=ALL
 
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
 -runee: JavaSE-17
@@ -110,33 +113,6 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.gecko.search.document;version='[1.1.0,1.1.1)',\
 	org.gecko.search.util;version='[1.1.0,1.1.1)'
 -runrepos: \
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
-	Workspace,\
 	Workspace,\
 	Central,\
 	Local,\

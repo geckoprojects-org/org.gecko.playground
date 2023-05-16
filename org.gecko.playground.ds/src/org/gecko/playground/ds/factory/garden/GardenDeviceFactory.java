@@ -9,23 +9,19 @@
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
-package org.gecko.playground.ds.factory;
+package org.gecko.playground.ds.factory.garden;
 
 import java.util.Map;
 
+import org.gecko.playground.ds.factory.api.Device;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 
-/**
- * 
- * @author mark
- * @since 29.04.2022
- */
-@Component(factory = "HOME", service = Device.class, property = "type=HOME")
-public class HomeDeviceFactory implements Device {
+@Component(factory = "GARDEN", service = Device.class, property = "type=GARDEN")
+public class GardenDeviceFactory implements Device {
 	
-	private static final String type = "HOME-DEVICE";
+	private static final String type = "GARDEN-DEVICE";
 	private String name;
 	
 	@Activate

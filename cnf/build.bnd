@@ -2,7 +2,8 @@
 #	Gecko EMF OSGi - geckoEMF
 #	OSGi-Test Support - gecko-osgitest
 #	DIMC Github-Configuration - gecko-dimc
-#	Jacoco Support - gecko-jacoco
+#	Jacoco Support - gecko-jacoco 
+
 -library: \
 	geckoEMF,\
 	geckoOSGi-Test,\
@@ -14,7 +15,7 @@
 	
 # Needed because we enabled library 'gecko-dimc' 	
 github-project: org.gecko.playground
-base-version: 1.0.0.SNAPSHOT
+base-version: 1.0.0
 
 # Maven Central Group-Id
 -groupid: org.gecko.playground

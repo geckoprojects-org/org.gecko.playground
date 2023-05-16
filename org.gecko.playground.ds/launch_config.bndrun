@@ -26,4 +26,10 @@
 	-runproperties: \
 	osgi.console.enable.builtin=false,\
 	osgi.console=
--runblacklist: bnd.identity;id='org.osgi.service.cm'
+-runblacklist: \
+	bnd.identity;id='org.osgi.service.cm',\
+	bnd.identity;id='org.gecko.playground.ds.factory',\
+	bnd.identity;id='org.gecko.playground.ds.greedy',\
+	bnd.identity;id='org.gecko.playground.ds.greedy.very',\
+	bnd.identity;id='org.gecko.playground.ds.prototype',\
+	bnd.identity;id='org.gecko.playground.ds.simple'

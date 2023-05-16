@@ -11,11 +11,6 @@
  */
 package org.gecko.playground.ds.greedy;
 
-/**
- * 
- * @author mark
- * @since 29.04.2022
- */
 public interface Important {
 	
 	boolean important();
