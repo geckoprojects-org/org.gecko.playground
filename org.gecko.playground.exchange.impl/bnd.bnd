@@ -7,5 +7,4 @@ Private-Package: \
 	org.gecko.playground.exchange.api;version=latest,\
 	org.osgi.service.component;version=latest,\
 	org.osgi.service.log;version=latest,\
-	org.osgi.framework;version=latest,\
-	org.osgi.service.event
+	org.osgi.framework;version=latest

@@ -1,16 +1,10 @@
 package org.gecko.playground.exchange.prices;
 
-import java.util.Dictionary;
-import java.util.Map;
 import java.util.Random;
 
-import org.osgi.framework.FrameworkUtil;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
-import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.event.Event;
-import org.osgi.service.event.EventAdmin;
 
 @Component(immediate=true, name="org.gecko.playground.exchange.prices.feed")
 public class RandomPriceFeed implements Runnable {
@@ -27,8 +21,8 @@ public class RandomPriceFeed implements Runnable {
 	private double delta;
 
 	// TODO (Lab 17): bind a reference to the EventAdmin service
-	@Reference
-	private EventAdmin eventAdmin;
+//	@Reference
+//	private EventAdmin eventAdmin;
 	
 	@Activate
 	protected void activate() {
@@ -70,8 +64,8 @@ public class RandomPriceFeed implements Runnable {
 	private void postUpdate(String symbol, double price, long time) {
 		// TODO (Lab 17): Create and send the event containing symbol, current time and price
 		// Tip: create the topic using the TOPIC_PREFIX constant, e.g. TOPIC_PREFIX + symbol
-		Dictionary<String, Object> props = FrameworkUtil.asDictionary(Map.of(null, null));
-		Event e = new Event(TOPIC_PREFIX + symbol, props);
-		eventAdmin.postEvent(e);
+//		Dictionary<String, Object> props = FrameworkUtil.asDictionary(Map.of(null, null));
+//		Event e = new Event(TOPIC_PREFIX + symbol, props);
+//		eventAdmin.postEvent(e);
 	}
 }
