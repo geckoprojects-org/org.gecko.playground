@@ -1,0 +1,4 @@
+-buildpath: \
+	org.osgi.framework
+	
+-sub: *.bnd
