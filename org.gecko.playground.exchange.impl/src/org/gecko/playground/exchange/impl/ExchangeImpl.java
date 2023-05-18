@@ -30,7 +30,7 @@ import org.osgi.service.component.annotations.ReferencePolicyOption;
 import org.osgi.service.log.Logger;
 import org.osgi.service.log.LoggerFactory;
 
-@Component(immediate = true,
+@Component(
 		property = {
 				"name=Local",
 				"symbols=MSFT",
@@ -40,6 +40,8 @@ import org.osgi.service.log.LoggerFactory;
 public class ExchangeImpl implements Exchange {
 	
 	private static final AtomicLong instanceCounter = new AtomicLong(0L);
+	
+	@Reference (cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
 	private final List <ExchangeListener > listeners = new CopyOnWriteArrayList<>();
 	private final ConcurrentMap<UUID, Order> orders = new ConcurrentHashMap<UUID, Order>();
 	private final BlockingDeque<Order> orderQueue = new LinkedBlockingDeque<Order>(128);
@@ -100,7 +102,7 @@ public class ExchangeImpl implements Exchange {
 		return orders.values();
 	}
 	
-	@Reference (cardinality = ReferenceCardinality.MULTIPLE , policy = ReferencePolicy.DYNAMIC)
+//	@Reference (cardinality = ReferenceCardinality.MULTIPLE , policy = ReferencePolicy.DYNAMIC)
 	public void addExchangeListener(ExchangeListener listener) {
 		System.out.println("Add listener to exchange: " + listener);
 		listeners.add(listener);
