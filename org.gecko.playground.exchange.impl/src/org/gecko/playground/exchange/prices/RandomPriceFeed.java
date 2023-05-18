@@ -6,7 +6,7 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 
-@Component(immediate=true, name="org.gecko.playground.exchange.prices.feed")
+//@Component(immediate=true, name="org.gecko.playground.exchange.prices.feed")
 public class RandomPriceFeed implements Runnable {
 	
 	private static final String TOPIC_PREFIX = "PRICES/STOCKS/NASDAQ/";

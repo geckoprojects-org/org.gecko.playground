@@ -1,9 +1,12 @@
-package org.gecko.playground.exchange.logger;
+package org.gecko.playground.ds.whiteboard.logger;
 
 import org.gecko.playground.ds.simple.logging.Log;
 import org.gecko.playground.exchange.api.ExchangeListener;
 import org.gecko.playground.model.orders.Order;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 
+@Component(service = ExchangeListener.class)
 public class LoggingExchangeListener extends ExchangeListener {
 	
 	private Log log;
@@ -12,23 +15,24 @@ public class LoggingExchangeListener extends ExchangeListener {
 		return log;
 	}
 	
+	@Reference
 	public void setLog(Log log) {
 		this.log = log;
 	}
-
+	
 	@Override
 	public void orderSubmitted(String exchangeId, Order order) {
-		log.logMessage("LoggingExchangeListener: order submitted.");
+		log.logMessage("LEL: Order submitted" + order.toString());
 	}
 
 	@Override
 	public void orderCancelled(String exchangeId, Order order) {
-		log.logMessage("LoggingExchangeListener: order cancelled.");
+		log.logMessage("LEL: order cancelled: " + order.toString());
 	}
 
 	@Override
 	public void orderExpired(String exchangeId, Order order) {
-		log.logMessage("LoggingExchangeListener: order expired.");
+		log.logMessage("LEL: order expired: " + order.toString());
 	}
 	
 }
