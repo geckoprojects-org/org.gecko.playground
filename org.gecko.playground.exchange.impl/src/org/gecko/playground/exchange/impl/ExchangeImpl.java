@@ -1,17 +1,20 @@
 package org.gecko.playground.exchange.impl;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.gecko.playground.exchange.api.Exchange;
+import org.gecko.playground.exchange.api.ExchangeListener;
 import org.gecko.playground.model.orders.Fill;
 import org.gecko.playground.model.orders.Order;
 import org.osgi.framework.Constants;
@@ -22,11 +25,12 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
 import org.osgi.service.component.annotations.ReferencePolicyOption;
 import org.osgi.service.log.Logger;
 import org.osgi.service.log.LoggerFactory;
 
-@Component(
+@Component(immediate = true,
 		property = {
 				"name=Local",
 				"symbols=MSFT",
@@ -36,7 +40,7 @@ import org.osgi.service.log.LoggerFactory;
 public class ExchangeImpl implements Exchange {
 	
 	private static final AtomicLong instanceCounter = new AtomicLong(0L);
-	
+	private final List <ExchangeListener > listeners = new CopyOnWriteArrayList<>();
 	private final ConcurrentMap<UUID, Order> orders = new ConcurrentHashMap<UUID, Order>();
 	private final BlockingDeque<Order> orderQueue = new LinkedBlockingDeque<Order>(128);
 	private final BlockingDeque<Fill> fillQueue = new LinkedBlockingDeque<Fill>(128);
@@ -47,9 +51,6 @@ public class ExchangeImpl implements Exchange {
 	@Reference(service = LoggerFactory.class, cardinality = ReferenceCardinality.OPTIONAL, policyOption = ReferencePolicyOption.GREEDY)
 	private Logger log;
 
-	// TODO: bind to ExchangeListener services.
-	// You will need to add a final field of type List<ExchangeListener>.
-	
 	/**
 	 * Activate without OSGi ComponentContext. Used for tests.
 	 * @param configProps
@@ -99,13 +100,25 @@ public class ExchangeImpl implements Exchange {
 		return orders.values();
 	}
 	
+	@Reference (cardinality = ReferenceCardinality.MULTIPLE , policy = ReferencePolicy.DYNAMIC)
+	public void addExchangeListener(ExchangeListener listener) {
+		System.out.println("Add listener to exchange: " + listener);
+		listeners.add(listener);
+	}
+	
+	public void removeExchangeListener(ExchangeListener listener) {
+		System.out.println("Remove listener from exchange: " + listener);
+		listeners.remove(listener);
+	}
+	
 	void orderSubmitted(Order order) {
 		orders.put(order.getId(), order);
 		fireOrderSubmitted(order);
 	}
 	
 	private void fireOrderSubmitted(Order order) {
-		// TODO: iterate over ExchangeListeners and call orderSubmitted(exchangeId, order).
+		for (ExchangeListener l : listeners)
+			l.orderSubmitted(id , order);
 	}
 	
 	private void fireFill(Fill fill) {

@@ -1,0 +1,6 @@
+-buildpath: \
+	org.gecko.playground.exchange.api,\
+	org.gecko.playground.ds.simple
+-privatepackage: \
+	org.gecko.playground.ds.whiteboard,\
+	org.gecko.playground.ds.whiteboard.logger
