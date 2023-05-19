@@ -1,0 +1,5 @@
+-buildpath: \
+	org.osgi.framework,\
+	org.osgi.service.component
+	
+-sub: *.bnd

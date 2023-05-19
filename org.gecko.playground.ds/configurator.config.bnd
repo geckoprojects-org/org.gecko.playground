@@ -1,6 +1,0 @@
--includeresource: \
-	OSGI-INF/configurator/=config/
-	
--resourceonly: true
-
-Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
