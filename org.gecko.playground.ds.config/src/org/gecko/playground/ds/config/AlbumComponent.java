@@ -11,22 +11,27 @@
  */
 package org.gecko.playground.ds.config;
 
+import org.gecko.playground.ds.config.api.Album;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Modified;
 
-@Component(name = "MyAlbumConfig", configurationPolicy = ConfigurationPolicy.REQUIRE)
-public class AlbumComponent {
+@Component(immediate = true, name = "MyAlbumConfig", configurationPolicy = ConfigurationPolicy.REQUIRE)
+public class AlbumComponent implements Album {
 	
+	private MyFancyConfig c;
+
 	@Activate
 	public void activate(MyFancyConfig c) {
+		this.c = c;
 		System.out.println("Activate " + c.name() + " from " + c.year() + "(" + c.album() + ") from instance " + this);
 	}
 	
 	@Modified
 	public void modified(MyFancyConfig c) {
+		this.c = c;
 		System.out.println("Modified " + c.name() + " from " + c.year() + "(" + c.album() + ") from instance " + this);
 		
 	}
@@ -35,6 +40,11 @@ public class AlbumComponent {
 	public void deactivate(MyFancyConfig c) {
 		System.out.println("De-Activate " + c.name() + " from " + c.year() + "(" + c.album() + ") from instance " + this);
 		
+	}
+
+	@Override
+	public String getAlbum() {
+		return c.name() + " - " + c.album() + " (" + c.year() + ")";
 	}
 
 }

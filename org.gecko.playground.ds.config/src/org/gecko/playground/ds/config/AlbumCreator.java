@@ -28,7 +28,7 @@ public class AlbumCreator {
 	}
 	
 	private Void createConfigs() {
-		for (int i = 0; i < 10; i++) {
+		for (int i = 1; i < 6; i++) {
 			createConfiguration(i, 0);
 			try {
 				Thread.sleep(1000l);
@@ -39,7 +39,7 @@ public class AlbumCreator {
 			Thread.sleep(2000l);
 		} catch (InterruptedException e) {
 		}
-		for (int i = 0; i < 10; i++) {
+		for (int i = 1; i < 6; i++) {
 			createConfiguration(i, 5);
 			try {
 				Thread.sleep(1000l);

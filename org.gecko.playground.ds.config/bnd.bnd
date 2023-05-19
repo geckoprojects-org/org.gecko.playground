@@ -1,3 +1,5 @@
 -buildpath: \
 	org.osgi.service.cm,\
 	org.osgi.util.promise
+	
+-sub: *.bnd

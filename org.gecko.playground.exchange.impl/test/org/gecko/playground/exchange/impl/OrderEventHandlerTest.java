@@ -7,8 +7,6 @@ import java.util.UUID;
 import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.LinkedBlockingDeque;
 
-import org.gecko.playground.exchange.impl.ExchangeImpl;
-import org.gecko.playground.exchange.impl.OrderEventHandler;
 import org.gecko.playground.model.orders.Fill;
 import org.gecko.playground.model.orders.Order;
 import org.gecko.playground.model.orders.Side;
