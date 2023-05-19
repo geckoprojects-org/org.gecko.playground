@@ -8,7 +8,6 @@ import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsResource;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
-@RequireJakartarsWhiteboard
 @Component(service=ExampleResource.class, scope = ServiceScope.PROTOTYPE)
 @JakartarsResource
 @Path("")

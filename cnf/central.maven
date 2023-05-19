@@ -155,7 +155,7 @@ org.eclipse.platform:org.eclipse.ui:3.201.200
 org.eclipse.platform:org.eclipse.ui.workbench:3.127.0
 
 org.geckoprojects.bnd:org.gecko.bnd.dimc.library:1.2.0-SNAPSHOT
-org.geckoprojects.bnd:org.gecko.bnd.osgitest.library:1.2.0-SNAPSHOT
+org.geckoprojects.bnd:org.gecko.bnd.osgitest.library:1.3.1
 org.geckoprojects.bnd:org.gecko.bnd.jacoco.library:1.2.0-SNAPSHOT
 
 org.geckoprojects.emf:org.gecko.emf.osgi.api:4.5.0

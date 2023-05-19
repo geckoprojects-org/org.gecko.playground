@@ -1,0 +1,2 @@
+-privatepackage: org.gecko.playground.ds.config
+Export-Package: org.gecko.playground.ds.config.api

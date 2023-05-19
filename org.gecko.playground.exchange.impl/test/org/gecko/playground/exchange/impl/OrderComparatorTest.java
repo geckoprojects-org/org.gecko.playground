@@ -7,7 +7,6 @@ import java.util.Iterator;
 import java.util.TreeSet;
 import java.util.UUID;
 
-import org.gecko.playground.exchange.impl.OrderComparator;
 import org.gecko.playground.model.orders.Order;
 import org.gecko.playground.model.orders.Side;
 import org.junit.jupiter.api.Test;
