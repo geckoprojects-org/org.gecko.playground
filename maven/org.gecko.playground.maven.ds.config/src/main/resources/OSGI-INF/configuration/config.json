@@ -1,0 +1,16 @@
+{
+  ":configurator:resource-version": 1,
+  
+  "MyAlbumConfig~test1": 
+	{
+		"name": "Funky",
+		"year": 1974,
+		"album": "Funky, Funky" 
+	},
+  "MyAlbumConfig~test2": 
+	{
+		"name": "Happy",
+		"year": 2010,
+		"album": "I wanna be shappy" 
+	}
+}

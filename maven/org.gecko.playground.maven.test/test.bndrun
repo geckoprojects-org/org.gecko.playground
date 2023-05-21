@@ -1,0 +1,39 @@
+-tester: biz.aQute.tester.junit-platform
+-runrequires: \
+	bnd.identity;id='${project.artifactId}-tests',\
+	bnd.identity;id='org.gecko.playground.maven.ds.simple'
+	
+-runfw: org.eclipse.osgi
+
+-resolve.effective: active
+-runstartlevel: \
+    order=sortbynameversion,\
+    begin=-1
+    
+-runproperties: \
+	org.osgi.framework.bootdelegation='sun.misc,sun.reflect',\
+	osgi.console=
+-runbundles: \
+	junit-jupiter-api;version='[5.9.2,5.9.3)',\
+	junit-jupiter-engine;version='[5.9.2,5.9.3)',\
+	junit-jupiter-params;version='[5.9.2,5.9.3)',\
+	junit-platform-commons;version='[1.9.2,1.9.3)',\
+	junit-platform-engine;version='[1.9.2,1.9.3)',\
+	junit-platform-launcher;version='[1.9.2,1.9.3)',\
+	net.bytebuddy.byte-buddy;version='[1.12.21,1.12.22)',\
+	net.bytebuddy.byte-buddy-agent;version='[1.12.19,1.12.20)',\
+	org.apache.felix.configadmin;version='[1.9.22,1.9.23)',\
+	org.apache.felix.scr;version='[2.2.6,2.2.7)',\
+	org.gecko.playground.maven.ds.configadmin;version='[1.0.0,1.0.1)',\
+	org.gecko.playground.maven.ds.log;version='[1.0.0,1.0.1)',\
+	org.gecko.playground.maven.test-tests;version='[1.0.0,1.0.1)',\
+	org.mockito.junit-jupiter;version='[4.11.0,4.11.1)',\
+	org.mockito.mockito-core;version='[4.11.0,4.11.1)',\
+	org.objenesis;version='[3.3.0,3.3.1)',\
+	org.opentest4j;version='[1.2.0,1.2.1)',\
+	org.osgi.service.component;version='[1.5.1,1.5.2)',\
+	org.osgi.test.common;version='[1.2.1,1.2.2)',\
+	org.osgi.test.junit5;version='[1.2.1,1.2.2)',\
+	org.osgi.test.junit5.cm;version='[1.2.1,1.2.2)',\
+	org.osgi.util.function;version='[1.2.0,1.2.1)',\
+	org.osgi.util.promise;version='[1.3.0,1.3.1)'
