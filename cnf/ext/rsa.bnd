@@ -1,0 +1,7 @@
+-plugin: \
+    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+        snapshotUrl="https://oss.sonatype.org/content/repositories/snapshots/"; \
+        releaseUrl=https://repo.maven.apache.org/maven2/; \
+        index=${.}/rsa.mvn; \
+        readOnly=true; \
+        name="RSA"

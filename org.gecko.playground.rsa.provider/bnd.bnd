@@ -1,0 +1,11 @@
+-buildpath: \
+	org.gecko.playground.rsa.api;version=project,\
+	org.osgi.annotation.bundle,\
+	org.osgi.service.component.annotations
+
+Bundle-Version: 1.0.0.${tstamp}
+
+-privatepackage: org.gecko.playground.rsa.test
+
+javac.source: 1.8
+javac.target: 1.8

@@ -35,3 +35,6 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.gecko.playground.e4.rcp.parts,\
 	org.gecko.playground.e4.rcp.helpers
 
+Import-Package: \
+	org.gecko.search,\
+	*

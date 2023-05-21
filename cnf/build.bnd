@@ -17,6 +17,9 @@
 github-project: org.gecko.playground
 base-version: 1.0.0
 
+-fixupmessages \
+  "No metadata for revision";is:=ignore
+
 # Maven Central Group-Id
 -groupid: org.gecko.playground
 -noimportjava: true

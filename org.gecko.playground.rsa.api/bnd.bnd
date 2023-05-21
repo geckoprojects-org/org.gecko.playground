@@ -1,0 +1,11 @@
+Bundle-Version: 1.0.0.${tstamp}
+
+-buildpath: \
+	org.osgi.annotation.bundle,\
+	org.osgi.annotation.versioning,\
+	org.osgi.service.component.annotations
+
+Export-Package: org.gecko.playground.rsa.api
+
+javac.source: 1.8
+javac.target: 1.8
