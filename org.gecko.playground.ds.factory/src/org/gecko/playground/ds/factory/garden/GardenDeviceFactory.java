@@ -18,7 +18,7 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 
-@Component(factory = "GARDEN", service = Device.class, property = "type=GARDEN")
+@Component(factory = "GARDEN", property = "type=GARDEN")
 public class GardenDeviceFactory implements Device {
 	
 	private static final String type = "GARDEN-DEVICE";
