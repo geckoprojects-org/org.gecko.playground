@@ -18,7 +18,7 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 
-@Component(factory = "HOME", service = Device.class, property = "type=HOME")
+@Component(factory = "HOME", property = "type=HOME")
 public class HomeDeviceFactory implements Device {
 	
 	private static final String type = "HOME-DEVICE";
