@@ -1,0 +1,7 @@
+Bundle-Version: 1.0.0.${tstamp}
+
+Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
+-sub: *.bnd
+
+javac.source: 1.8
+javac.target: 1.8

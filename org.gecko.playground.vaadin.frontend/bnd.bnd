@@ -1,8 +1,6 @@
 Fragment-Host: org.gecko.playground.vaadin
 Bundle-Version: 1.0.0.SNAPSHOT
 
--privatepackage: org.gecko.playground.vaadin.frontend
-
 -includeresource: \
 	META-INF/VAADIN=META-INF/VAADIN
 	
@@ -129,3 +127,6 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	Javax Namespace,\
 	Workspace,\
 	Gecko Search
+	
+javac.source: 11
+javac.target: 11

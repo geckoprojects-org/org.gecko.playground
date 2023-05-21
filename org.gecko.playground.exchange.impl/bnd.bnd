@@ -1,6 +1,5 @@
 
 Private-Package: \
-	org.gecko.playground.exchange.prices,\
 	org.gecko.playground.exchange.impl
 
 -buildpath: \

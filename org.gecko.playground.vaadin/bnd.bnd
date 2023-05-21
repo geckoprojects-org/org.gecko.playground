@@ -31,3 +31,6 @@ Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 	com.vaadin.flow.component.checkbox,\
 	org.gecko.playground.search;version=latest,\
 	org.gecko.playground.mongo;version=latest
+	
+javac.source: 11
+javac.target: 11
