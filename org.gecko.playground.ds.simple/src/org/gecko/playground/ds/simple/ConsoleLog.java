@@ -15,4 +15,9 @@ public class ConsoleLog implements Log {
 		System.out.println("LOG : " + message);
 	}
 
+	@Override
+	public String info(String message) {
+		return "INFO: " + message;
+	}
+
 }

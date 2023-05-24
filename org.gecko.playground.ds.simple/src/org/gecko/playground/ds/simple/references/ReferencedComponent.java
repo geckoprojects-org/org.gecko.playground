@@ -17,7 +17,7 @@ public class ReferencedComponent {
 	}
 	
 	void unsetLog(Log log) {
-		System.out.println("set Log " + log.getClass().getName());
+		System.out.println("unset Log " + log.getClass().getName());
 	}
 
 }

@@ -1,1 +1,3 @@
--buildpath: org.gecko.playground.exchange.api
+-buildpath: \
+	org.gecko.playground.exchange.api,\
+	org.osgi.service.component

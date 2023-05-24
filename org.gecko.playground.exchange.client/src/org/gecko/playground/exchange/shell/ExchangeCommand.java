@@ -7,6 +7,7 @@ import org.gecko.playground.model.orders.Order;
 import org.gecko.playground.model.orders.Side;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
 
 @Component (service = Object.class , 
 property = { "osgi.command.scope=exchange", 

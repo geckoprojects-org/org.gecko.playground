@@ -15,7 +15,7 @@ import org.osgi.service.component.annotations.ReferencePolicy;
 @Component
 public class ExchangeComponent {
 	
-	private AtomicReference<Exchange> exchangeRef;
+	private AtomicReference<Exchange> exchangeRef = new AtomicReference<Exchange>();
 	
 	@Activate
 	public void activate() {
