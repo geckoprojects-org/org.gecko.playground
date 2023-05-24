@@ -6,8 +6,8 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 -buildpath: \
 	org.osgi.framework;version=latest,\
 	org.osgi.test.junit5.cm;version=latest,\
-	org.gecko.playground.ds.config.configadmin;version=latest,\
-	org.gecko.playground.ds.simple;version=latest
+	org.gecko.playground.ds.config.configadmin;version=snapshot,\
+	org.gecko.playground.ds.simple;version=snapshot
 	
 Private-Package: org.gecko.playground.test
 

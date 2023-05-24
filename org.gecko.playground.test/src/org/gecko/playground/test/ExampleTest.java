@@ -76,6 +76,13 @@ public class ExampleTest {
 		assertNotNull(log);
 		assertNotNull(mockBar);
 	}
+	
+	@Test
+	public void testLogInfo(@InjectService Log log) {
+		assertNotNull(log);
+		assertNotNull(mockBar);
+		assertEquals("INFO: test", log.info("test"));
+	}
 
 	@Test
 	public void testBarServicePublished(@InjectService(cardinality = 0) ServiceAware<Bar> barAware, 

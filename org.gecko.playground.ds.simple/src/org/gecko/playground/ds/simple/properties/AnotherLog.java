@@ -12,4 +12,9 @@ public class AnotherLog implements Log {
 		System.out.println("ANOTHER LOG : " + message);
 	}
 
+	@Override
+	public String info(String message) {
+		return "Another: " + message;
+	}
+
 }

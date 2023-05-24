@@ -14,9 +14,6 @@ import org.osgi.service.log.LoggerFactory;
 @Component(service = Task.class)
 public class ExampleInitializationTask extends AbstractTask {
 
-	@Reference(service = LoggerFactory.class)
-	private Logger logger;
-	
 	@Override
 	public String getName() {
 		return "EXTERNAL 1 - INITIALIZATION TASK";
@@ -29,23 +26,23 @@ public class ExampleInitializationTask extends AbstractTask {
 	
 	@Override
 	protected void doActivate() {
-		logger.info("Started activation EXTERNAL 1 ...");
+		System.out.println("Started activation EXTERNAL 1 ...");
 		try {
 			Thread.sleep(8000l);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		logger.info("Finished initialization EXTERNAL 1");
+		System.out.println("Finished initialization EXTERNAL 1");
 	}
 
 	@Override
 	protected void doDeactivate() {
-		logger.info("Started deactivation EXTERNAL 1 ...");
+		System.out.println("Started deactivation EXTERNAL 1 ...");
 		try {
 			Thread.sleep(3000l);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		logger.info("Finished deactivation EXTERNAL 1");
+		System.out.println("Finished deactivation EXTERNAL 1");
 	}
 }
