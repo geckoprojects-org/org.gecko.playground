@@ -1,0 +1,20 @@
+lib.version: 12.3.0
+
+-buildpath:  \
+	net.sf.saxon:Saxon-HE;version=${lib.version}
+	
+-includeresource: \
+	OSGI-OPT/src=@${repo;net.sf.saxon:Saxon-HE:jar:sources;${lib.version};EXACT},\
+	@${repo;net.sf.saxon:Saxon-HE:jar;${lib.version};EXACT}!/META-INF/services/*
+
+Bundle-Version: ${lib.version}
+Bundle-Name: Saxon Re-packaged JAR
+Bundle-Vendor: ACME Inc.
+
+Export-Package: net.sf.*
+Import-Package: \
+	org.xml.*;'resolution:'=optional,\
+	org.w3c.*;'resolution:'=optional,\
+	com.sun.*;'resolution:'=optional,\
+	jline.*;'resolution:'=optional,\
+	*
