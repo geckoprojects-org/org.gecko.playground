@@ -33,7 +33,6 @@ org.apache.felix:org.apache.felix.configadmin:1.9.26
 
 
 # Eclipse parsson impl (needed since update for org.apache.felix.configurator and org.apache.felix.cm.json, otherwise json config are not parsed!)
-org.eclipse.parsson:jakarta.json:1.1.1
 
 # Apache Aries
 org.apache.aries.spifly:org.apache.aries.spifly.dynamic.framework.extension:1.3.6
@@ -87,8 +86,10 @@ org.eclipse.emf:org.eclipse.emf.ecore:2.33.0
 org.eclipse.emf:org.eclipse.emf.ecore.xmi:2.17.0
 
 
-net.sf.saxon:Saxon-HE:12.0
-net.sf.saxon:Saxon-HE:jar:sources:12.0
+net.sf.saxon:Saxon-HE:12.3
+net.sf.saxon:Saxon-HE:jar:sources:12.3
+org.xmlresolver:xmlresolver:5.2.0
+org.xmlresolver:xmlresolver:jar:sources:5.2.0
 
 # OSGi API
 org.osgi:org.osgi.service.clusterinfo:1.0.0
@@ -182,4 +183,4 @@ org.jline:jline-builtins:3.22.0
 org.jline:jline-reader:3.22.0
 org.jline:jline-console:3.22.0
 org.jline:jline-terminal:3.22.0
-
+org.eclipse.parsson:jakarta.json:1.1.2

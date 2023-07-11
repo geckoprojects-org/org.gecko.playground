@@ -1,0 +1,20 @@
+lib.version: 5.2.0
+
+-buildpath:  \
+	org.xmlresolver:xmlresolver;version=${lib.version}
+	
+-includeresource: \
+	OSGI-OPT/src=@${repo;org.xmlresolver:xmlresolver:jar:sources;${lib.version};EXACT}
+
+Bundle-Version: ${lib.version}
+Bundle-Localization: bundle
+Bundle-Name: XMLResolver Re-packaged JAR
+Bundle-Vendor: ACME Inc.
+
+Export-Package: org.xmlresolver.*
+Import-Package: \
+	org.w3c.*;'resolution:'=optional,\
+	org.xml.*;'resolution:'=optional,\
+	org.apache.hc.*;'resolution:'=optional,\
+	com.thaiopensource.*;'resolution:'=optional,\
+	*
