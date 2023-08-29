@@ -4,8 +4,8 @@ lib.version: 12.3.0
 	net.sf.saxon:Saxon-HE;version=${lib.version}
 	
 -includeresource: \
-	OSGI-OPT/src=@${repo;net.sf.saxon:Saxon-HE:jar:sources;${lib.version};EXACT},\
 	@${repo;net.sf.saxon:Saxon-HE:jar;${lib.version};EXACT}!/META-INF/services/*
+#	OSGI-OPT/src=@${repo;net.sf.saxon:Saxon-HE:jar:sources;${lib.version};EXACT},\
 
 Bundle-Version: ${lib.version}
 Bundle-Name: Saxon Re-packaged JAR

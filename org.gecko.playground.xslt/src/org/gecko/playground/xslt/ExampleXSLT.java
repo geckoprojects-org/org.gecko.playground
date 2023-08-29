@@ -36,12 +36,17 @@ public class ExampleXSLT {
 	@Activate
 	public void activate(BundleContext ctx) {
 		System.out.println("Transform some book XML into HTML");
-//		TransformerFactory tf = new TransformerFactoryImpl();
+// 		Alternative 1
+//		tf = new TransformerFactoryImpl();
+		// BundleContext ctx = ...
 		Optional<Bundle> saxon = Arrays.stream(ctx.getBundles()).
 				filter(b->"org.gecko.playground.saxon".equals(b.getSymbolicName())).
 				findFirst();
 		saxon.ifPresent(b->{
 			BundleWiring wiring = b.adapt(BundleWiring.class);
+//	 		Alternative 2
+//			tf = Class.forName("net.sf.saxon.BasicTransformerFactory", false, wiring.getClassLoader());
+//	 		Alternative 3
 			tf = TransformerFactory.newInstance("net.sf.saxon.BasicTransformerFactory", wiring.getClassLoader());
 		});
 		if (Objects.isNull(tf)) {

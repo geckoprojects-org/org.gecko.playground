@@ -5,3 +5,4 @@ generated/
 .metadata
 bin/
 build/
+bin_test/
