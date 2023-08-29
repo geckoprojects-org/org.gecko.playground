@@ -32,7 +32,6 @@ net.bytebuddy:byte-buddy-agent:1.12.6
 org.objenesis:objenesis:3.2
 
 org.apache.felix:org.apache.felix.configadmin:1.9.22
-org.apache.felix:org.apache.felix.configurator:1.0.14
 org.apache.felix:org.apache.felix.converter:1.0.14
 org.apache.felix:org.apache.felix.coordinator:1.0.2
 org.apache.felix:org.apache.felix.eventadmin:1.6.2
@@ -139,3 +138,4 @@ org.bouncycastle:bcpkix-jdk15on:1.70
 org.bouncycastle:bcprov-jdk15on:1.70
 org.bouncycastle:bctls-jdk15on:1.70
 org.bouncycastle:bcutil-jdk15on:1.70
+org.apache.felix:org.apache.felix.configurator:1.0.18
