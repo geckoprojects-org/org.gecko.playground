@@ -1,4 +1,4 @@
 -buildpath: \
-	org.osgi.framework
+	org.osgi.framework;version=latest
 	
 -sub: *.bnd

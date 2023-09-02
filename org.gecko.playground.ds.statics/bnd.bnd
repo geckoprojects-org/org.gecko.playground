@@ -1,1 +1,1 @@
--buildpath: org.gecko.playground.exchange.api
+-buildpath: org.gecko.playground.exchange.api;version=project

@@ -1,7 +1,7 @@
 -library: enable-emf
 
 -buildpath :\
-	org.osgi.service.condition
+	org.osgi.service.condition;version=latest
 
 # The code generation takes a bit of time and makes the build a bit slower.
 # It might be a good idea to put comments around it, when you don't need it

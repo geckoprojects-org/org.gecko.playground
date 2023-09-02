@@ -1,10 +1,12 @@
 -buildpath: \
-	org.gecko.playground;version=latest,\
+	org.gecko.playground;version=project,\
 	org.apache.logging.log4j.api;version=latest,\
 	org.apache.logging.log4j.core;version=latest,\
 	slf4j.api;version=latest,\
 	org.osgi.framework;version=latest,\
 	org.osgi.service.log;version=latest,\
-	org.osgi.util.tracker;version=latest
+	org.osgi.util.tracker;version=latest,\
+	org.osgi.annotation.bundle;version=latest,\
+	org.osgi.service.component.annotations
 
 -sub: *.bnd

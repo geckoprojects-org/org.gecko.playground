@@ -1,4 +1,4 @@
 -buildpath: \
-	org.gecko.playground.exchange.api,\
-	org.gecko.playground.ds.simple
+	org.gecko.playground.exchange.api;version=project,\
+	org.gecko.playground.ds.simple;version=project
 -privatepackage: org.gecko.playground.ds.whiteboard.logger

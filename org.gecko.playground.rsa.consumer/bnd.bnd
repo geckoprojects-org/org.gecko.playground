@@ -1,8 +1,8 @@
 -buildpath: \
-	org.osgi.annotation.bundle,\
-	org.osgi.annotation.versioning,\
-	org.osgi.service.component.annotations,\
-	org.gecko.playground.rsa.api;version=snapshot
+	org.osgi.annotation.bundle;version=latest,\
+	org.osgi.annotation.versioning;version=latest,\
+	org.osgi.service.component.annotations;version=latest,\
+	org.gecko.playground.rsa.api;version=project
 
 Bundle-Version: 0.0.0.${tstamp}
 
