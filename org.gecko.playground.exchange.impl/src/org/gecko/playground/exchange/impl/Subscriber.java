@@ -26,7 +26,12 @@ public class Subscriber<T> implements Runnable {
 				// Exit from main loop
 				break;
 			} catch (Exception e) {
-				log.error("Error handling event: ", e);
+				if (log != null) {
+					log.error("Error handling event: ", e);
+				} else {
+					System.err.println("Error handling event: ");
+					e.printStackTrace();
+				}
 			}
 		}
 	}
