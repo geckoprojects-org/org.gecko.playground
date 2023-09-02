@@ -1,9 +1,9 @@
 -buildpath: \
-	org.osgi.service.condition,\
+	org.osgi.service.condition;version=latest,\
 	org.osgi.util.promise;version=latest,\
-	org.osgi.util.function,\
-	org.osgi.framework,\
-	org.osgi.service.log
+	org.osgi.util.function;version=latest,\
+	org.osgi.framework;version=latest,\
+	org.osgi.service.log;version=latest
 
 Bundle-Name: Playground Tasks Runtime
 Bundle-Description: Gecko Playground Tasks Runtime

@@ -1,5 +1,5 @@
 -buildpath: \
-	org.osgi.service.cm,\
+	org.osgi.service.cm;version=latest,\
 	org.osgi.util.promise;version='1.3.0.202212101352'
 	
 -sub: *.bnd

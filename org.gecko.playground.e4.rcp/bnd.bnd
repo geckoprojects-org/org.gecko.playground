@@ -11,7 +11,7 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	
 -buildpath: \
 	javax.inject;version=latest,\
-	org.osgi.service.event,\
+	org.osgi.service.event;version=latest,\
 	javax.annotation;version=latest,\
 	org.eclipse.equinox.common;version=latest,\
 	org.eclipse.equinox.registry;version=latest,\
@@ -24,10 +24,11 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.eclipse.e4.ui.di;version=latest,\
 	org.eclipse.e4.ui.model.workbench;version=latest,\
 	org.gecko.eclipse.api;version=latest,\
-	org.gecko.playground.search;version=latest,\
-	org.gecko.playground.model,\
-	org.gecko.search.document,\
-	org.eclipse.e4.core.contexts,\
+	org.gecko.playground.search;version=project,\
+	org.gecko.playground.model;version=project,\
+	org.gecko.search;version=latest,\
+	org.gecko.search.document;version=latest,\
+	org.eclipse.e4.core.contexts;version=latest,\
 	org.gecko.playground.mongo;version=latest
 
 -privatepackage: \

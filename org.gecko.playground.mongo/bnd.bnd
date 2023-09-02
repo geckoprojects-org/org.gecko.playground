@@ -7,7 +7,7 @@ Bundle-Version: 1.0.0.SNAPSHOT
 Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 
 -buildpath: \
-	org.gecko.emf.repository.api,\
-	org.gecko.playground.model;version=latest
+	org.gecko.emf.repository.api;version=latest,\
+	org.gecko.playground.model;version=project
 -privatepackage: org.gecko.playground.mongo.cmd
 Export-Package: org.gecko.playground.mongo

@@ -1,9 +1,12 @@
 -buildpath: \
-	org.gecko.playground,\
+	org.gecko.playground;version=project,\
 	org.osgi.service.condition;version='1.0',\
-	org.osgi.service.cm,\
-	org.osgi.service.log,\
-	org.osgi.framework
+	org.osgi.service.cm;version=latest,\
+	org.osgi.service.log;version=latest,\
+	org.osgi.framework;version=latest,\
+	org.osgi.annotation.versioning;version=latest,\
+	org.osgi.annotation.bundle;version=latest,\
+	org.osgi.service.component.annotations;version=latest
 
 Bundle-Name: Playground Workmode 
 Bundle-Description: Gecko Playground Workmode

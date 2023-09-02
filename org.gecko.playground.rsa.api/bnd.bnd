@@ -1,9 +1,9 @@
 Bundle-Version: 1.0.0.${tstamp}
 
 -buildpath: \
-	org.osgi.annotation.bundle,\
-	org.osgi.annotation.versioning,\
-	org.osgi.service.component.annotations
+	org.osgi.annotation.bundle;version=latest,\
+	org.osgi.annotation.versioning;version=latest,\
+	org.osgi.service.component.annotations;version=latest
 
 Export-Package: org.gecko.playground.rsa.api
 

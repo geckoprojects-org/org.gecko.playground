@@ -1,5 +1,5 @@
 -buildpath: \
-	org.osgi.framework,\
-	org.osgi.service.component
+	org.osgi.framework;version=latest,\
+	org.osgi.service.component;version=latest
 	
 -sub: *.bnd

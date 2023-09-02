@@ -3,7 +3,8 @@
 	org.gecko.playground.tasks;version=latest,\
 	org.osgi.util.promise;version=latest,\
 	org.osgi.service.condition;version='1.0',\
-	org.osgi.service.log
+	org.osgi.service.log;version=latest,\
+	org.osgi.service.component.annotations;version=latest
 
 Bundle-Name: Playground Tasks Demo 
 Bundle-Description: Gecko Playground Tasks Demo

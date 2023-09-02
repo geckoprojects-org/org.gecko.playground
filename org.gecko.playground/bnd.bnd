@@ -1,4 +1,6 @@
--buildpath: jakarta.json-api
+-buildpath: \
+	jakarta.json-api,\
+	osgi.annotation
 
 Export-Package: \
 	org.gecko.playground.configuration,\

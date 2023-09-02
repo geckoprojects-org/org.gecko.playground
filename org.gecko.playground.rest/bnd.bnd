@@ -1,9 +1,9 @@
 -buildpath: \
 	jakarta.ws.rs-api;version='2.1',\
 	jakarta.annotation-api,\
-	org.osgi.framework,\
-	org.gecko.rest.jersey,\
-	org.osgi.service.jakartars
+	org.osgi.framework;version=latest,\
+	org.gecko.rest.jersey;version=latest,\
+	org.osgi.service.jakartars;version=latest
 
 Bundle-Name: REST Interface
 Bundle-Description: Gecko Playground REST with JaxRs Whiteboard

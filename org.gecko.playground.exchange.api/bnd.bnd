@@ -1,4 +1,4 @@
 -buildpath: \
-	org.osgi.service.log,\
-	org.osgi.framework,\
-	org.osgi.service.component
+	org.osgi.service.log;version=latest,\
+	org.osgi.framework;version=latest,\
+	org.osgi.service.component;version=latest

@@ -19,18 +19,19 @@ Export-Package: \
 Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 -buildpath: \
 	org.gecko.playground.model;version=latest,\
-	com.vaadin.flow.component.combobox,\
-	com.vaadin.flow.component.dialog,\
-	com.vaadin.flow.component.grid,\
-	com.vaadin.flow.component.icon,\
-	com.vaadin.flow.component.datepicker,\
-	com.vaadin.flow.data,\
-	com.vaadin.flow.data.renderer,\
-	com.vaadin.external.gwt,\
-	com.vaadin.flow.component.radiobutton,\
-	com.vaadin.flow.component.checkbox,\
-	org.gecko.playground.search;version=latest,\
-	org.gecko.playground.mongo;version=latest
+	com.vaadin.flow.component.combobox;version=latest,\
+	com.vaadin.flow.component.dialog;version=latest,\
+	com.vaadin.flow.component.grid;version=latest,\
+	com.vaadin.flow.component.icon;version=latest,\
+	com.vaadin.flow.component.datepicker;version=latest,\
+	com.vaadin.flow.data;version=latest,\
+	com.vaadin.flow.data.renderer;version=latest,\
+	com.vaadin.external.gwt;version=latest,\
+	com.vaadin.flow.component.radiobutton;version=latest,\
+	com.vaadin.flow.component.checkbox;version=latest,\
+	org.gecko.playground.search;version=project,\
+	org.gecko.playground.mongo;version=project,\
+	org.gecko.search;version=latest
 	
 javac.source: 11
 javac.target: 11
