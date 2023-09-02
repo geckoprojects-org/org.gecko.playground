@@ -5,9 +5,6 @@ import org.gecko.playground.tasks.Task;
 import org.gecko.playground.tasks.annotations.RequireTasks;
 import org.gecko.playground.workmode.annotations.RequireWorkmode;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.log.Logger;
-import org.osgi.service.log.LoggerFactory;
 
 @RequireTasks
 @RequireWorkmode

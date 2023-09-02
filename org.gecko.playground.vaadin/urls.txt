@@ -1,4 +1,0 @@
-Needs mongo database
-
-Default Vaadin App
-http://localhost:8086/playground/

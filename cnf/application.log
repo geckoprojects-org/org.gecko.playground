@@ -444,3 +444,15 @@ Caused by: java.lang.IllegalStateException: InjectionManagerFactory not found.
 2023.02.17 14:03:58,667 INFO  [FelixStartLevel] org.eclipse.jetty.server.Server: Started Server@3abd06de{STARTING}[11.0.13,sto=0] @1069ms
 2023.02.17 14:03:58,713 INFO  [FelixStartLevel] org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@32c6b470{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
 2023.02.17 14:03:58,715 INFO  [FelixStartLevel] org.apache.felix.http: Started Jetty 11.0.13 at port(s) HTTP:8080 on context path / [minThreads=8,maxThreads=200,acceptors=1,selectors=6]
+2023.09.02 14:28:33,214 INFO  [FelixStartLevel] org.eclipse.jetty.server.Server: jetty-11.0.13; built: 2022-12-07T20:47:15.149Z; git: a04bd1ccf844cf9bebc12129335d7493111cbff6; jvm 17.0.8.1+1-Ubuntu-0ubuntu122.04
+2023.09.02 14:28:33,255 INFO  [FelixStartLevel] org.eclipse.jetty.server.session.DefaultSessionIdManager: Session workerName=node0
+2023.09.02 14:28:33,263 INFO  [FelixStartLevel] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@3bd7c854{/,null,AVAILABLE}
+2023.09.02 14:28:33,264 INFO  [FelixStartLevel] org.eclipse.jetty.server.Server: Started Server@53134114{STARTING}[11.0.13,sto=0] @766ms
+2023.09.02 14:28:33,285 INFO  [FelixStartLevel] org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@59cac307{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2023.09.02 14:28:33,286 INFO  [FelixStartLevel] org.apache.felix.http: Started Jetty 11.0.13 at port(s) HTTP:8080 on context path / [minThreads=8,maxThreads=200,acceptors=2,selectors=8]
+2023.09.02 14:35:28,034 INFO  [Start Level: Equinox Container: 1f1164d1-7fbc-4738-ab7e-e1befaa761bf] org.eclipse.jetty.server.Server: jetty-11.0.13; built: 2022-12-07T20:47:15.149Z; git: a04bd1ccf844cf9bebc12129335d7493111cbff6; jvm 17.0.8.1+1-Ubuntu-0ubuntu122.04
+2023.09.02 14:35:28,153 INFO  [Start Level: Equinox Container: 1f1164d1-7fbc-4738-ab7e-e1befaa761bf] org.eclipse.jetty.server.session.DefaultSessionIdManager: Session workerName=node0
+2023.09.02 14:35:28,182 INFO  [Start Level: Equinox Container: 1f1164d1-7fbc-4738-ab7e-e1befaa761bf] org.eclipse.jetty.server.handler.ContextHandler: Started o.e.j.s.ServletContextHandler@3e05ca06{/,null,AVAILABLE}
+2023.09.02 14:35:28,187 INFO  [Start Level: Equinox Container: 1f1164d1-7fbc-4738-ab7e-e1befaa761bf] org.eclipse.jetty.server.Server: Started Server@4491ac88{STARTING}[11.0.13,sto=0] @1201ms
+2023.09.02 14:35:28,276 INFO  [Start Level: Equinox Container: 1f1164d1-7fbc-4738-ab7e-e1befaa761bf] org.eclipse.jetty.server.AbstractConnector: Started ServerConnector@3e11a389{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2023.09.02 14:35:28,278 INFO  [Start Level: Equinox Container: 1f1164d1-7fbc-4738-ab7e-e1befaa761bf] org.apache.felix.http: Started Jetty 11.0.13 at port(s) HTTP:8080 on context path / [minThreads=8,maxThreads=200,acceptors=2,selectors=8]

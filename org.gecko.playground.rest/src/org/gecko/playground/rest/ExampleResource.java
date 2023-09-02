@@ -2,7 +2,6 @@ package org.gecko.playground.rest;
 
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ServiceScope;
-import org.osgi.service.jakartars.whiteboard.annotations.RequireJakartarsWhiteboard;
 import org.osgi.service.jakartars.whiteboard.propertytypes.JakartarsResource;
 
 import jakarta.ws.rs.GET;
