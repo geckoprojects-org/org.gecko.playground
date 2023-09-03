@@ -1,6 +1,6 @@
 package org.gecko.playground.ds.simple.services;
 
-import org.osgi.service.component.annotations.Component;
+//import org.osgi.service.component.annotations.Component;
 
 //@Component(service = MyService.class)
 //@Component(service = {MyService1.class, MyService2.class})

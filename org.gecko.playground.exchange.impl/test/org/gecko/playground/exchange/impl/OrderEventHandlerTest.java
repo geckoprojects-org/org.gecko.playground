@@ -1,7 +1,6 @@
 package org.gecko.playground.exchange.impl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.mock;
 
 import java.util.UUID;
 import java.util.concurrent.BlockingDeque;
@@ -15,7 +14,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.osgi.service.log.Logger;
 
 @ExtendWith(MockitoExtension.class)
 public class OrderEventHandlerTest {
@@ -23,12 +21,12 @@ public class OrderEventHandlerTest {
 	private final ExchangeImpl exchange = new ExchangeImpl();
 	
 	private BlockingDeque<Fill> fillQueue;
-	private Logger log;
+//	private Logger log;
 
 	@BeforeEach
 	protected void setUp() throws Exception {
 		fillQueue = new LinkedBlockingDeque<Fill>();
-		log = mock(Logger.class);
+//		log = mock(Logger.class);
 	}
 	
 	@AfterEach

@@ -1,1 +1,0 @@
-package org.gecko.playground.ds.whiteboard;

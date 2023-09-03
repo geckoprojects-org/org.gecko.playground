@@ -7,7 +7,6 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferenceCardinality;
 
 @Component (service = Object.class , 
 property = { "osgi.command.scope=exchange", 
@@ -26,8 +25,8 @@ public class ExchangeCommand {
 		System.out.println("De-Activate order command ");
 	}
 	
-//	@Reference
-	@Reference(cardinality = ReferenceCardinality.OPTIONAL)
+	@Reference
+//	@Reference(cardinality = ReferenceCardinality.OPTIONAL)
 	public void setExchange(Exchange exchange) {
 		System.out.println("Order Command: Set exchange " + exchange.toString());
 		this.exchange = exchange;

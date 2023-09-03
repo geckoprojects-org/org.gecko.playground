@@ -1,28 +1,44 @@
-# `org.gecko.playground.ds`
+# `org.gecko.playground.ds.factory`
 
-This tutorial shows how to work with OSGi *Declarative Service* and how many cool things you can do with them.
+This tutorial shows how to work with OSGi *Declarative Service* as a factory.
 
-## Configurable Services (`org.gecko.plaground.ds.config`)
+For this we have two different factories:
 
-First of all you can make your service *configurable*, meaning you can provide a set of properties that will customize the instance of your service, without having to repeat the common logic. 
+* *GardenDeviceFactory* - Creates smart device for your garden
+* *HomeDeviceFactory* - Creates smart device for your home and rooms
 
-As soon as the configuration is modified, or even removed, the service instance associated to it will be modified or removed accordingly. 
+Both are *Device* s
 
-The configuration can be defined in a simple `.json` file, and can then be injected in the activate/modified/deactivate methods, so you have access to it.
+The *DeviceHandlerService* injects these instance as *ComponentFactory*. These can create *ComponentInstance* s. Depending on the given type and properties now configured instance can be created using the right factory.
 
+All instances can be disposed, when they are not needed any more
 
+To test this you can use the *DeviceCommands*:
 
-## Component Factory (`org.gecko.playground.ds.factory`)
+* `device:createDevice <type> <name>` - creates a new device of type and name
+* `device:deleteDevice <name>` - removes the device with the given name
 
+This can be tested:
 
+```
+g! createDevice GARDEN Pool-Pump
+Activate Instance GARDEN-DEVICE - Pool-Pump
+Device created: GARDEN-DEVICE- Pool-Pump (org.gecko.playground.ds.factory.garden.GardenDeviceFactory@254b5fd4)
+g! createDevice HOME Smart-TV
+Activate Instance HOME-DEVICE - Smart-TV
+Device created: HOME-DEVICE- Smart-TV (org.gecko.playground.ds.factory.home.HomeDeviceFactory@6147eaea)
 
-## Greedy Policy (`org.gecko.playground.ds.greedy`)
+g! deleteDevice HOME Smart-TV
+Dispose device HOME - Smart-TV
+Deactivate Instance HOME-DEVICE - Smart-TV
+STOP HOME-DEVICE - Smart-TV
+Device deleted: HOME- Smart-TV
+g! deleteDevice GARDEN Pool-Pump
+Dispose device GARDEN - Pool-Pump
+Deactivate Instance GARDEN-DEVICE - Pool-Pump
+STOP GARDEN-DEVICE - Pool-Pump
+Device deleted: GARDEN- Pool-Pump
+```
 
-
-
-## Prototype Services (`org.gecko.playground.ds.prototype`)
-
-By default, when you define a service, this will be a singleton, meaning, every time you want to reference to that service within the lifetime of an application, you will get the same instance.
-
-If instead you want to get a new instance every time, you can define your service as a *prototype*. 
+Now the instance are release using the corresponding factory.
 

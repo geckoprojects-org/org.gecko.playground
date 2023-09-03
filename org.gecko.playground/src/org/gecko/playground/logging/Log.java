@@ -1,4 +1,4 @@
-package org.gecko.playground.ds.simple.logging;
+package org.gecko.playground.logging;
 
 public interface Log {
 

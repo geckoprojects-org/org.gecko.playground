@@ -1,4 +1,4 @@
-package org.gecko.playground.ds.simple;
+package org.gecko.playground.ds.whiteboard.logger;
 
 import org.gecko.playground.logging.Log;
 import org.osgi.service.component.annotations.Component;
