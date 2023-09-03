@@ -16,12 +16,12 @@ import org.gecko.playground.ds.factory.api.DeviceHandler;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-@Component(service = WorkmodeCommands.class, property = {
+@Component(service = DeviceCommands.class, property = {
 		"osgi.command.scope=device", //
 		"osgi.command.function=createDevice", 
 		"osgi.command.function=deleteDevice"
 })
-public class WorkmodeCommands {
+public class DeviceCommands {
 	
 	@Reference
 	private DeviceHandler deviceHandler;

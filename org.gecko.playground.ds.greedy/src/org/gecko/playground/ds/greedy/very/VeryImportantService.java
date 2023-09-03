@@ -15,7 +15,7 @@ import org.gecko.playground.ds.greedy.Important;
 import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 
-@Component(name="VIS", property = Constants.SERVICE_RANKING + ":Integer=10")
+@Component(name="VIS", enabled = false, property = Constants.SERVICE_RANKING + ":Integer=10")
 public class VeryImportantService implements Important{
 
 	/* 

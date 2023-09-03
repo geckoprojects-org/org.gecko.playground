@@ -1,7 +1,8 @@
 -library: enableOSGi-Test
 
 -runrequires: \
-	bnd.identity;id='org.gecko.playground.test'
+	bnd.identity;id='org.gecko.playground.test',\
+	bnd.identity;id='org.gecko.playground.ds.simple'
 	
 -runbundles.test: \
 	org.gecko.playground.test;version=snapshot
@@ -17,6 +18,7 @@
 	net.bytebuddy.byte-buddy;version='[1.12.21,1.12.22)',\
 	net.bytebuddy.byte-buddy-agent;version='[1.12.21,1.12.22)',\
 	org.apache.felix.scr;version='[2.2.6,2.2.7)',\
+	org.gecko.playground;version=snapshot,\
 	org.gecko.playground.ds.simple;version=snapshot,\
 	org.gecko.playground.test;version=snapshot,\
 	org.mockito.junit-jupiter;version='[4.11.0,4.11.1)',\

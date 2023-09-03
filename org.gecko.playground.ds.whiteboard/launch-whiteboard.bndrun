@@ -11,7 +11,6 @@
 	org.apache.felix.gogo.runtime;version='[1.1.6,1.1.7)',\
 	org.apache.felix.gogo.shell;version='[1.1.4,1.1.5)',\
 	org.apache.felix.scr;version='[2.2.6,2.2.7)',\
-	org.gecko.playground.ds.simple;version=snapshot,\
 	org.gecko.playground.ds.whiteboard;version=snapshot,\
 	org.gecko.playground.exchange.api;version=snapshot,\
 	org.gecko.playground.exchange.impl;version=snapshot,\
@@ -19,4 +18,5 @@
 	org.osgi.service.log;version='[1.5.0,1.5.1)',\
 	org.osgi.util.function;version='[1.2.0,1.2.1)',\
 	org.osgi.util.promise;version='[1.3.0,1.3.1)',\
-	org.gecko.playground.exchange.client;version=snapshot
+	org.gecko.playground.exchange.client;version=snapshot,\
+	org.gecko.playground;version=snapshot
