@@ -1,0 +1,16 @@
+Fragment-Host: system.bundle
+Bundle-Activator: biz.aQute.trace.runpath.impl.Activator
+
+-buildpath: \
+	biz.aQute.trace.runpath,\
+	aQute.libg
+
+-conditionalpackage: \
+	javassist.*,\
+	biz.*,\
+	aQute.*
+	
+Import-Package: \
+	sun.*;'resolution:'=optional,\
+	jdk.*;'resolution:'=optional,\
+	*

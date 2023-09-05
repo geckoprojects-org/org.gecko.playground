@@ -183,4 +183,9 @@ org.jline:jline-builtins:3.22.0
 org.jline:jline-reader:3.22.0
 org.jline:jline-console:3.22.0
 org.jline:jline-terminal:3.22.0
-org.eclipse.parsson:jakarta.json:1.1.2
+org.eclipse.parsson:jakarta.json:1.1.2#
+
+#
+biz.aQute:biz.aQute.trace.gui:1.9.0
+biz.aQute:biz.aQute.trace.runpath:1.9.0
+biz.aQute:biz.aQute.trace.tester:1.9.0
