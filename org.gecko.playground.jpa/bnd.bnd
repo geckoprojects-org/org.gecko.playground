@@ -1,0 +1,24 @@
+-buildpath: \
+	jakarta.persistence-api;version=latest,\
+	org.osgi.framework;version=latest,\
+	org.osgi.util.tracker;version=latest,\
+	org.osgi.service.jpa;version=latest,\
+	org.eclipse.persistence.jpa;version=latest,\
+	org.eclipse.persistence.core;version=latest,\
+	org.eclipse.emf.ecore;version=latest
+	
+-includeresource: \
+	META-INF/persistence.xml=persistence.xml
+Meta-Persistence: META-INF/persistence.xml
+
+-privatepackage: \
+	org.gecko.playground.jpa,\
+	org.gecko.playground.jpa.classloader
+	
+Require-Capability: \
+	osgi.extender;filter:='(osgi.extender=osgi.configurator)'
+	
+Export-Package: org.gecko.playground.jpa.entities
+Import-Package: \
+	org.eclipse.persistence.internal.dynamic;version='[4.0.0,5.0.0)',\
+	*
