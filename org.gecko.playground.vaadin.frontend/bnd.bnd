@@ -8,7 +8,7 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.gecko.playground.vaadin
 	
 -buildpath: \
-	org.gecko.playground.vaadin;version=project
+	org.gecko.playground.vaadin;version=snapshot
 
 #-generate:\
 #	test.txt;\

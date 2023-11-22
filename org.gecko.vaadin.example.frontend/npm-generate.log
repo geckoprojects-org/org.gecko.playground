@@ -1,0 +1,37 @@
+[INFO] Generating frontend ...
+[INFO]  - Propagate build info ...
+[DEBUG] 
+>>> Running prepare-frontend
+System.properties:
+ productionMode: true
+ webpackPort: null
+ project.basedir: /opt/git/org.gecko.playground/org.gecko.vaadin.example.frontend
+Goal parameters:
+ productionMode: true
+ npmFolder: /opt/git/org.gecko.playground/org.gecko.vaadin.example.frontend
+Token file: /opt/git/org.gecko.playground/org.gecko.vaadin.example.frontend/META-INF/VAADIN/config/flow-build-info.json
+Token content: {"productionMode":true,"useDeprecatedV14Bootstrapping":false,"eagerServerLoad":false,"npmFolder":"/opt/git/org.gecko.playground/org.gecko.vaadin.example.frontend","node.version":"v18.12.1","node.download.root":"https://nodejs.org/dist/","generatedFolder":"/opt/git/org.gecko.playground/org.gecko.vaadin.example.frontend/generated/frontend","frontendFolder":"/opt/git/org.gecko.playground/org.gecko.vaadin.example.frontend/frontend","connect.javaSourceFolder":"/opt/git/org.gecko.playground/org.gecko.vaadin.example.frontend/src","javaResourceFolder":"/opt/git/org.gecko.playground/org.gecko.vaadin.example.frontend/resources","connect.applicationProperties":"/opt/git/org.gecko.playground/org.gecko.vaadin.example.frontend/res/application.properties","connect.openApiFile":"/generated-resources/openapi.json","project.frontend.generated":"/opt/git/org.gecko.playground/org.gecko.vaadin.example.frontend/frontend/generated","pnpm.enable":false,"require.home.node":false,"build.folder":"generated"}
+
+[INFO]  - Prepare frontend ...
+[INFO] Getting class finder
+[INFO]  - Update build fileFrontend ...
+[INFO]  - Run node updater ...
+[INFO]  - Run frontend build ...
+[INFO] Running Vite ...
+[DEBUG] 
+/home/mark/.vaadin/node/node \ 
+    ./node_modules/vite/bin/vite.js build 
+
+[INFO] Finished generating frontend
+[INFO] Doing cleanup ...
+[INFO] Removed file vite.config.ts
+[INFO] Removed file vite.generated.ts
+[INFO] Removed file types.d.ts
+[INFO] Removed file tsconfig.json
+[INFO] Removed file package.json
+[INFO] Removed file generated/sw.ts
+[INFO] Removed folder generated/plugins/
+[INFO] Removed folder generated/frontend/
+[INFO] Removed folder node_modules/
+[INFO] Removed folder frontend/
+[INFO] Finished cleanup

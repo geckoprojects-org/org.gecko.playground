@@ -17,4 +17,5 @@ Import-Package: \
 	org.xml.*;'resolution:'=optional,\
 	org.apache.hc.*;'resolution:'=optional,\
 	com.thaiopensource.*;'resolution:'=optional,\
+	org.apache.xerces.*;'resolution:'=optional,\
 	*

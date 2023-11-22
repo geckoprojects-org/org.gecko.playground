@@ -1,7 +1,7 @@
 package org.gecko.playground.ds.whiteboard.logger;
 
-import org.gecko.playground.logging.Log;
 import org.gecko.playground.exchange.api.ExchangeListener;
+import org.gecko.playground.log.Log;
 import org.gecko.playground.model.orders.Order;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;

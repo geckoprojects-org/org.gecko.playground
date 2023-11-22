@@ -16,6 +16,7 @@
 # Needed because we enabled library 'gecko-dimc' 	
 github-project: org.gecko.playground
 base-version: 1.0.0
+dimcBaselining: false
 
 -fixupmessages \
   "No metadata for revision";is:=ignore

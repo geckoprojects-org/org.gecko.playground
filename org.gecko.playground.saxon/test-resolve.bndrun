@@ -1,0 +1,8 @@
+-runee: JavaSE-17
+-runrequires: bnd.identity;id='org.gecko.playground.saxon'
+-runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
+-runbundles: \
+	org.gecko.playground.saxon;version=snapshot,\
+	org.gecko.playground.xmlresolver;version=snapshot,\
+	slf4j.api;version='[1.7.30,1.7.31)',\
+	slf4j.simple;version='[1.7.30,1.7.31)'

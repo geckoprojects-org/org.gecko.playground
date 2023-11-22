@@ -1,8 +1,8 @@
 Bundle-Activator: org.gecko.playground.logging.Activator
 
 -privatepackage: \
-	org.gecko.playground.logging,\
-	org.gecko.playground.logging.impl
+	org.gecko.playground.logging.impl,\
+	org.gecko.playground.logging
 
 Bundle-Name: Logging Log4j
 Bundle-Description: Gecko Playground Logging Log4j

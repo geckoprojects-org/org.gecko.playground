@@ -1,0 +1,8 @@
+-library: \
+	enableVaadin
+
+-buildpath: \
+	org.osgi.framework;version=latest,\
+	org.osgi.util.promise;version=latest,\
+	org.osgi.util.function;verison=latest,\
+	org.gecko.vaadin.example;version=snapshot

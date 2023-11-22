@@ -1,0 +1,20 @@
+-library: \
+	enableVaadin
+
+Bundle-Version: 1.0.0.SNAPSHOT
+Export-Package: \
+	org.gecko.vaadin.example,\
+	org.gecko.vaadin.example.views.main,\
+	org.gecko.vaadin.example.views.helloworld,\
+	org.gecko.vaadin.example.service
+
+-includeresource: \
+	OSGI-INF/configurator/=configs/,\
+	META-INF/resources=resources,\
+	META-INF/resources=frontend,\
+	META-INF/frontend=frontend
+Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
+-buildpath: \
+	org.osgi.framework,\
+	org.osgi.util.promise;version=latest,\
+	org.osgi.util.function;version=latest

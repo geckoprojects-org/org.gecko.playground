@@ -1,0 +1,13 @@
+{
+  ":configurator:resource-version": 1,
+  
+	"VaadinApplication~Vaadin": 
+  	{
+  	    "vaadin.pwa": "vaadin",
+  	    "vaadin.application.description": "Vaadin Application",
+		"vaadin.application.name" : "Demo",
+		"vaadin.application.context" : "/vaadin",
+		"vaadin.application.theme": "Material",
+		"vaadin.application.frontend": "VITE"
+	}
+}

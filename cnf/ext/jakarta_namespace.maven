@@ -31,6 +31,45 @@ org.apache.felix:org.apache.felix.http.servlet-api:2.1.0
 org.osgi:org.osgi.service.servlet:2.0.0
 org.osgi:org.osgi.service.jakartars:2.0.0
 
+#Jersey
+org.glassfish.jersey.core:jersey-common:3.1.1
+org.glassfish.jersey.core:jersey-client:3.1.1
+org.glassfish.jersey.core:jersey-server:3.1.1
+org.glassfish.jersey.containers:jersey-container-jetty-http:3.1.1
+org.glassfish.jersey.containers:jersey-container-jetty-servlet:3.1.1
+org.glassfish.jersey.containers:jersey-container-servlet:3.1.1
+org.glassfish.jersey.containers:jersey-container-servlet-core:3.1.1
+org.glassfish.jersey.media:jersey-media-json-jackson:3.1.1
+org.glassfish.jersey.media:jersey-media-json-binding:3.1.1
+org.glassfish.jersey.media:jersey-media-jaxb:3.1.1
+org.glassfish.jersey.media:jersey-media-multipart:3.1.1
+org.glassfish.jersey.media:jersey-media-sse:3.1.1
+org.glassfish.jersey.media:jersey-media-moxy:3.1.1
+org.glassfish.jersey.media:jersey-media-json-processing:3.1.1
+org.glassfish.jersey.ext:jersey-entity-filtering:3.1.1
+org.glassfish.jersey.ext:jersey-bean-validation:3.1.1
+org.glassfish.jersey.security:oauth1-server:3.1.1
+org.glassfish.jersey.security:oauth1-client:3.1.1
+org.glassfish.jersey.security:oauth2-client:3.1.1
+org.glassfish.jersey.inject:jersey-hk2:3.1.1
+org.glassfish.hk2:osgi-adapter:3.0.3
+org.glassfish.hk2:hk2-api:3.0.3
+org.glassfish.hk2:hk2-locator:3.0.3
+org.glassfish.hk2:hk2-utils:3.0.3
+org.glassfish.hk2.external:aopalliance-repackaged:3.0.3
+org.glassfish.hk2.external:jakarta.inject:2.6.1
+org.glassfish.hk2:osgi-resource-locator:1.0.3
+org.glassfish.jersey.bundles.repackaged:jersey-guava:2.26-b03
+org.javassist:javassist:3.29.2-GA
+org.jvnet.mimepull:mimepull:jar:1.10.0
+
+# ASM
+org.ow2.asm:asm:9.5
+org.ow2.asm:asm-tree:9.5
+org.ow2.asm:asm-commons:9.5
+org.ow2.asm:asm-analysis:9.5
+org.ow2.asm:asm-util:9.5
+
 # Gecko
 org.geckoprojects.jakartars:org.gecko.rest.jersey:6.0.0.RC2
 org.geckoprojects.jakartars:org.gecko.rest.jersey.sse:6.0.0.RC2

@@ -1,6 +1,6 @@
 package org.gecko.playground.ds.simple.references;
 
-import org.gecko.playground.logging.Log;
+import org.gecko.playground.log.Log;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
