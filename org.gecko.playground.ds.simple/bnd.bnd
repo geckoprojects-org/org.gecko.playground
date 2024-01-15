@@ -1,2 +1,3 @@
 -buildpath: \
-	org.gecko.playground;version=project
+	org.gecko.playground;version=project,\
+	org.osgi.framework
