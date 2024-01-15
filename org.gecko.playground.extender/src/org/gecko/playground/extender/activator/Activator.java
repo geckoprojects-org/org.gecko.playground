@@ -39,7 +39,7 @@ public class Activator implements BundleActivator {
 	final Map<Bundle, ServiceRegistration<?>> registrations = new ConcurrentHashMap<>();
 	
 
-	private BundleTracker tracker;
+	private BundleTracker<Bundle> tracker;
 
 	/* 
 	 * (non-Javadoc)
@@ -120,11 +120,10 @@ public class Activator implements BundleActivator {
 
 			@Override
 			public void removedBundle(Bundle bundle, BundleEvent event, Bundle object) {
-				ServiceRegistration<?> registration = registrations.remove(bundle);
-				if(registration != null) {
-					registration.unregister();
-				}
+				// Services will be removed automatrically
+				registrations.remove(bundle);
 			}
+			
 		});
 		
 		tracker.open();
