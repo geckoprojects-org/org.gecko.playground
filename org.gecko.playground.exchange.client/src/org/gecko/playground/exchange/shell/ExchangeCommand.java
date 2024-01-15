@@ -7,16 +7,20 @@ import org.gecko.playground.model.orders.Order;
 import org.gecko.playground.model.orders.Side;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.apache.felix.service.command.annotations.GogoCommand;
 
-@Component (service = Object.class , 
-property = { "osgi.command.scope=exchange", 
-			 "osgi.command.function=orders",
-			 "osgi.command.function=askOrder",})
+@Component (service = Object.class  
+//property = { "osgi.command.scope=exchange", 
+//			 "osgi.command.function=orders",
+//			 "osgi.command.function=askOrder"}
+)
+@GogoCommand(scope = "exchange", function = {"orders", "askOrder"})
 public class ExchangeCommand {
 	
 	private Exchange exchange;
 	
-	@Reference
+	@Reference(cardinality = ReferenceCardinality.OPTIONAL)
 	public void setExchange(Exchange exchange) {
 		this.exchange = exchange;
 	}
