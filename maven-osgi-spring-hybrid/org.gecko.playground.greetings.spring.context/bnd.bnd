@@ -1,0 +1,7 @@
+Export-Package: \
+	org.springframework.stereotype;version=6.1,\
+	org.springframework.core.annotation;version=6.1,\
+	org.springframework.lang;version=6.1
+Import-Package: \
+	org.springframework.util;resolution:=optional,\
+	*
