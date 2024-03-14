@@ -11,11 +11,11 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.gecko.vaadin.example,\
 	org.gecko.vaadin.example.ece
 
--generate:\
-	test.txt;\
-	generate=geckoVaadinNPM;\
-	output=META-INF/VAADIN;\
-	cleanup=ALL
+#-generate:\
+#	test.txt;\
+#	generate=geckoVaadinNPM;\
+#	output=META-INF/VAADIN;\
+#	cleanup=ALL
 
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
 -runee: JavaSE-17
