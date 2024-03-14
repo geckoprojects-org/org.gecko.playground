@@ -10,6 +10,10 @@ public class ConsoleLog implements Log {
 		System.out.println("ConsoleLog created");
 	}
 
+	public ConsoleLog (String source) {
+		System.out.println("ConsoleLog created by " + source);
+	}
+
 	@Override
 	public void logMessage(String message) {
 		System.out.println("LOG : " + message);

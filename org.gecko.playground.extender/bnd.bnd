@@ -1,0 +1,3 @@
+-buildpath: \
+	org.osgi.framework,\
+	org.osgi.util.tracker
