@@ -1,1 +1,2 @@
--buildpath: org.gecko.playground
+-buildpath: \
+	org.gecko.playground;version=snapshot

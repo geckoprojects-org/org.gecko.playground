@@ -76,7 +76,7 @@ public class Activator implements BundleActivator {
 					try {
 						Class<?> clazz = adapt.getClassLoader().loadClass(clazzName);
 						Constructor<?> constructor = clazz.getConstructor();
-						Object newInstance = constructor.newInstance(null);
+						Object newInstance = constructor.newInstance(new Object[0]);
 						Class<?>[] interfaces = clazz.getInterfaces();
 						String[] services = new String[] {clazzName};
 						if(interfaces.length > 0) {
