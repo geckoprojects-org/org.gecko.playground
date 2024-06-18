@@ -1,6 +1,8 @@
 package org.gecko.playground.ds.simple.shell;
 
+import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Deactivate;
 
 @Component (service = Object.class , 
 	property = { "osgi.command.scope=hello", 
@@ -8,8 +10,18 @@ import org.osgi.service.component.annotations.Component;
 				 "osgi.command.function=sayHello"})
 public class HelloCommand {
 	
-	public void sayHello () {
-		System.out.println("I wanted to say Hello!");
+	@Activate
+	public void activate()
+	{
+		System.out.println("Activate Command");
+	}
+	@Deactivate
+	public void deactivate()
+	{
+		System.out.println("De-Activate Command");
+	}
+	public void sayHello (String name, int age) {
+		System.out.println("I wanted to say Hello!" + name + " " + age);
 	}
 	
 	public void sagHallo () {

@@ -1,4 +1,3 @@
 -buildpath: \
-	org.gecko.playground.exchange.api;version=project,\
 	org.osgi.service.component;version=latest,\
 	org.gecko.playground;version=snapshot

@@ -1,3 +1,5 @@
 -buildpath: \
 	org.gecko.playground;version=project,\
-	org.osgi.framework
+	org.osgi.framework,\
+	org.osgi.util.tracker,\
+	org.osgi.service.cm
