@@ -288,6 +288,7 @@
 		<module>org.gecko.playground.maven.test</module>
 		<module>org.gecko.playground.maven.jpa.entities</module>
 		<module>org.gecko.playground.maven.jpa.client</module>
+		<module>org.gecko.playground.application</module>
 	</modules>
 
     <build>

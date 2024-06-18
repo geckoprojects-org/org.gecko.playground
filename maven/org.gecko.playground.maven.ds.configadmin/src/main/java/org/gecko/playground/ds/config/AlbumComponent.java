@@ -12,12 +12,14 @@
 package org.gecko.playground.ds.config;
 
 import org.gecko.playground.ds.config.api.Album;
+import org.osgi.service.cm.annotations.RequireConfigurationAdmin;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.ConfigurationPolicy;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Modified;
 
+@RequireConfigurationAdmin
 @Component(immediate = true, name = "MyAlbumConfig", configurationPolicy = ConfigurationPolicy.REQUIRE)
 public class AlbumComponent implements Album {
 	

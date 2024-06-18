@@ -1,19 +1,20 @@
--runfw: org.eclipse.osgi;version='[3.18.200.v20221116-1324,3.18.200.v20221116-1324]'
--runrequires: \
-	bnd.identity;id='org.apache.felix.gogo.command',\
-	bnd.identity;id='org.apache.felix.gogo.shell',\
-	bnd.identity;id='org.apache.felix.configadmin',\
-	bnd.identity;id='org.eclipse.parsson.jakarta.json',\
-	bnd.identity;id='org.gecko.playground.maven.ds.config',\
-	bnd.identity;id='org.gecko.playground.maven.ds.configadmin'
-	
+# Define the OSGi framework to run. Must be part of your dependencies 
+-runfw: org.eclipse.osgi
+-runee: JavaSE-17
+
 -runstartlevel: \
     order=sortbynameversion,\
     begin=-1
-    
--runproperties: \
-	org.osgi.framework.bootdelegation='sun.misc,sun.reflect',\
-	osgi.console=
+
+-runrequires: \
+	bnd.identity;id='org.apache.felix.gogo.command',\
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	bnd.identity;id='org.eclipse.parsson.jakarta.json',\
+	bnd.identity;id='org.gecko.playground.maven.ds.simple',\
+	bnd.identity;id='org.gecko.playground.maven.ds.config',\
+	bnd.identity;id='org.gecko.playground.maven.ds.configadmin'
+	
+	
 -runbundles: \
 	org.apache.felix.configadmin;version='[1.9.22,1.9.23)',\
 	org.apache.felix.configurator;version='[1.0.8,1.0.9)',\
@@ -24,7 +25,8 @@
 	org.eclipse.parsson.jakarta.json;version='[1.1.1,1.1.2)',\
 	org.gecko.playground.maven.ds.config;version='[1.0.0,1.0.1)',\
 	org.gecko.playground.maven.ds.configadmin;version='[1.0.0,1.0.1)',\
+	org.gecko.playground.maven.ds.log;version='[1.0.0,1.0.1)',\
+	org.gecko.playground.maven.ds.simple;version='[1.0.0,1.0.1)',\
 	org.osgi.service.component;version='[1.5.1,1.5.2)',\
 	org.osgi.util.function;version='[1.2.0,1.2.1)',\
 	org.osgi.util.promise;version='[1.3.0,1.3.1)'
--runee: JavaSE-17

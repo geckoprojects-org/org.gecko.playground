@@ -1,0 +1,6 @@
+-include: app-base.bndrun
+
+-runproperties: \
+	org.osgi.framework.bootdelegation='sun.misc,sun.reflect',\
+	osgi.console=,\
+	test.properties=MyTestProperty
