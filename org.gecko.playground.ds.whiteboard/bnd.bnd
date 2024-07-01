@@ -1,6 +1,8 @@
 -buildpath: \
 	org.gecko.playground.exchange.api;version=project,\
-	org.gecko.playground;version=project
+	org.gecko.playground;version=project,\
+	org.osgi.service.component;version=latest,\
+	org.osgi.framework;version=latest
 -privatepackage: \
 	org.gecko.playground.ds.whiteboard.logger,\
 	org.gecko.playground.ds.whiteboard.sysout

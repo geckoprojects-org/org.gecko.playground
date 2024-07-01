@@ -34,14 +34,13 @@ public class Activator implements BundleActivator {
 	 */
 	@Override
 	public void start(BundleContext context) throws Exception {
-		System.out.println("Test");
 		
 		Dictionary<String, String> props = new Hashtable<>();
 		props.put("some prop", "via Activator" );
 		
-		ConsoleLog log = new ConsoleLog("Activator");
+//		ConsoleLog log = new ConsoleLog("Bundle-Activator class");
 		
-		registerService = context.registerService(Log.class, log, props);
+//		registerService = context.registerService(Log.class, log, props);
 	}
 
 	/* 
@@ -50,7 +49,7 @@ public class Activator implements BundleActivator {
 	 */
 	@Override
 	public void stop(BundleContext context) throws Exception {
-		registerService.unregister();
+//		registerService.unregister();
 	}
 
 }

@@ -12,7 +12,7 @@ public class HelloComponent {
 		if (isNull(property)) {
 			property = "<no-propery-provided>";
 		}
-		System.out.println("HelloComponent created with property: " + property);
+		System.out.println("HelloComponent created with property:dfhfdehfdh " + property);
 	}
 
 }

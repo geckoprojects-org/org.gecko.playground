@@ -14,12 +14,17 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
+import org.osgi.service.component.annotations.ReferencePolicy;
 
 @Component(immediate = true)
 public class CustomerManager implements CustomerManagerService {
 	
-	private AtomicReference<Log> logRef = new AtomicReference<Log>();
+	private AtomicReference<Log> logRef = new AtomicReference<>();
 	private DataSourceService datasource;
+	
+	public CustomerManager() {
+		System.out.println("Create customer manager");
+	}
 	
 	@Activate
 	public void activate() {
@@ -49,9 +54,11 @@ public class CustomerManager implements CustomerManagerService {
 	}
 	
 	@Reference(cardinality = ReferenceCardinality.OPTIONAL)
+//	@Reference(cardinality = ReferenceCardinality.OPTIONAL, policy = ReferencePolicy.DYNAMIC)
 	public void setLog(Log log) {
 		System.out.println("Set Log " + log.toString());
-//		logRef.compareAndSet(null, log);
+		logRef.compareAndSet(null, log);
+// 		When doing service exchange, first set will be called		
 //		logRef.set(log);
 	}
 	

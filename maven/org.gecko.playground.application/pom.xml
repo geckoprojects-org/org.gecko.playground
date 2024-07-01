@@ -92,6 +92,21 @@
 							</scopes>
 						</configuration>
 					</execution>
+					<execution>
+						<id>verify-application</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>resolve</goal>
+						</goals>
+						<configuration>
+							<failOnChanges>false</failOnChanges>
+							<writeOnChanges>false</writeOnChanges>
+							<includeDependencyManagement>true</includeDependencyManagement>
+							<bndruns>
+								<bndrun>application.bndrun</bndrun>
+							</bndruns>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>

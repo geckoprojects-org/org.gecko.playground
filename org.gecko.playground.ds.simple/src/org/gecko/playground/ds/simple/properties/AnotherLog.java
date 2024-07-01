@@ -4,7 +4,6 @@ import org.gecko.playground.log.Log;
 import org.osgi.service.component.annotations.Component;
 
 //@Component(property = "fizz=buzz")
-@Component(property = "fizz=buzz")
 @MyServiceProp(foo = "bar")
 public class AnotherLog implements Log {
 

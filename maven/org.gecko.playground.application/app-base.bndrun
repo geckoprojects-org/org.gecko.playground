@@ -2,6 +2,12 @@
 -runfw: org.eclipse.osgi
 -runee: JavaSE-17
 
+baseprop: MyBaseProperties
+
+-runproperties.base: \
+	org.osgi.framework.bootdelegation='sun.misc,sun.reflect',\
+	osgi.console=
+
 -runstartlevel: \
     order=sortbynameversion,\
     begin=-1

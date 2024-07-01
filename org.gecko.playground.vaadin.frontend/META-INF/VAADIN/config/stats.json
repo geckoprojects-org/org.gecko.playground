@@ -48,9 +48,12 @@
   "@vaadin/vaadin-usage-statistics",
   "@vaadin/vertical-layout",
   "@webcomponents/shadycss",
+  "construct-style-sheets-polyfill",
   "date-fns",
+  "is-regexp",
   "lit-element",
   "lit-html",
+  "strip-css-comments",
   "tslib"
  ]
 }

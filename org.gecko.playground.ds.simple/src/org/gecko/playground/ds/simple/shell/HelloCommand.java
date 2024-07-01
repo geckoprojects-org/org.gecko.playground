@@ -1,13 +1,12 @@
 package org.gecko.playground.ds.simple.shell;
 
 import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
 
-@Component (service = Object.class , 
-	property = { "osgi.command.scope=hello", 
-				 "osgi.command.function=sagHallo",
-				 "osgi.command.function=sayHello"})
+//@Component (service = Object.class , 
+//	property = { "osgi.command.scope=hello", 
+//				 "osgi.command.function=sagHallo",
+//				 "osgi.command.function=sayHello"})
 public class HelloCommand {
 	
 	@Activate

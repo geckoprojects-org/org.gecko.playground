@@ -4,7 +4,8 @@ import org.gecko.playground.log.Log;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-@Component
+//Remove comment to get this work ;-)
+//@Component
 public class ReferencedComponent {
 	
 	public ReferencedComponent () {
