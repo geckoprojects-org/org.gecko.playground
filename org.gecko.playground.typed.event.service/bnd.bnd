@@ -1,0 +1,6 @@
+library: enable-emf
+
+Bundle-Version: 1.0.0.SNAPSHOT
+Private-Package: org.gecko.playground.typed.event.service
+-buildpath: org.osgi.service.typedevent
+-privatepackage: org.gecko.playground.typed.event.service.handlers
