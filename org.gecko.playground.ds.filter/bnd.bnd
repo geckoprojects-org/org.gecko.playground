@@ -1,5 +1,1 @@
--includeresource: \
-	OSGI-INF/configurator/=config/
-	
-Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 -privatepackage: org.gecko.playground.ds.filter

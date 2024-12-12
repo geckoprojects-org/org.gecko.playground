@@ -1,0 +1,13 @@
+{
+  ":configurator:resource-version": 1,
+  
+  "CGS": 
+	{
+		"gs.target": "(lang=DE)" 
+	},
+  "CGSMin": 
+	{
+		"gsmin.target": "(|(lang=DE)(lang=EN))", 
+		"gsmin.cardinality.minimum:int": 2 
+	}
+}
