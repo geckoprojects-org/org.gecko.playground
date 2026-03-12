@@ -1,4 +1,4 @@
--runee: JavaSE-17
+-runee: JavaSE-21
 -runrequires: \
 	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.configadmin)(version>=1.9.26))',\
 	bnd.identity;id='org.apache.felix.gogo.command',\

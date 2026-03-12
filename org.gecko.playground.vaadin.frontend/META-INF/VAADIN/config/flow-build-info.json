@@ -2,28 +2,5 @@
   "productionMode": true,
   "useDeprecatedV14Bootstrapping": false,
   "eagerServerLoad": false,
-  "enableDevServer": false,
-  "chunks": {
-    "fallback": {
-      "jsModules": [
-        "@vaadin/avatar-group/src/vaadin-avatar-group.js",
-        "@vaadin/checkbox-group/src/vaadin-checkbox-group.js",
-        "@vaadin/multi-select-combo-box/src/vaadin-multi-select-combo-box.js",
-        "@polymer/iron-icon/iron-icon.js",
-        "@vaadin/scroller/vaadin-scroller.js",
-        "./tooltip.ts",
-        "@vaadin/tabsheet/src/vaadin-tabsheet.js",
-        "@vaadin/number-field/src/vaadin-number-field.js",
-        "./vaadin-big-decimal-field.js",
-        "@vaadin/email-field/src/vaadin-email-field.js",
-        "@vaadin/password-field/src/vaadin-password-field.js",
-        "@vaadin/text-area/src/vaadin-text-area.js",
-        "@vaadin/integer-field/src/vaadin-integer-field.js",
-        "@vaadin/grid/src/vaadin-grid-tree-toggle.js"
-      ],
-      "cssImports": [
-        
-      ]
-    }
-  }
+  "enableDevServer": false
 }

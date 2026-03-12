@@ -46,4 +46,4 @@
 	bnd.identity;id='org.eclipse.parsson.jakarta.json',\
 	bnd.identity;id='org.gecko.emf.mongo.pushstream'
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-17
+-runee: JavaSE-21

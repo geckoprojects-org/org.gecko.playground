@@ -1,5 +1,5 @@
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-17
+-runee: JavaSE-21
 -runrequires: \
 	bnd.identity;id='org.gecko.playground.eventadmin',\
 	bnd.identity;id='org.gecko.playground.exchange.impl',\

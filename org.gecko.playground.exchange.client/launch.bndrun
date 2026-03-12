@@ -1,5 +1,5 @@
 -runfw: org.eclipse.osgi;version='[3.18.200.v20221116-1324,3.18.200.v20221116-1324]'
--runee: JavaSE-17
+-runee: JavaSE-21
 -runrequires: \
 	bnd.identity;id='org.gecko.playground.exchange.impl',\
 	bnd.identity;id='org.gecko.playground.exchange.client',\

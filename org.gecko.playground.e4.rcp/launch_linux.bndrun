@@ -32,3 +32,4 @@
 	org.eclipse.e4.ui.swt.gtk;version='[1.1.100,2)',\
 	org.eclipse.swt.gtk.linux.x86_64;version='[3.121.0,4)'
 
+-runee: JavaSE-21

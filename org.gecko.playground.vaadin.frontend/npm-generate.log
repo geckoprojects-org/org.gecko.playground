@@ -5,33 +5,106 @@
 System.properties:
  productionMode: true
  webpackPort: null
- project.basedir: /devel/git/org.gecko.playground/org.gecko.playground.vaadin.frontend
+ project.basedir: /opt/git/org.gecko.playground/org.gecko.playground.vaadin.frontend
 Goal parameters:
  productionMode: true
- npmFolder: /devel/git/org.gecko.playground/org.gecko.playground.vaadin.frontend
-Token file: /devel/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/META-INF/VAADIN/config/flow-build-info.json
-Token content: {"productionMode":true,"useDeprecatedV14Bootstrapping":false,"eagerServerLoad":false,"npmFolder":"/devel/git/org.gecko.playground/org.gecko.playground.vaadin.frontend","node.version":"v18.12.1","node.download.root":"https://nodejs.org/dist/","generatedFolder":"/devel/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/generated/frontend","frontendFolder":"/devel/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/frontend","connect.javaSourceFolder":"/devel/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/src","javaResourceFolder":"/devel/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/resources","connect.applicationProperties":"/devel/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/res/application.properties","connect.openApiFile":"/generated-resources/openapi.json","project.frontend.generated":"/devel/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/frontend/generated","pnpm.enable":false,"require.home.node":false,"build.folder":"generated"}
+ npmFolder: /opt/git/org.gecko.playground/org.gecko.playground.vaadin.frontend
+Token file: /opt/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/META-INF/VAADIN/config/flow-build-info.json
+Token content: {"productionMode":true,"useDeprecatedV14Bootstrapping":false,"eagerServerLoad":false,"npmFolder":"/opt/git/org.gecko.playground/org.gecko.playground.vaadin.frontend","node.version":"v18.12.1","node.download.root":"https://nodejs.org/dist/","generatedFolder":"/opt/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/generated/frontend","frontendFolder":"/opt/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/frontend","connect.javaSourceFolder":"/opt/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/src","javaResourceFolder":"/opt/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/resources","connect.applicationProperties":"/opt/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/res/application.properties","connect.openApiFile":"/generated-resources/openapi.json","project.frontend.generated":"/opt/git/org.gecko.playground/org.gecko.playground.vaadin.frontend/frontend/generated","pnpm.enable":false,"require.home.node":false,"build.folder":"generated"}
 
 [INFO]  - Prepare frontend ...
 [INFO] Getting class finder
 [INFO]  - Update build fileFrontend ...
 [INFO]  - Run node updater ...
-[INFO]  - Run frontend build ...
-[INFO] Running Vite ...
-[DEBUG] 
-/home/mark/.vaadin/node/node \ 
-    ./node_modules/vite/bin/vite.js build 
-
-[INFO] Finished generating frontend
+[ERROR] Error generating Vaadin Frontend Error occured during goal execution: Unsupported class file major version 69Please run Maven with the -e switch (or Gradle with the --stacktrace switch), to learn the full stack trace.
+com.vaadin.flow.server.ExecutionFailedException: Error occured during goal execution: Unsupported class file major version 69Please run Maven with the -e switch (or Gradle with the --stacktrace switch), to learn the full stack trace.
+	at com.vaadin.flow.plugin.base.BuildFrontendUtil.runNodeUpdater(BuildFrontendUtil.java:349)
+	at org.gecko.vaadin.generator.VaadinNPMGenerator.doGenerate(VaadinNPMGenerator.java:130)
+	at org.gecko.vaadin.generator.VaadinNPMGenerator.generate(VaadinNPMGenerator.java:85)
+	at org.gecko.vaadin.generator.VaadinNPMGenerator.generate(VaadinNPMGenerator.java:62)
+	at aQute.bnd.build.ProjectGenerate.lambda$doGeneratePlugin$1(ProjectGenerate.java:270)
+	at aQute.lib.redirect.Redirect.apply(Redirect.java:117)
+	at aQute.bnd.build.ProjectGenerate.lambda$doGeneratePlugin$2(ProjectGenerate.java:270)
+	at aQute.bnd.build.WorkspaceExternalPluginHandler.call(WorkspaceExternalPluginHandler.java:99)
+	at aQute.bnd.build.ProjectGenerate.doGeneratePlugin(ProjectGenerate.java:255)
+	at aQute.bnd.build.ProjectGenerate.doGenerate(ProjectGenerate.java:226)
+	at aQute.bnd.build.ProjectGenerate.step(ProjectGenerate.java:146)
+	at aQute.bnd.build.ProjectGenerate.generate(ProjectGenerate.java:66)
+	at org.bndtools.builder.BndSourceGenerateCompilationParticipant.lambda$aboutToBuild$2(BndSourceGenerateCompilationParticipant.java:63)
+	at bndtools.central.Central.lambda$bndCall$17(Central.java:787)
+	at aQute.bnd.service.progress.TaskManager.with(TaskManager.java:37)
+	at bndtools.central.Central.lambda$bndCall$18(Central.java:787)
+	at aQute.bnd.build.WorkspaceLock.locked(WorkspaceLock.java:168)
+	at aQute.bnd.build.Workspace.readLocked(Workspace.java:1529)
+	at bndtools.central.Central.bndCall(Central.java:798)
+	at org.bndtools.builder.BndSourceGenerateCompilationParticipant.aboutToBuild(BndSourceGenerateCompilationParticipant.java:58)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:680)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:211)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:299)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:355)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:449)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:452)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:564)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:512)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:594)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:208)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 69
+	at net.bytebuddy.jar.asm.ClassReader.<init>(ClassReader.java:199)
+	at net.bytebuddy.jar.asm.ClassReader.<init>(ClassReader.java:180)
+	at net.bytebuddy.jar.asm.ClassReader.<init>(ClassReader.java:166)
+	at net.bytebuddy.jar.asm.ClassReader.<init>(ClassReader.java:287)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:606)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.visitClass(FrontendDependencies.java:624)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.collectEndpoints(FrontendDependencies.java:303)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.computeEndpoints(FrontendDependencies.java:271)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependencies.<init>(FrontendDependencies.java:130)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependenciesScanner$FrontendDependenciesScannerFactory.createScanner(FrontendDependenciesScanner.java:130)
+	at com.vaadin.flow.server.frontend.scanner.FrontendDependenciesScanner$FrontendDependenciesScannerFactory.createScanner(FrontendDependenciesScanner.java:92)
+	at com.vaadin.flow.server.frontend.NodeTasks.<init>(NodeTasks.java:744)
+	at com.vaadin.flow.plugin.base.BuildFrontendUtil.runNodeUpdater(BuildFrontendUtil.java:343)
+	... 34 more
 [INFO] Doing cleanup ...
 [INFO] Removed file vite.config.ts
 [INFO] Removed file vite.generated.ts
-[INFO] Removed file types.d.ts
-[INFO] Removed file tsconfig.json
 [INFO] Removed file package.json
-[INFO] Removed file generated/sw.ts
-[INFO] Removed folder generated/plugins/
 [INFO] Removed folder generated/frontend/
-[INFO] Removed folder node_modules/
 [INFO] Removed folder frontend/
 [INFO] Finished cleanup
