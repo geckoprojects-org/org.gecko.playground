@@ -8,7 +8,7 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.gecko.playground.vaadin
 	
 -buildpath: \
-	org.gecko.playground.vaadin;version=snapshot
+	org.gecko.playground.vaadin;version=project
 
 -generate:\
 	test.txt;\
@@ -17,8 +17,10 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	cleanup=ALL
 
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-17
+-runee: JavaSE-21
 -runrequires: \
+	bnd.identity;id='org.eclipse.fennec.emf.osgi.component',\
+	bnd.identity;id='org.eclipse.fennec.emf.gecko.compatibility.api',\
 	bnd.identity;id='org.gecko.vaadin.whiteboard.api',\
 	bnd.identity;id='org.gecko.vaadin.whiteboard',\
 	bnd.identity;id='org.gecko.playground.vaadin'
@@ -91,8 +93,6 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.apache.felix.http.servlet-api;version='[1.2.0,1.2.1)',\
 	org.eclipse.emf.ecore.xmi;version='[2.17.0,2.17.1)',\
 	org.eclipse.equinox.cm;version='[1.5.100,1.5.101)',\
-	org.gecko.emf.osgi.api;version='[4.5.0,4.5.1)',\
-	org.gecko.emf.osgi.component;version='[4.5.0,4.5.1)',\
 	org.gecko.playground.model;version=snapshot,\
 	com.vaadin.flow.component.checkbox;version='[23.3.0,23.3.1)',\
 	com.vaadin.flow.component.radiobutton;version='[23.3.0,23.3.1)',\

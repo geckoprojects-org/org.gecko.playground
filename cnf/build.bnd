@@ -1,22 +1,26 @@
 # We include setups for
-#	Gecko EMF OSGi - geckoEMF
-#	OSGi-Test Support - gecko-osgitest
-#	DIMC Github-Configuration - gecko-dimc
-#	Jacoco Support - gecko-jacoco 
+#	Eclipse Fennec base setup - fennec
+#	OSGi-Test / JUnit5 support - fennecTest
+#	Eclipse Fennec EMF OSGi - fennecEMF
+#	Eclipse Fennec Codec / Persistence (Mongo) - fennecCodec, fennecPersistence
+# The remaining gecko libraries have no Eclipse Fennec counterpart yet.
+# Gecko bundles that still use the GeckoEMF API run on top of Fennec EMF via
+# org.eclipse.fennec.emf.gecko.compatibility.api.
 
 -library: \
-	geckoEMF,\
-	geckoOSGi-Test,\
-	geckoDIMC,\
+	fennec,\
+	fennecTest,\
+	fennecEMF,\
+	fennecCodec,\
+	fennecPersistence,\
 	geckoBndEclipse,\
 	geckoVaadin,\
-	geckoEMFUtil,\
 	geckoSearch
-	
-# Needed because we enabled library 'gecko-dimc' 	
+
+# Needed because we enabled library 'fennec'
+github-orga: geckoprojects-org
 github-project: org.gecko.playground
 base-version: 1.0.0
-dimcBaselining: false
 
 -fixupmessages \
   "No metadata for revision";is:=ignore
@@ -31,14 +35,14 @@ dimcBaselining: false
 # If release not needed is empty, no Bundle has been found and for maven we do a release to the remote Repo. If not, we only do a release to the local .m2 Repo
 #-maven-release.local: ${if;${def;releaseNotNeeded};local;remote}
 
-javac.source: 17
-javac.target: 17
+javac.source: 21
+javac.target: 21
 
--require-bnd "(version>=6.4.0)"
+-require-bnd: "(version>=7.2.0)"
 
 -plugin.Central: \
     aQute.bnd.repository.maven.provider.MavenBndRepository; \
-        snapshotUrl="https://oss.sonatype.org/content/repositories/snapshots/"; \
+        snapshotUrl="https://central.sonatype.com/repository/maven-snapshots/"; \
         releaseUrl=https://repo.maven.apache.org/maven2/; \
         index=${.}/central.maven; \
         readOnly=true; \
@@ -59,11 +63,11 @@ javac.target: 17
 		
 -use-emf: false	
 	
-# Default build path when using EMF and Gecko EMF
+# Default build path when using EMF and Eclipse Fennec EMF
 emf.lib: \
 	org.osgi.service.component.annotations;version=1.4,\
 	org.osgi.framework;version=1.9,\
-	org.gecko.emf.osgi.api;version=latest,\
+	org.eclipse.fennec.emf.osgi.api;version=latest,\
 	org.eclipse.emf.common;version=latest,\
 	org.eclipse.emf.ecore;version=latest,\
 	org.eclipse.emf.ecore.xmi;version=latest

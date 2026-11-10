@@ -7,7 +7,7 @@ Test-Cases: ${classes;HIERARCHY_INDIRECTLY_ANNOTATED;org.junit.platform.commons.
 	org.osgi.framework;version=latest,\
 	org.osgi.util.promise;version=latest,\
 	org.osgi.service.cm;version=latest,\
-	org.gecko.playground.tasks;version=snapshot
+	org.gecko.playground.tasks;version=project
 
 Private-Package: org.gecko.playground.tasks.tests
 

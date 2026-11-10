@@ -1,26 +1,25 @@
--library: enable-emf
+-library: enableEMF
 
 Bundle-Version: 1.0.0.SNAPSHOT
 -buildpath: \
 	org.osgi.service.component;version=latest,\
-	org.gecko.search;version=latest,\
-	org.gecko.search.util;version=latest,\
-	org.apache.lucene.core;version=latest,\
-	org.gecko.playground.model;version=latest,\
 	org.osgi.util.promise;version=latest,\
-	org.gecko.emf.repository.api;version=latest,\
 	org.osgi.util.function;version=latest,\
-	org.gecko.emf.mongo.pushstream;version=latest,\
-	org.gecko.emf.pushstreams;version=latest,\
-	org.osgi.util.pushstream;version=latest,\
-	org.gecko.emf.mongo.api;version=latest,\
-	org.gecko.emf.search;version=latest,\
-	org.gecko.search.document;version=latest
-	
+	org.gecko.playground.model;version=project,\
+	org.gecko.playground.mongo;version=project,\
+	org.eclipse.fennec.emf.osgi.eobject.registry;version=latest,\
+	org.eclipse.fennec.persistence.repository;version=latest,\
+	org.eclipse.fennec.persistence.query;version=latest,\
+	org.eclipse.fennec.query.model;version=latest,\
+	org.eclipse.fennec.expression.model;version=latest,\
+	org.eclipse.fennec.search;version=latest,\
+	org.eclipse.fennec.search.model;version=latest,\
+	org.apache.lucene.core;version='[10,11)'
+
 -includeresource: \
 	OSGI-INF/configurator/=configs/
 Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
-	
+
 -privatepackage: \
 	org.gecko.playground.search.helper,\
 	org.gecko.playground.search.cmd

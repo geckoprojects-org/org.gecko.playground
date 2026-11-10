@@ -1,131 +1,106 @@
 /**
- * Copyright (c) 2012 - 2023 Data In Motion and others.
- * All rights reserved. 
- * 
- * This program and the accompanying materials are made available under the terms of the 
- * Eclipse Public License v1.0 which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
+ * Copyright (c) 2012 - 2026 Data In Motion and others.
+ * All rights reserved.
+ *
+ * This program and the accompanying materials are made available under the terms of the
+ * Eclipse Public License v2.0 which accompanies this distribution, and is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
  * Contributors:
  *     Data In Motion - initial API and implementation
  */
 package org.gecko.playground.search;
 
-import java.io.IOException;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
-import org.apache.lucene.document.Document;
-import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.index.Term;
-import org.apache.lucene.search.BooleanClause.Occur;
-import org.apache.lucene.search.BooleanQuery;
-import org.apache.lucene.search.FuzzyQuery;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.Query;
-import org.apache.lucene.search.TermQuery;
-import org.apache.lucene.search.TopDocs;
-import org.apache.lucene.search.WildcardQuery;
-import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.fennec.model.query.Query;
+import org.eclipse.fennec.model.query.builder.Expressions;
+import org.eclipse.fennec.model.query.builder.QueryBuilder;
+import org.eclipse.fennec.model.expression.Expression;
+import org.eclipse.fennec.persistence.query.api.Hit;
+import org.eclipse.fennec.search.query.IndexSearch;
 import org.gecko.playground.model.person.Person;
-import org.gecko.playground.search.helper.PersonIndexHelper;
-import org.gecko.search.util.DocumentUtil;
-import org.osgi.service.component.ComponentServiceObjects;
+import org.gecko.playground.model.person.PersonPackage;
+import org.gecko.playground.search.helper.PersonSearchMapping;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 /**
- * 
- * @author ilenia
- * @since Mar 9, 2023
+ * Searches persons in the Eclipse Fennec Search {@code person} index unit.
+ * <p>
+ * The queries are written in the backend-neutral Fennec query IR. The hits are the original
+ * persons from MongoDB, resolved by the {@code PersonPrimaryStore}.
  */
 @Component(name = "PersonSearchService", service = PersonSearchService.class)
 public class PersonSearchService {
 
-	@Reference(target = "(id=person)")
-	private ComponentServiceObjects<IndexSearcher> searcherSO;
+	@Reference(target = "(search.unit.alias=" + PersonSearchMapping.UNIT_NAME + ")")
+	private IndexSearch search;
 
 	@Reference
-	private ResourceSet resourceSet;
+	private PersonPackage personPackage;
 
 	public Person searchPersonById(String personId) {
 		Objects.requireNonNull(personId, "Cannot search Person by null id!");
-		Query query = new TermQuery(new Term(PersonIndexHelper.PERSON_ID, personId));
-		List<Person> result = executeTermSearch(query);
-		if(result != null && !result.isEmpty()) return result.get(0);
-		return null;
+		List<Person> result = execute(Expressions.path(personPackage.getPerson_Id()).eq(personId));
+		return result.isEmpty() ? null : result.get(0);
 	}
-
 
 	public List<Person> searchPersonsByFirstName(String firstName, boolean exactMatch) {
 		Objects.requireNonNull(firstName, "Cannot search Person by null firstName!");
-		Query query;
-		if(exactMatch) {
-			query = new TermQuery(new Term(PersonIndexHelper.PERSON_FIRST_NAME, firstName));
-
-		} else {
-			Query q1 = new WildcardQuery(new Term(PersonIndexHelper.PERSON_FIRST_NAME_LOWER, "*" + firstName.toLowerCase() + "*"));
-			Query q2 = new FuzzyQuery(new Term(PersonIndexHelper.PERSON_FIRST_NAME_LOWER, firstName.toLowerCase()));
-			query = new BooleanQuery.Builder().add(q1, Occur.SHOULD).add(q2, Occur.SHOULD).build();
-		}
-		return executeTermSearch(query);
+		return execute(match(personPackage.getPerson_FirstNames(), firstName, exactMatch));
 	}
-
 
 	public List<Person> searchPersonsByLastName(String lastName, boolean exactMatch) {
 		Objects.requireNonNull(lastName, "Cannot search Person by null lastName!");
-		Query query;
-		if(exactMatch) {
-			query = new TermQuery(new Term(PersonIndexHelper.PERSON_LAST_NAME, lastName));
-
-		} else {
-			Query q1 = new WildcardQuery(new Term(PersonIndexHelper.PERSON_LAST_NAME_LOWER, "*" + lastName.toLowerCase() + "*"));
-			Query q2 = new FuzzyQuery(new Term(PersonIndexHelper.PERSON_LAST_NAME_LOWER, lastName.toLowerCase()));
-			query = new BooleanQuery.Builder().add(q1, Occur.SHOULD).add(q2, Occur.SHOULD).build();
-		}
-		return executeTermSearch(query);
+		return execute(match(personPackage.getPerson_LastName(), lastName, exactMatch));
 	}
 
 	public List<Person> searchPersonsName(String name) {
 		Objects.requireNonNull(name, "Cannot search Person by null name!");
-		Query q1 = new WildcardQuery(new Term(PersonIndexHelper.PERSON_FIRST_NAME_LOWER, "*" + name.toLowerCase() + "*"));
-		Query q2 = new FuzzyQuery(new Term(PersonIndexHelper.PERSON_FIRST_NAME_LOWER, name.toLowerCase()));
-		Query q3 = new WildcardQuery(new Term(PersonIndexHelper.PERSON_LAST_NAME_LOWER, "*" + name.toLowerCase() + "*"));
-		Query q4 = new FuzzyQuery(new Term(PersonIndexHelper.PERSON_LAST_NAME_LOWER, name.toLowerCase()));
-		Query query = new BooleanQuery.Builder().add(q1, Occur.SHOULD).add(q2, Occur.SHOULD).add(q3, Occur.SHOULD).add(q4, Occur.SHOULD).build();
-		return executeTermSearch(query);
+		if (name.isBlank()) {
+			return execute(null);
+		}
+		return execute(Expressions.or(
+				match(personPackage.getPerson_FirstNames(), name, false),
+				match(personPackage.getPerson_LastName(), name, false)));
 	}
 
-	private List<Person> executeTermSearch(Query query) {
+	/**
+	 * Exact: the whole value. Otherwise: a case insensitive substring or a value within one
+	 * edit (typo tolerance). An empty value searches for all persons.
+	 */
+	private Expression match(EAttribute attribute, String value, boolean exactMatch) {
+		if (value.isBlank()) {
+			return null;
+		}
+		if (exactMatch) {
+			return Expressions.path(attribute).eq(value);
+		}
+		return Expressions.or(
+				Expressions.path(attribute).containsIgnoreCase(value),
+				Expressions.path(attribute).fuzzy(value, 1));
+	}
 
-		IndexSearcher searcher = searcherSO.getService();		
+	private List<Person> execute(Expression predicate) {
+		QueryBuilder builder = QueryBuilder.from(personPackage.getPerson());
+		if (predicate != null) {
+			builder.where(predicate);
+		}
+		Query query = builder.build();
 		try {
-			TopDocs topDocs = searcher.search(query, Integer.MAX_VALUE);
-			if (topDocs.scoreDocs.length == 0) {
-				return Collections.emptyList();
-			}
-			IndexReader indexReader = searcher.getIndexReader();
-			return Arrays.asList(topDocs.scoreDocs).stream().map(sd -> sd.doc).map(id -> {
-				Document d;
-				try {
-					d = indexReader.storedFields().document(id);
-					return d;
-				} catch (IOException e) {
-					return null;
-				}
-			}).filter(d -> d != null).map(d -> {
-				return (Person) DocumentUtil.toEObject(d, resourceSet);
-			}).collect(Collectors.toList());
+			return search.search(query).stream()
+					.map(Hit::object)
+					.filter(Person.class::isInstance)
+					.map(Person.class::cast)
+					.toList();
 		} catch (Exception e) {
-			System.err.println("Exception while search for Person with query " + query);
+			System.err.println("Exception while searching for Persons with query " + query);
 			e.printStackTrace();
 			return Collections.emptyList();
-		} finally {
-			searcherSO.ungetService(searcher);
 		}
 	}
 }
-

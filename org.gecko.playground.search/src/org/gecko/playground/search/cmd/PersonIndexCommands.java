@@ -15,6 +15,8 @@ import java.util.UUID;
 
 import org.gecko.playground.model.person.Person;
 import org.gecko.playground.model.person.PersonPackage;
+import org.gecko.playground.mongo.PersonPersistenceService;
+import org.gecko.playground.search.PersonIndexMongoService;
 import org.gecko.playground.search.PersonIndexService;
 import org.gecko.playground.search.PersonSearchService;
 import org.osgi.service.component.annotations.Component;
@@ -27,7 +29,8 @@ import org.osgi.service.component.annotations.Reference;
  */
 @Component(name = "PersonIndexCommands", service = PersonIndexCommands.class, property = {
 		"osgi.command.scope=index", //
-		"osgi.command.function=indexPerson", 
+		"osgi.command.function=reindex", 
+		"osgi.command.function=savePerson", 
 		"osgi.command.function=removePerson"
 })
 public class PersonIndexCommands {
@@ -39,15 +42,29 @@ public class PersonIndexCommands {
 	PersonSearchService personSearchService;
 	
 	@Reference
+	PersonIndexMongoService personIndexMongoService;
+	
+	@Reference
+	PersonPersistenceService personPersistenceService;
+	
+	@Reference
 	PersonPackage personPackage;
 	
-	public void indexPerson(String firstName, String lastName) {
+	/** Saves a new person in MongoDB and indexes it - the same flow as the e4 person form. */
+	public void savePerson(String firstName, String lastName) {
 		Person person = personPackage.getPersonFactory().createPerson();
 		person.setId(UUID.randomUUID().toString());
 		person.setFirstNames(firstName);
 		person.setLastName(lastName);
+		person = personPersistenceService.savePerson(person);
 		personIndexService.indexPerson(person, true);
-		System.out.println("Person indexed with id: " + person.getId());
+		System.out.println("Person saved and indexed with id: " + person.getId());
+	}
+	
+	/** Rebuilds the person index from all persons stored in MongoDB. */
+	public void reindex() throws Exception {
+		Long count = personIndexMongoService.initializeIndex().getValue();
+		System.out.println(count + " Person(s) indexed");
 	}
 	
 	public void removePerson(String personId) {

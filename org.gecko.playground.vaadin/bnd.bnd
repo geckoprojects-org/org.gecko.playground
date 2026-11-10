@@ -1,6 +1,6 @@
 -library: \
 	enableVaadin,\
-	enable-emf
+	enableEMF
 
 Bundle-Version: 1.0.0.SNAPSHOT
 Export-Package: \
@@ -18,7 +18,7 @@ Export-Package: \
 	META-INF/frontend=frontend
 Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 -buildpath: \
-	org.gecko.playground.model;version=latest,\
+	org.gecko.playground.model;version=project,\
 	com.vaadin.flow.component.combobox;version=latest,\
 	com.vaadin.flow.component.dialog;version=latest,\
 	com.vaadin.flow.component.grid;version=latest,\

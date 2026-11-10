@@ -156,16 +156,15 @@ org.eclipse.platform:org.eclipse.swt.gtk.linux.x86_64:3.122.0
 org.eclipse.platform:org.eclipse.ui:3.201.200
 org.eclipse.platform:org.eclipse.ui.workbench:3.127.0
 
-org.geckoprojects.bnd:org.gecko.bnd.dimc.library:1.3.1
-org.geckoprojects.bnd:org.gecko.bnd.osgitest.library:1.3.1
-org.geckoprojects.bnd:org.gecko.bnd.jacoco.library:1.3.1
+org.eclipse.fennec.bnd:org.eclipse.fennec.bnd.library:0.0.10
+org.eclipse.fennec.bnd:org.eclipse.fennec.osgitest.bnd.library:0.0.10
+org.eclipse.fennec.bnd:org.eclipse.fennec.jacoco.bnd.library:0.0.10
 
-org.geckoprojects.emf:org.gecko.emf.osgi.api:4.5.0
-org.geckoprojects.emf:org.gecko.emf.osgi.bnd.library.workspace:4.5.0
-org.geckoprojects.emf:org.gecko.emf.osgi.extender:4.5.0
-org.geckoprojects.emf:org.gecko.emf.osgi.example.model.basic:4.5.0
+org.eclipse.fennec.emf:org.eclipse.fennec.emf.osgi.bnd.library.workspace:1.1.0-SNAPSHOT
+org.eclipse.fennec.emf:org.eclipse.fennec.emf.osgi.bnd.library.project:1.1.0-SNAPSHOT
+# Runs not yet migrated GeckoEMF bundles (mongo, repository, search, ...) on Fennec EMF
+org.eclipse.fennec.emf:org.eclipse.fennec.emf.gecko.compatibility.api:1.1.0-SNAPSHOT
 
-org.geckoprojects.emf.utils:org.gecko.emf.util.bnd.library.workspace:1.0.0-SNAPSHOT
 
 org.geckoprojects.repository:org.gecko.emf.repository.api:9.2.2
 org.geckoprojects.repository:org.gecko.emf.repository.mongo:3.1.0
@@ -231,3 +230,24 @@ org.fusesource.jansi:jansi:1.18
 #TypedEventService
 org.apache.aries.typedevent:org.apache.aries.typedevent.bus:0.0.2
 com.liferay:org.apache.aries.component.dsl:1.2.2.LIFERAY-PATCHED-1
+
+# Eclipse Fennec Persistence (Mongo repository) and Codec - used by the playground mongo/search/e4 examples
+org.eclipse.fennec.persistence:org.eclipse.fennec.persistence.workspace.library:0.1.0-SNAPSHOT
+org.eclipse.fennec.codec:org.eclipse.fennec.codec.workspace.library:0.1.0-SNAPSHOT
+
+# Eclipse Fennec Search (Lucene 10, no workspace library yet)
+org.eclipse.fennec.search:org.eclipse.fennec.search:1.0.0-SNAPSHOT
+org.eclipse.fennec.search:org.eclipse.fennec.search.model:1.0.0-SNAPSHOT
+org.eclipse.fennec.search:org.eclipse.fennec.search.osgi:1.0.0-SNAPSHOT
+org.geckoprojects.libraries:org.apache.lucene.core:10.5.0-SNAPSHOT
+org.geckoprojects.libraries:org.apache.lucene.queries:10.5.0-SNAPSHOT
+org.geckoprojects.libraries:org.apache.lucene.queryparser:10.5.0-SNAPSHOT
+org.geckoprojects.libraries:org.apache.lucene.facet:10.5.0-SNAPSHOT
+org.geckoprojects.libraries:org.apache.lucene.suggest:10.5.0-SNAPSHOT
+org.geckoprojects.libraries:org.apache.lucene.highlighter:10.5.0-SNAPSHOT
+org.geckoprojects.libraries:org.apache.lucene.join:10.5.0-SNAPSHOT
+org.geckoprojects.libraries:org.apache.lucene.grouping:10.5.0-SNAPSHOT
+org.geckoprojects.libraries:org.apache.lucene.memory:10.5.0-SNAPSHOT
+# Change-stream model, imported by org.eclipse.fennec.search (moved from persistence to emf.streaming)
+org.eclipse.fennec.streaming:org.eclipse.fennec.stream.model:0.1.0-SNAPSHOT
+org.eclipse.fennec.search:org.eclipse.fennec.search.suggest:1.0.0-SNAPSHOT

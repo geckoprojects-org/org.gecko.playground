@@ -52,7 +52,7 @@
 	bnd.identity;id='org.gecko.playground.logging.test',\
 	bnd.identity;id='org.fusesource.jansi';version:Version='1.18.0'
 	
--runee: JavaSE-17
+-runee: JavaSE-21
 
 # Bundles excluded from resolving. Sometimes necessary to achieve best results
 -runblacklist: \

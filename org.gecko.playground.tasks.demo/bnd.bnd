@@ -1,6 +1,6 @@
 -buildpath: \
-	org.gecko.playground.workmode;version=latest,\
-	org.gecko.playground.tasks;version=latest,\
+	org.gecko.playground.workmode;version=project,\
+	org.gecko.playground.tasks;version=project,\
 	org.osgi.util.promise;version=latest,\
 	org.osgi.service.condition;version='1.0',\
 	org.osgi.service.log;version=latest,\
