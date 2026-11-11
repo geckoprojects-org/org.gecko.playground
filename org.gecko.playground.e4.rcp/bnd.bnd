@@ -1,7 +1,7 @@
 Bundle-SymbolicName: ${project.name};singleton:=true
 Bundle-Version: 1.0.0.SNAPSHOT
 
--library: enable-emf
+-library: enableEMF
 
 -includeresource: \
 	Application.e4xmi,\
@@ -10,9 +10,9 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	plugin.xml
 	
 -buildpath: \
-	javax.inject;version=latest,\
+	jakarta.inject.jakarta.inject-api;version=latest,\
 	org.osgi.service.event;version=latest,\
-	javax.annotation;version=latest,\
+	jakarta.annotation-api;version=latest,\
 	org.eclipse.equinox.common;version=latest,\
 	org.eclipse.equinox.registry;version=latest,\
 	org.eclipse.core.commands;version=latest,\
@@ -26,16 +26,10 @@ Bundle-Version: 1.0.0.SNAPSHOT
 	org.gecko.eclipse.api;version=latest,\
 	org.gecko.playground.search;version=project,\
 	org.gecko.playground.model;version=project,\
-	org.gecko.search;version=latest,\
-	org.gecko.search.document;version=latest,\
 	org.eclipse.e4.core.contexts;version=latest,\
-	org.gecko.playground.mongo;version=latest
+	org.gecko.playground.mongo;version=project
 
 -privatepackage: \
 	org.gecko.playground.e4.rcp.handlers,\
 	org.gecko.playground.e4.rcp.parts,\
 	org.gecko.playground.e4.rcp.helpers
-
-Import-Package: \
-	org.gecko.search,\
-	*

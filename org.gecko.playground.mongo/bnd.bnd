@@ -1,4 +1,4 @@
--library: enable-emf
+-library: enableEMF
 
 Bundle-Version: 1.0.0.SNAPSHOT
 
@@ -7,7 +7,7 @@ Bundle-Version: 1.0.0.SNAPSHOT
 Require-Capability: osgi.extender;filter:='(osgi.extender=osgi.configurator)'
 
 -buildpath: \
-	org.gecko.emf.repository.api;version=latest,\
+	org.eclipse.fennec.persistence.repository;version=latest,\
 	org.gecko.playground.model;version=project
 -privatepackage: org.gecko.playground.mongo.cmd
 Export-Package: org.gecko.playground.mongo

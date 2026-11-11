@@ -1,4 +1,4 @@
--library: enable-emf
+-library: enableEMF
 
 -buildpath :\
 	org.osgi.service.condition;version=latest
@@ -7,7 +7,7 @@
 # It might be a good idea to put comments around it, when you don't need it
 #-generate:\
 #	model/person.genmodel;\
-#		generate=geckoEMF;\
+#		generate=fennecEMF;\
 #		genmodel=model/person.genmodel;\
 #		output=src
 # Add this attribute to find some logging information

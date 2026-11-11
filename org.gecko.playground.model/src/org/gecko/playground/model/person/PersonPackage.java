@@ -2,11 +2,13 @@
  */
 package org.gecko.playground.model.person;
 
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
 
 import org.osgi.annotation.versioning.ProviderType;
 
@@ -27,7 +29,8 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-public interface PersonPackage extends EPackage {
+@EPackage(uri = PersonPackage.eNS_URI, fingerprint = "fp1:6bd61b17358ce1cb955be85a6e6e1fb6b42468b9972f72936724b6da914ba3fc", genModel = "/model/person.genmodel", genModelSourceLocations = {"model/person.genmodel","org.gecko.playground.model/model/person.genmodel"}, ecore = "/model/person.ecore", ecoreSourceLocations = "/model/person.ecore")
+public interface PersonPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->

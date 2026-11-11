@@ -1,5 +1,5 @@
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
--runee: JavaSE-17
+-runee: JavaSE-21
 
 -runsystemcapabilities: ${native_capability}
 
@@ -8,6 +8,8 @@
 -runtrace: true
 
 -runrequires: \
+	bnd.identity;id='org.eclipse.fennec.emf.osgi.component',\
+	bnd.identity;id='org.eclipse.fennec.emf.gecko.compatibility.api',\
 	bnd.identity;id='slf4j.simple';version:Version='1.7.25',\
 	bnd.identity;id='org.apache.felix.http.jetty';version:Version='4.1.2',\
 	bnd.identity;id='com.vaadin.flow.client',\

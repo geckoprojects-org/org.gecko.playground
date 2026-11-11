@@ -13,14 +13,17 @@ You may realize that the splash screen appears only for a blink of an eye. This 
 
 ## Precondition
 
-You need a running mongo database as backing storage. 
+You need a running mongo database as backing storage, reachable at `mongodb://localhost:27017`, e.g.:
+
+```
+docker run -d --rm --name playground-mongo -p 27017:27017 mongo:7
+```
 
 In addition to that this RCP uses the following *playground* projects:
 
-* org.gecko.playground.lucene - using OSGyfied Lucene 
 * org.gecko.playground.model - an EMF example data model for our person
-* org.gecko.playground.search - an search service for our persons
-* org.gecko.playground.mongo - Persistence service using MongoDB backing including the configuration in */config/config.json*
+* org.gecko.playground.mongo - Persistence service using the [Eclipse Fennec Persistence](https://github.com/eclipse-fennec/emf.persistence-jpa) MongoDB repository, including the configuration in *configs/mongodb.json*
+* org.gecko.playground.search - a search service for our persons using [Eclipse Fennec Search](https://github.com/eclipse-fennec/emf.search) (Lucene 10) as secondary index beside MongoDB, including the configuration in *configs/index.json*
 * org.gecko.playground.e4.rcp - the RCP application
 
 ## Features

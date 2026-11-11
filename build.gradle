@@ -8,8 +8,25 @@ repositories {
     mavenCentral()
 }
 
+// The fennecTest library no longer puts JUnit on the bnd -testpath; the unit test
+// dependencies come from Gradle (see eclipse-fennec/fennec.bnd.libraries#34)
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+    plugins.withType(JavaPlugin) {
+        test {
+            useJUnitPlatform()
+        }
+        dependencies {
+            testImplementation 'org.junit.jupiter:junit-jupiter:5.14.2'
+            testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.14.4'
+            testImplementation 'org.mockito:mockito-junit-jupiter:5.23.0'
+            testImplementation 'org.assertj:assertj-core:3.27.7'
+        }
+    }
+}
+
 tasks.named('wrapper') {
   jarFile = rootProject.file('.gradle-wrapper/gradle-wrapper.jar')
 }
-
-

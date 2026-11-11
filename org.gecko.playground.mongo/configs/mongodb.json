@@ -1,11 +1,19 @@
 {
-  ":configurator:resource-version": 1,
-  
-	"EMFMongoRepositoryConfigurator~playground": 
-  	{
-	    "mongo.instances": "playground",
-		"playground.baseUris" : "mongodb://mongodb",
-		"playground.databases" : "playground", 
-		"playground.playground.repoType" : "PROTOTYPE" 
+	":configurator:resource-version": 1,
+
+	"persistence.mongo.client~playground": {
+		"ident": "playground",
+		"connectionString": "mongodb://localhost:27017"
+	},
+
+	"persistence.mongo.database~playground": {
+		"alias": "playground",
+		"database": "playground",
+		"client.target": "(mongo.client.ident=playground)"
+	},
+
+	"fennec.repository.mongo~playground": {
+		"repositoryId": "playground",
+		"database.target": "(mongo.database.alias=playground)"
 	}
 }

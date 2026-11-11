@@ -8,8 +8,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
+import jakarta.annotation.PostConstruct;
+import jakarta.inject.Inject;
 
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.di.Persist;
@@ -204,8 +204,9 @@ public class PersonFormPart {
 		person.setBirthDate(Date.from(LocalDate.of(birthDateField.getYear(), birthDateField.getMonth()+1, birthDateField.getDay()).atStartOfDay(ZoneId.systemDefault()).toInstant()));
 		person.getContact().addAll(contacts);
 		person.getAddress().addAll(addresses);
+		// The search index is a secondary index beside MongoDB: save first, then index the stored person
+		person = personPersistenceService.savePerson(person);
 		indexService.indexPerson(person, true);
-		personPersistenceService.savePerson(person);
 		MessageDialog.openInformation(parent.getShell(), "Person Saved", "Person successfully added to the Index and to the DB!");
 	}
 }

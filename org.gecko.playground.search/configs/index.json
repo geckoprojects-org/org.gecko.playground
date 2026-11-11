@@ -1,10 +1,16 @@
 {
-  ":configurator:resource-version": 1,
-  
-	"EMFLuceneIndex~person": 
-  	{
-  	    "id": "person",
-  	    "directory.type": "MMAP",
-		"base.path" : "/tmp/index/person/"
+	":configurator:resource-version": 1,
+
+	"EObjectRegistry~search": {
+		"name": "search-mappings",
+		"initialProvider.target": "(emf.eobject.provider.name=playground-person-mapping)"
+	},
+
+	"SearchIndexUnit~person": {
+		"alias": "person",
+		"location": "/tmp/index/person",
+		"visibility": "NRT",
+		"refresh": "BACKGROUND",
+		"refresh.interval.ms": 1000
 	}
 }

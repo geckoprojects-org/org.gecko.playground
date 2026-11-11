@@ -94,7 +94,6 @@ public class PersonPackageImpl extends EPackageImpl implements PersonPackage {
 	private PersonPackageImpl() {
 		super(eNS_URI, PersonFactory.eINSTANCE);
 	}
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
