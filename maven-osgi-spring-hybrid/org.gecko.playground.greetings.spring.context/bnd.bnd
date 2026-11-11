@@ -1,0 +1,12 @@
+# Provides the Spring annotations that the greetings bundles use inside OSGi.
+# Only the annotation types are needed at runtime, so everything else the
+# exported packages reference is optional.
+Export-Package: \
+	org.springframework.stereotype;version=6.1,\
+	org.springframework.core.annotation;version=6.1,\
+	org.springframework.lang;version=6.1
+Import-Package: \
+	org.springframework.*;resolution:=optional,\
+	org.apache.commons.logging;resolution:=optional,\
+	javax.annotation.*;resolution:=optional,\
+	*
