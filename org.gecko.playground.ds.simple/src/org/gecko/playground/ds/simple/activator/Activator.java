@@ -23,7 +23,7 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 
-@Header(name = "Bundle-Activator", value = "org.gecko.playground.ds.simple.activator.Activator")
+@Header(name = "Bundle-Activator", value = "${@class}")
 public class Activator implements BundleActivator {
 
 	private ServiceRegistration<Log> registerService;

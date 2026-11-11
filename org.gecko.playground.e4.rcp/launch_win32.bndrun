@@ -154,5 +154,5 @@
 	tools.jackson.core.jackson-core;version='[3.2.2,3.2.3)',\
 	tools.jackson.core.jackson-databind;version='[3.2.2,3.2.3)',\
 	org.apache.lucene.core;version='[10.5.0,10.5.1)',\
-	org.eclipse.swt;version='[3.122.0,3.122.1)',\
 	org.osgi.service.application;version='[1.1.0,1.1.1)'
+-resolve: never
