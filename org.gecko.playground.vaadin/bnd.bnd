@@ -2,6 +2,11 @@
 	enableVaadin,\
 	enableEMF
 
+# DISABLED: the Vaadin example is switched off for now, together with
+# org.gecko.playground.vaadin.frontend (see README.MD).
+# To re-enable: remove -nobundles here and in the frontend project.
+-nobundles: true
+
 Bundle-Version: 1.0.0.SNAPSHOT
 Export-Package: \
 	org.gecko.playground.vaadin,\

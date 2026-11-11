@@ -10,11 +10,18 @@ Bundle-Version: 1.0.0.SNAPSHOT
 -buildpath: \
 	org.gecko.playground.vaadin;version=project
 
--generate:\
-	test.txt;\
-	generate=geckoVaadinNPM;\
-	output=META-INF/VAADIN;\
-	cleanup=ALL
+# DISABLED: the Vaadin example is switched off for now (see README.MD).
+# The geckoVaadinNPM generator cannot read Java 21 class files
+# ("Unsupported class file major version 65"), and the -runbundles below are
+# stale (e.g. org.eclipse.equinox.cm 1.5.100 is no longer in any repository).
+# To re-enable: remove -nobundles and uncomment -generate.
+-nobundles: true
+
+#-generate:\
+#	test.txt;\
+#	generate=geckoVaadinNPM;\
+#	output=META-INF/VAADIN;\
+#	cleanup=ALL
 
 -runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
 -runee: JavaSE-21

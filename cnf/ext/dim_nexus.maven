@@ -6,3 +6,5 @@ org.geckoprojects.emf:org.gecko.emf.pushstreams:1.0.15
 org.gecko.addons:org.gecko.util.pushstream:6.0.0
 org.gecko.addons:org.gecko.util.common:2.0.0-SNAPSHOT
 
+# Gecko bnd Eclipse 2.0.0 library (Eclipse 4.41); its bundles come through the library's own repos
+org.geckoprojects.bnd.eclipse:org.gecko.bnd.eclipse.library:2.0.0-SNAPSHOT
