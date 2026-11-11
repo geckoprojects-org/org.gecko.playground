@@ -1,0 +1,9 @@
+{
+	":configurator:resource-version": 1,
+	":configurator:symbolic-name": "org.gecko.playground.greetings.osgi.application",
+	":configurator:version": "1.0.0",
+	"JakartarsWhiteboardComponent": {
+		"jersey.port:Integer": 8080,
+		"jersey.context.path": "/"
+	}
+}

@@ -25,6 +25,7 @@
 		<module>org.gecko.playground.greetings.rest</module>
 		<module>org.gecko.playground.greetings.application</module>
 		<module>org.gecko.playground.greetings.spring.context</module>
+		<module>org.gecko.playground.greetings.osgi.json</module>
 		<module>org.gecko.playground.greetings.osgi.application</module>
 	</modules>
 
